@@ -5,7 +5,7 @@ function jump() {
         
         setTimeout(function () {
             sonic.classList.remove("jump");
-        }, 300);
+        }, 400);
     }   
 }
 

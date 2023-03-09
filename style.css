@@ -6,16 +6,17 @@
 }
 
 #sonic {
-    width: 50px;
-    height: 50px;
-    background-image: url(sonic.ico);
-    background-size: 50px 50px;
+    width: 55px;
+    height: 55px;
+    background-image: url("sprites/sonic.gif");
+    background-size: 55px 55px;
     position: relative;
     top: 150px;
+    z-index: 3;
 }
 
 .jump {
-    animation: jump 0.3s linear;
+    animation: jump 0.5s linear;
 }
 
 @keyframes jump {
@@ -23,15 +24,39 @@
         top:150px;
     }
     30% {
-        top: 130px;
+        top: 120px;
     }
     50% {
+        top: 70px;
+    }
+    65% {
         top: 80px;
     }
     80% {
-        top: 130px;
+        top: 120px;
     }
     100% {
         top: 150px;
+    }
+}
+
+#obstacle {
+    width: 45px;
+    height: 45px;
+    background-image: url("sprites/badnik1.png");
+    background-size: 45px 45px;
+    position: relative;
+    top: 105px;
+    left: 580px;
+
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: 0px;
     }
 }
