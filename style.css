@@ -5,6 +5,7 @@
     margin: auto;
 }
 
+/* Player */
 #sonic {
     width: 55px;
     height: 55px;
@@ -16,15 +17,15 @@
 }
 
 .jump {
-    animation: jump 0.5s linear;
+    animation: jump 0.35s linear;
 }
 
 @keyframes jump {
     0% {
+        background-image: url("sprites/sonic-jump.gif");
         top:150px;
     }
     30% {
-        background-image: url("sprites/sonic-jump.gif");
         top: 120px;
     }
     50% {
@@ -42,6 +43,7 @@
     }
 }
 
+/* Obstacle */
 #obstacle {
     width: 50px;
     height: 45px;
