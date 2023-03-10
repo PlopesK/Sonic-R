@@ -1,6 +1,16 @@
 /* Loading */
 window.addEventListener("load", function (event) {
-    console.log ("loaded");
+    var load = document.getElementById("load");
+    var loadEffect = setInterval(function () {
+        if (!load.style.opacity) {
+            load.style.opacity = 1;
+        }
+        if (load.style.opacity > 0) {
+            load.style.opacity -= 0.3;
+        } else {
+            clearInterval(loadEffect);
+        }
+    }, 200);
 });
 
 /* start */
