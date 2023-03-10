@@ -238,7 +238,13 @@ footer p {
 }
 
   /* Loading */
-  .load-wrapper.active {
+  .load-wrapper {
+    display: block;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,11 +258,11 @@ footer p {
   }
 
   .load {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 1px;
-      animation: rotate 4s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    animation: rotate 4s infinite;
   }
 
 @keyframes rotate {

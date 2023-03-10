@@ -9,6 +9,7 @@ window.addEventListener("load", function (event) {
             load.style.opacity -= 0.3;
         } else {
             clearInterval(loadEffect);
+            load.classList.remove("active");
         }
     }, 200);
 });
