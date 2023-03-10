@@ -52,7 +52,7 @@ header {
 
 .game {
     width: 620px;
-    height: 200px;
+    height: 210px;
     background-image: url("sprites/background.gif");
     margin: auto;
 }
@@ -119,33 +119,28 @@ header {
     }
 }
 
-/* Loading */
-.load-wrapper.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2058b6;
-    position: fixed;
+#ground {
+    background-image: url("sprites/ground.png");
+    background-size: auto 50px;
+    position: relative;
+    top: 90px;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
+    height: 50px;
 
-  .load {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url("sonic.png");
-      animation: rotate 4s infinite;
-  }
+    animation: move 1s infinite linear;
+}
 
-@keyframes rotate {
-  50% {
-      transform: rotateZ(0.5turn);
-  }
-  100% {
-    transform: rotateZ(1turn);
-  }
+@keyframes move {
+    0% {
+        background-position-x: 100%;
+    }
+    50% {
+        background-position-x: 50%;
+    }
+    100% {
+        background-position-x: 0%;
+    }
+    110% {
+        background-position-x: 100%;
+    }
 }
