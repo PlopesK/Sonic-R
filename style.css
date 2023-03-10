@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-image: url("sprites/header.png");
+    background-image: url("images/header.png");
     background-size: auto 200px;
     width: 100%;
     height: 200px;
