@@ -76,18 +76,15 @@ footer .social-media {
     background-image: url("sprites/background.gif");
     border-radius: 10px;
     margin: auto;
-    animation: background 4s infinite linear;
+    animation: background 6s infinite linear;
 }
 
 @keyframes background {
     0% {
-        background-position-x: left;
-    }
-    50% {
-        background-position-x: center;
+        background-position-x: 0%;
     }
     100% {
-        background-position-x: right;
+        background-position-x: 3050%;
     }
 }
 
@@ -172,9 +169,6 @@ footer .social-media {
 @keyframes move {
     0% {
         background-position-x: 100%;
-    }
-    50% {
-        background-position-x: 50%;
     }
     100% {
         background-position-x: 0%;
