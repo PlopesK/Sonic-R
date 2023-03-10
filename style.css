@@ -76,6 +76,9 @@ footer .social-media {
     background-image: url("sprites/background.gif");
     border-radius: 10px;
     margin: auto;
+}
+
+.background {
     animation: background 6s infinite linear;
 }
 
@@ -163,7 +166,7 @@ footer .social-media {
 }
 
 .move {
-    animation: move 1s infinite linear;
+    animation: move 4s infinite linear;
 }
 
 @keyframes move {
@@ -171,12 +174,20 @@ footer .social-media {
         background-position-x: 100%;
     }
     100% {
-        background-position-x: 0%;
+        background-position-x: -140%;
     }
 }
 
 /* Mobile */
 @media(max-width: 700px){
+    .background {
+        animation: background 55s infinite linear;
+    }
+
+    .move {
+        animation: move 2s infinite linear;
+    }
+
     footer .social-media {
         font-size: 10vw;
     }

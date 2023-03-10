@@ -6,7 +6,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="sonic.ico"/>
-        <script src="scripts.js"></script> 
+        <script src="prep.js"></script>
+        <script src="game.js"></script> 
         <title>Sonic Runner</title>
     </head>
     <body>
@@ -15,10 +16,10 @@
         </header>
         <div class="area">
             <div class="start">
-                <a id="play" class="button" onclick="game()">
+                <a id="play" class="button" onclick="start()">
                     <i class="fa fa-play"></i>
                 </a>
-                <div class="game">
+                <div class="game" id="background">
                     <div id="sonic"></div>
                     <div id="obstacle"></div>
                     <div id="ground"></div>

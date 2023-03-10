@@ -2,11 +2,6 @@
 function game() {
     const sonic = document.getElementById("sonic");
     const obstacle = document.getElementById("obstacle");
-    const button = document.getElementById("play");
-    const ground = document.getElementById("ground");
-    button.classList.add("click");
-    obstacle.classList.add("block");
-    ground.classList.add("move");
 
     function jump() {
         if (sonic.classList != "jump") {
