@@ -3,15 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="sonic.ico"/>
+        <script src="scripts.js"></script> 
         <title>Sonic Runner</title>
     </head>
     <body>
-        <div class="game">
-            <div id="sonic"></div>
-            <div id="obstacle"></div>
+        <div class="start">
+            <a id="play" class="button" onclick="game()">
+                <i class="fa fa-play"></i>
+            </a>
+            <div class="game">
+                <div id="sonic"></div>
+                <div id="obstacle"></div>
+            </div>
         </div>
-        <script src="scripts.js"></script> 
     </body>
 </html>

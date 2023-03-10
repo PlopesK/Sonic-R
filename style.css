@@ -1,7 +1,34 @@
+body {
+    background-color: #2058b6;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background-color: #2058b6;
+    border: 1px solid black;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.click {
+    display: none;
+}
+
 .game {
     width: 600px;
     height: 200px;
-    border: 1px solid black;
+    background-image: url("sprites/background.gif");
     margin: auto;
 }
 
@@ -18,6 +45,10 @@
 
 .jump {
     animation: jump 0.35s linear;
+}
+
+.death {
+
 }
 
 @keyframes jump {
@@ -52,7 +83,9 @@
     position: relative;
     top: 105px;
     left: 580px;
+}
 
+.block {
     animation: block 1s infinite linear;
 }
 
@@ -63,4 +96,35 @@
     100% {
         left: 0px;
     }
+}
+
+/* Loading */
+.load-wrapper.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2058b6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .load {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("sonic.png");
+      animation: rotate 4s infinite;
+  }
+
+@keyframes rotate {
+  50% {
+      transform: rotateZ(0.5turn);
+  }
+  100% {
+    transform: rotateZ(1turn);
+  }
 }
