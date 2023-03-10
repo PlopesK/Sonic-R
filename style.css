@@ -12,7 +12,6 @@ html {
 
 a {
     text-decoration: none;
-    color: black;
     font-weight: bold;
 }
 
@@ -37,13 +36,51 @@ header {
 footer {
 	padding: 30px;
     text-align: center;
-    background-color: #185299;
+    background-image: url("images/header-bg.gif");
     position: relative;
+    color: white;
 }
 
-footer .social-media {
-    font-size: 2.5vw;
-    margin-bottom: 5px;
+footer a {
+    font-size: 3vw;
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 400;
+    text-align: inherit;
+    text-shadow: none !important;
+    font-size: 12px;
+    line-height: 1.2em;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
+.sega {
+    height: 50px;
+    margin-top: 20px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sega img {
+    width: auto;
+    height: 40px;
+}
+
+.img-section {
+    width: 20%;
+    text-align: center;
 }
 
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */

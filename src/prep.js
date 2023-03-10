@@ -13,7 +13,7 @@ window.addEventListener("load", function (event) {
     }, 200);
 });
 
-/* start */
+/* Start */
 function start() {
     const button = document.getElementById("play");
     const background = document.getElementById("background");
