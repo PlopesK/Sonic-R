@@ -72,10 +72,6 @@ header {
     animation: jump 0.35s linear;
 }
 
-.death {
-
-}
-
 @keyframes jump {
     0% {
         background-image: url("sprites/sonic-jump.gif");

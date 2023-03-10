@@ -29,7 +29,9 @@ function game() {
         }
     }, 10);
 
-    document.addEventListener("keydown", function (event) {
-        jump();
+    ['keydown', 'click'].forEach(function(e) {
+        document.addEventListener(e, function (event) {
+            jump();
+        });
     });
 }
