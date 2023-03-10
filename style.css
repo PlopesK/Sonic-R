@@ -15,6 +15,7 @@ a {
     font-weight: bold;
 }
 
+/* 🚧🚧🚧🚧Body🚧🚧🚧🚧 */
 body {
     background-color: #257BE6;
 }
@@ -23,9 +24,8 @@ header {
     background-image: url("images/header.png");
     background-size: auto 200px;
     width: 100%;
-    height: 200px;
+    height: 180px;
     top: 0;
-    margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,16 +33,28 @@ header {
     color: white;
 }
 
+.subheader {
+    background-image: url("images/header-bg.gif");
+    height: 10px;
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+
 footer {
 	padding: 30px;
     text-align: center;
     background-image: url("images/header-bg.gif");
-    position: relative;
+    position: absolute;
     color: white;
 }
 
-footer a {
+footer .social-media {
     font-size: 3vw;
+}
+
+footer a {
     color: white;
     text-decoration: none;
 }
@@ -237,14 +249,14 @@ footer p {
     }
 }
 
-  /* Loading */
-  .load-wrapper {
+/* Loading */
+.load-wrapper {
     display: block;
     position: absolute;
     z-index: -2;
-  }
+}
 
-  .active {
+.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,15 +267,15 @@ footer p {
     top: 0;
     left: 0;
     z-index: 100;
-  }
+}
 
-  .load {
+.load {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1px;
     animation: rotate 4s infinite;
-  }
+}
 
 @keyframes rotate {
   50% {
