@@ -90,7 +90,6 @@ header {
         top: 120px;
     }
     100% {
-        background-image: url("sprites/sonic.gif");
         top: 150px;
     }
 }
@@ -104,6 +103,7 @@ header {
     position: relative;
     top: 105px;
     left: 580px;
+    z-index: 1;
 }
 
 .block {
@@ -121,12 +121,15 @@ header {
 
 #ground {
     background-image: url("sprites/ground.png");
-    background-size: auto 50px;
+    background-size: 200px 80px;
     position: relative;
     top: 90px;
     width: 100%;
-    height: 50px;
+    height: 80px;
+    z-index: 0;
+}
 
+.move {
     animation: move 1s infinite linear;
 }
 
@@ -139,8 +142,5 @@ header {
     }
     100% {
         background-position-x: 0%;
-    }
-    110% {
-        background-position-x: 100%;
     }
 }
