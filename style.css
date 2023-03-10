@@ -1,5 +1,30 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: #2058b6;
+    background-color: #2a89ff;
+}
+
+header {
+    background-image: url("sprites/header.png");
+    background-size: auto 200px;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
 }
 
 .start {
@@ -26,7 +51,7 @@ body {
 }
 
 .game {
-    width: 600px;
+    width: 620px;
     height: 200px;
     background-image: url("sprites/background.gif");
     margin: auto;
