@@ -1,3 +1,4 @@
+/* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #2a89ff;
+    background-color: #257BE6;
 }
 
 header {
@@ -25,6 +26,25 @@ header {
     justify-content: center;
     position: relative;
     color: white;
+}
+
+footer {
+	padding: 30px;
+    text-align: center;
+    background-color: #185299;
+    position: relative;
+}
+
+footer .social-media {
+    font-size: 2.5vw;
+}
+
+/* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
+.area {
+    width: 100%;
+    height: 340px;
+    margin: auto;
+    padding-top: 10px;
 }
 
 .start {
@@ -54,10 +74,24 @@ header {
     width: 620px;
     height: 210px;
     background-image: url("sprites/background.gif");
+    border-radius: 10px;
     margin: auto;
+    animation: background 4s infinite linear;
 }
 
-/* Player */
+@keyframes background {
+    0% {
+        background-position-x: left;
+    }
+    50% {
+        background-position-x: center;
+    }
+    100% {
+        background-position-x: right;
+    }
+}
+
+/* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
     width: 55px;
     height: 55px;
@@ -94,7 +128,7 @@ header {
     }
 }
 
-/* Obstacle */
+/* 🐞🐞🐞🐞Obstacle🐞🐞🐞🐞 */
 #obstacle {
     width: 50px;
     height: 45px;
@@ -119,9 +153,11 @@ header {
     }
 }
 
+/* 🏞️🏞️🏞️🏞️Ground🏞️🏞️🏞️🏞️ */
 #ground {
     background-image: url("sprites/ground.png");
     background-size: 200px 80px;
+    border-radius: 10px;
     position: relative;
     top: 90px;
     width: 100%;
@@ -142,5 +178,12 @@ header {
     }
     100% {
         background-position-x: 0%;
+    }
+}
+
+/* Mobile */
+@media(max-width: 700px){
+    footer .social-media {
+        font-size: 10vw;
     }
 }
