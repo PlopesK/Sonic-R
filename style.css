@@ -152,13 +152,25 @@ footer p {
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
-    width: 55px;
-    height: 60px;
+    width: 50px;
+    height: 65px;
     background-image: url("sprites/sonic-idle.gif");
-    background-size: 55px 60px;
+    background-size: 50px 65px;
+    background-repeat: no-repeat;
     position: relative;
     top: 150px;
+    left: 10px;
     z-index: 3;
+}
+
+.run {
+    animation: run 4s ease-in running;
+}
+
+@keyframes run {
+    100% {
+        background-image: url("sprites/sonic-start.gif");
+    }
 }
 
 .jump {
@@ -189,7 +201,8 @@ footer p {
     width: 50px;
     height: 45px;
     background-image: url("sprites/badnik1.gif");
-    background-size: 48px 45px;
+    background-size: 42px 45px;
+    background-repeat: no-repeat;
     position: relative;
     top: 105px;
     left: 580px;
