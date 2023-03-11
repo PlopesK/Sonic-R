@@ -150,7 +150,7 @@ footer p {
 #sonic {
     width: 50px;
     height: 65px;
-    background-image: url("sprites/sonic-start1.gif");
+    background-image: url("sprites/sonic-idle.gif");
     background-size: 50px 65px;
     background-repeat: no-repeat;
     position: relative;
