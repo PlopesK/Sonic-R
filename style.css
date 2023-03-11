@@ -274,7 +274,7 @@ footer p {
 /* 📱📱📱📱Mobile📱📱📱📱 */
 @media(max-width: 700px){
     .background {
-        animation: background 55s infinite linear;
+        animation: background 50.5s infinite linear;
     }
 
     .move {
