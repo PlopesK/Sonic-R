@@ -164,7 +164,7 @@ footer p {
 }
 
 .run {
-    animation: run 4s ease-in running;
+    animation: run 0.5s ease-in running;
 }
 
 @keyframes run {

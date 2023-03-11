@@ -20,12 +20,13 @@ function start() {
     const background = document.getElementById("background");
     const ground = document.getElementById("ground");
     const sonic = document.getElementById("sonic");
+    sonic.style.backgroundImage = "url(sprites/sonic-start1.gif)";
     var start = setInterval ( function () {
         button.classList.add("click");
-        sonic.style.backgroundImage = "url(sprites/sonic-start.gif)";
         sonic.classList.add("run");
         sonic.addEventListener("animationend", function () {
             clearInterval(start);
+            sonic.classList.remove("run");
             sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
             obstacle.classList.add("block");
             background.classList.add("background");
