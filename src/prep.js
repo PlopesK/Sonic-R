@@ -20,18 +20,15 @@ function start() {
     const background = document.getElementById("background");
     const ground = document.getElementById("ground");
     const sonic = document.getElementById("sonic");
-    sonic.style.backgroundImage = "url(sprites/sonic-start1.gif)";
-    var start = setInterval ( function () {
-        button.classList.add("click");
-        sonic.classList.add("run");
-        sonic.addEventListener("animationend", function () {
-            clearInterval(start);
-            sonic.classList.remove("run");
-            sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
-            obstacle.classList.add("block");
-            background.classList.add("background");
-            ground.classList.add("move");
-            game ();
-        })
+    button.style.display = "none";
+    sonic.classList.add("run");
+    ground.classList.add("move");
+
+    sonic.addEventListener("animationend", function () {
+        sonic.classList.remove("run");
+        sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
+        obstacle.classList.add("block");
+        background.classList.add("background");
+        game ();
     });
 }

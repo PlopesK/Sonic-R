@@ -124,10 +124,6 @@ footer p {
     z-index: 4;
 }
 
-.click {
-    display: none;
-}
-
 .game {
     width: 620px;
     height: 270px;
@@ -154,7 +150,7 @@ footer p {
 #sonic {
     width: 50px;
     height: 65px;
-    background-image: url("sprites/sonic-idle.gif");
+    background-image: url("sprites/sonic-start1.gif");
     background-size: 50px 65px;
     background-repeat: no-repeat;
     position: relative;
@@ -164,12 +160,27 @@ footer p {
 }
 
 .run {
-    animation: run 0.5s ease-in running;
+    animation: run 4s linear running;
 }
 
 @keyframes run {
-    100% {
+    0% {
         background-image: url("sprites/sonic-start.gif");
+        left: 10px;
+    }
+    25% {
+        left: 90px;
+    }
+    50% {
+        background-image: url("sprites/sonic-run.gif");
+        left: 200px;
+    }
+    75% {
+        left: 90px;
+    }
+    100% {
+        background-image: url("sprites/sonic-run.gif");
+        left: 10px;
     }
 }
 
