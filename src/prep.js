@@ -1,4 +1,4 @@
-/* Loading */
+/* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
 window.addEventListener("load", function (event) {
     var load = document.getElementById("load");
     var loadEffect = setInterval(function () {
@@ -14,7 +14,7 @@ window.addEventListener("load", function (event) {
     }, 200);
 });
 
-/* Start */
+/* 🎮🎮🎮🎮Start🎮🎮🎮🎮 */
 function start() {
     const button = document.getElementById("play");
     const background = document.getElementById("background");

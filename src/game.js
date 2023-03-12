@@ -1,4 +1,4 @@
-/* Game */
+/* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 function game() {
     const sonic = document.getElementById("sonic");
     const obstacle = document.getElementById("obstacle");
