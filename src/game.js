@@ -31,4 +31,5 @@ function game() {
             jump();
         });
     });
+    
 }
