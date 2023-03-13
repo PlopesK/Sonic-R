@@ -154,6 +154,7 @@ footer p {
     font-size: 1.5em;
     color:#103563;
     height: 20px;
+    width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -163,6 +164,10 @@ footer p {
 
 .score img {
     width: 15%;
+}
+
+#points {
+    margin-left: 0.2em;
 }
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
@@ -336,5 +341,9 @@ footer p {
     .img-section {
         width: 50%;
         text-align: center;
+    }
+
+    .score img{
+        width: 20%;
     }
 }

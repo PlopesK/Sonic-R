@@ -12,11 +12,11 @@ function pause() {
 }
     
  function score(){
-    if ((millisecond += 10) == 1000) {
+    if ((millisecond += 10) == 100) {
         millisecond = 0;
         points++;
     }
-    document.getElementById('score').innerText = returnData(points);
+    document.getElementById('points').innerText = returnData(points);
 }
 
 function returnData(input) {
