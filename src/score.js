@@ -1,4 +1,5 @@
 let millisecond = 0;
+let second = 0;
 let points = 0;
 let cron;
 
@@ -11,11 +12,12 @@ function pause() {
     clearInterval(crono);
 }
     
- function score(){
+function score(){
     if ((millisecond += 10) == 100) {
         millisecond = 0;
         points++;
     }
+
     document.getElementById('points').innerText = returnData(points);
 }
 

@@ -243,13 +243,14 @@ footer p {
 }
 
 .block {
-    animation: block 3s infinite linear;
+    animation: block linear;
+    animation-duration: 3s;
     background-image: url("sprites/badnik1.gif");
     background-size: 50px 45px;
 }
 
 @keyframes block {
-    0% {
+    0%{
         left: 580px;
     }
     100% {

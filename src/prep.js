@@ -1,5 +1,5 @@
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
-window.addEventListener("load", function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
     var load = document.getElementById("load");
     var loadEffect = setInterval(function () {
         if (!load.style.opacity) {
@@ -29,6 +29,8 @@ function start() {
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
         obstacle.classList.add("block");
         background.classList.add("background");
+
         game ();
+        enemy()
     });
 }
