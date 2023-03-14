@@ -1,7 +1,7 @@
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 function game() {
     const sonic = document.getElementById("sonic");
-    const obstacle = document.getElementsByClassName('obstacle');
+    const obstacle = document.querySelector(".obstacle");
 
     function jump() {
         if (sonic.classList != "jump") {
@@ -13,7 +13,7 @@ function game() {
         }   
     }
 
- 
+    
 
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function (event) {

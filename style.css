@@ -220,7 +220,13 @@ footer p {
     25% {
         top: 120px;
     }
+    40% {
+        top: 70px;
+    }
     50% {
+        top: 70px;
+    }
+    60% {
         top: 70px;
     }
     75% {
@@ -268,7 +274,7 @@ footer p {
         left: 580px;
     }
     100% {
-        left: 0px;
+        left: -10px;
     }
 }
 
