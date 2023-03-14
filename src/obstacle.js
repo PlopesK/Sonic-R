@@ -1,18 +1,17 @@
 function enemy() {
-  let count = 1;
-  let animationDuration = '3s';
   const obstacle = document.getElementById("obstacle");
   obstacle.classList.add('block');
 
   obstacle.addEventListener('animationend', () => {
-    count++;
+    const minDuration = 1500;
+    const maxDuration = 3000;
+    const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
+    const animationDuration = `${randomDuration / 1000}s`;
+
     obstacle.style.animationDuration = animationDuration;
     
-    if(count >= 2){
-      animationDuration = '1.5s';
-      obstacle.classList.remove('block');
-      void obstacle.offsetWidth; 
-      obstacle.classList.add('block');
-    }
+    obstacle.classList.remove('block');
+    void obstacle.offsetWidth;
+    obstacle.classList.add('block');
   });
 }
