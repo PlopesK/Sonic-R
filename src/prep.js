@@ -27,7 +27,6 @@ function start() {
     sonic.addEventListener("animationend", function () {
         sonic.classList.remove("run");
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
-        obstacle.classList.add("block");
         background.classList.add("background");
 
         game ();

@@ -1,19 +1,18 @@
 function enemy() {
-    let blockDuration = 3;
-    const obstacle = document.getElementById("obstacle");
-  
-    function updateBlockDuration() {
-      blockDuration -= 0.2;
-      if (blockDuration < 1) {
-        blockDuration = 1;
-      }
-      obstacle.style.animationDuration = `${blockDuration}s`;
-      console.log(`Block animation duration set to ${blockDuration}s`);
+  let count = 1;
+  let animationDuration = '3s';
+  const obstacle = document.getElementById("obstacle");
+  obstacle.classList.add('block');
+
+  obstacle.addEventListener('animationend', () => {
+    count++;
+    obstacle.style.animationDuration = animationDuration;
+    
+    if(count >= 2){
+      animationDuration = '1.5s';
+      obstacle.classList.remove('block');
+      void obstacle.offsetWidth; 
+      obstacle.classList.add('block');
     }
-  
-    function update() {
-      updateBlockDuration();
-    }
-  
-    setInterval(update, 1000);
-  }
+  });
+}

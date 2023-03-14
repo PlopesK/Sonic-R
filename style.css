@@ -244,6 +244,7 @@ footer p {
 
 .block {
     animation: block linear;
+    animation-iteration-count: 2;
     animation-duration: 3s;
     background-image: url("sprites/badnik1.gif");
     background-size: 50px 45px;
