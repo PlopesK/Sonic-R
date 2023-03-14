@@ -30,6 +30,6 @@ function start() {
         background.classList.add("background");
 
         game ();
-        enemy()
+        enemy();
     });
 }

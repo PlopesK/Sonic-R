@@ -232,22 +232,35 @@ footer p {
 }
 
 /* 🐞🐞🐞🐞Obstacle🐞🐞🐞🐞 */
-#obstacle {
-    width: 50px;
+.enemies {
+    height: 45px;
+}
+
+.obstacle {
+    width: 65px;
     height: 45px;
     background-repeat: no-repeat;
     position: relative;
-    top: 105px;
+    display: flex;
+    flex-direction: column;
     left: 580px;
     z-index: 1;
 }
 
+#badnik1 {
+    top: 55px;
+    background-size: 50px 45px;
+}
+
+#badnik2 {
+    top: 20px;
+    background-size: 65px 45px;
+}
+
 .block {
     animation: block linear;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-duration: 3s;
-    background-image: url("sprites/badnik1.gif");
-    background-size: 50px 45px;
 }
 
 @keyframes block {
