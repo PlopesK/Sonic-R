@@ -247,8 +247,6 @@ footer p {
     height: 45px;
     background-repeat: no-repeat;
     position: relative;
-    display: flex;
-    flex-direction: column;
     left: 580px;
     z-index: 1;
 }
