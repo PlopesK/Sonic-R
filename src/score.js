@@ -1,3 +1,4 @@
+/* 🎰🎰🎰🎰Score🎰🎰🎰🎰 */
 let millisecond = 0;
 let second = 0;
 let points = 0;

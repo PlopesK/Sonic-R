@@ -13,8 +13,6 @@ function game() {
         }   
     }
 
-    
-
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function (event) {
             jump();
