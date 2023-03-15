@@ -185,6 +185,8 @@ footer p {
 
 .run {
     animation: run 4s linear running;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 @keyframes run {
@@ -210,6 +212,8 @@ footer p {
 
 .jump {
     animation: jump 0.35s linear;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 @keyframes jump {
@@ -265,6 +269,8 @@ footer p {
     animation: block linear;
     animation-iteration-count: 1;
     animation-duration: 3s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 @keyframes block {
