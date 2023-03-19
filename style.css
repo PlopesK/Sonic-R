@@ -1,4 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/sf-intermosaic');
+@viewport {
+    zoom: 1.0;
+    min-zoom: 1.0;
+    max-zoom: 1.0;
+}
 
 /* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
 html {
@@ -20,13 +25,15 @@ a {
 /* 🚧🚧🚧🚧Body🚧🚧🚧🚧 */
 body {
     background-color: #257BE6;
+    font-size: 16px;
 }
 
 header {
     background-image: url("images/header.png");
-    background-size: auto 200px;
+    background-size: auto 30vh;
+    background-repeat: repeat-x ;
     width: 100%;
-    height: 180px;
+    height: 30vh;
     top: 0;
     display: flex;
     align-items: center;
@@ -35,9 +42,14 @@ header {
     color: white;
 }
 
+header img {
+    width: 40vh;
+    height: 24vh;
+}
+
 .subheader {
     background-image: url("images/header-bg.gif");
-    height: 10px;
+    height: 2vh;
     width: 100%;
     position: relative;
     padding-top: 10px;
@@ -46,6 +58,8 @@ header {
 
 footer {
 	padding: 30px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background-image: url("images/header-bg.gif");
     position: absolute;
@@ -53,7 +67,7 @@ footer {
 }
 
 footer .social-media {
-    font-size: 3vw;
+    font-size: 10vh;
 }
 
 footer a {
@@ -66,7 +80,7 @@ footer p {
     font-weight: 400;
     text-align: inherit;
     text-shadow: none !important;
-    font-size: 12px;
+    font-size: 2vh;
     line-height: 1.2em;
     padding-right: 40px !important;
     padding-left: 40px !important;
@@ -75,8 +89,8 @@ footer p {
 }
 
 .sega {
-    height: 50px;
-    margin-top: 20px;
+    height: 10vh;
+    margin-top: 5vh;
 }
 
 .logos {
@@ -89,7 +103,7 @@ footer p {
 
 .sega img {
     width: auto;
-    height: 40px;
+    height: 8vh;
 }
 
 .img-section {
@@ -100,7 +114,8 @@ footer p {
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 .area {
     width: 100%;
-    height: 340px;
+    min-height: 55vh;
+    max-height: 55vh;
     margin: auto;
     margin-bottom: 70px;
     padding-top: 10px;
@@ -117,28 +132,31 @@ footer p {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 100px;
-    height: 50px;
+    font-size: 2.5vh;
+    width: 15vh;
+    height: 10vh;
     background-color: #2058b6;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 0.7vh;
     opacity: 0.8;
     position: absolute;
     z-index: 4;
 }
 
 .game {
-    width: 620px;
-    height: 270px;
+    width: 120vh;
+    height: 42vh;
     background-image: url("sprites/background.gif");
-    border-radius: 10px;
+    background-size: 75vh 42vh;
+    background-repeat: repeat-x;
+    border-radius: 1.5vh;
     margin: auto;
     z-index: 0;
 }
 
 .game .left-wall {
     height: 110%;
-    width: 27%;
+    width: 45vh;
     left: 0;
     background-color: #257BE6;
     margin: auto;
@@ -148,7 +166,7 @@ footer p {
 
 .game .right-wall {
     height: 110%;
-    width: 27%;
+    width: 45vh;
     right: 0;
     background-color: #257BE6;
     margin: auto;
@@ -157,29 +175,26 @@ footer p {
 }
 
 .background {
-    animation: background 6s infinite linear;
+    animation: moving 20s infinite linear;
 }
 
-@keyframes background {
-    0% {
-        background-position-x: 0%;
-    }
-    100% {
-        background-position-x: 3050%;
+@keyframes moving {
+    to {
+        background-position-x: -798vh;
     }
 }
 
 .score {
     font-family: 'SF Intermosaic', sans-serif;
-    font-size: 1.5em;
+    font-size: 4vh;
     color:#103563;
-    height: 20px;
+    height: 3vh;
     width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1.5vh;
 }
 
 .score img {
@@ -192,14 +207,14 @@ footer p {
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
-    width: 50px;
-    height: 65px;
+    width: 7.7vh;
+    height: 10vh;
     background-image: url("sprites/sonic-idle.gif");
-    background-size: 50px 65px;
+    background-size: 7.7vh 10vh;
     background-repeat: no-repeat;
     position: relative;
-    top: 150px;
-    left: 10px;
+    top: 23vh;
+    left: 3vh;
     z-index: 3;
 }
 
@@ -212,21 +227,21 @@ footer p {
 @keyframes run {
     0% {
         background-image: url("sprites/sonic-start.gif");
-        left: 10px;
+        left: 3vh;
     }
     25% {
-        left: 90px;
+        left: 14vh;
     }
     50% {
         background-image: url("sprites/sonic-run.gif");
-        left: 200px;
+        left: 31vh;
     }
     75% {
-        left: 90px;
+        left: 14vh;
     }
     100% {
         background-image: url("sprites/sonic-run.gif");
-        left: 10px;
+        left: 3vh;
     }
 }
 
@@ -239,55 +254,55 @@ footer p {
 @keyframes jump {
     0% {
         background-image: url("sprites/sonic-jump.gif");
-        top:150px;
+        top: 23vh;
     }
     10% {
-        top: 120px;
+        top: 18.6vh;
     }
     20% {
-        top: 70px;
+        top: 11vh;
     }
     25% {
-        top: 70px;
+        top: 11vh;
     }
     50% {
-        top: 70px;
+        top: 11vh;
     }
     75% {
-        top: 70px;
+        top: 11vh;
     }
     90% {
         background-image: url("sprites/sonic-jump.gif");
-        top: 120px;
+        top: 18.6vh;
     }
     100% {
-        top: 150px;
+        top: 23vh;
     }
 }
 
 /* 🐞🐞🐞🐞Obstacle🐞🐞🐞🐞 */
 .enemies {
-    height: 45px;
+    height: 7vh;
 }
 
 .obstacle {
-    width: 65px;
-    height: 45px;
+    width: 10vh;
+    height: 7vh;
     background-repeat: no-repeat;
     position: relative;
-    left: 580px;
+    left: 120vh;
     left: calc(var(--left) * 1%);
     z-index: 1;
 }
 
 #badnik1 {
-    top: 55px;
-    background-size: 50px 45px;
+    top: 8.5vh;
+    background-size: 7.7vh 7vh;
 }
 
 #badnik2 {
-    top: 20px;
-    background-size: 65px 45px;
+    top: 3vh;
+    background-size: 10vh 7vh;
 }
 
 .block {
@@ -310,37 +325,32 @@ footer p {
 
 @keyframes block {
     0%{
-        left: 580px;
+        left: 120vh;
     }
     100% {
-        left: -40px;
+        left: -6vh;
     }
 }
 
 /* 🏞️🏞️🏞️🏞️Ground🏞️🏞️🏞️🏞️ */
 #ground {
     background-image: url("sprites/ground.png");
-    background-size: 200px 80px;
-    border-radius: 10px;
+    background-size: 34vh 12.4vh;
+    border-radius: 1.5vh;
     position: relative;
-    top: 90px;
+    top: 14vh;
     width: 100%;
-    height: 80px;
-    --left: 0;
-    left: calc(var(--left) * 1%);
+    height: 12.4vh;
     z-index: -1;
 }
 
 .move {
-    animation: move 4s infinite linear;
+    animation: move 14s infinite linear;
 }
 
 @keyframes move {
-    0% {
-        background-position-x: 100%;
-    }
-    100% {
-        background-position-x: -140%;
+    to {
+        background-position-x: -556vh;
     }
 }
 
@@ -405,8 +415,12 @@ footer p {
         text-align: center;
     }
 
-    .score img{
+    .score img {
         width: 20%;
+    }
+
+    .left-wall, .right-wall {
+        display: none;
     }
 }
 

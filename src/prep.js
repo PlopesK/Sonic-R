@@ -1,4 +1,6 @@
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
 window.addEventListener("DOMContentLoaded", function (event) {
     var load = document.getElementById("load");
     var loadEffect = setInterval(function () {
@@ -12,6 +14,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
             load.classList.remove("active");
         }
     }, 200);
+});
+
+window.addEventListener('resize', () => {
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
 });
 
 /* 💫💫💫💫Prevent scroll using Space or Arrows💫💫💫💫 */
@@ -33,9 +40,11 @@ function start() {
     button.classList.add("hidden");
     sonic.classList.add("run");
     ground.classList.add("move");
+    crono();
 
     sonic.addEventListener("animationend", function () {
         sonic.classList.remove("run");
+        ground.style.animationDuration = '9.5s'
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
         background.classList.add("background");
 

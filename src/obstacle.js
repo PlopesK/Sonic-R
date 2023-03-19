@@ -4,7 +4,7 @@ let minDuration = 1500;
 
 function enemy(){
     stop();
-    clearTimeout(respawnTime);
+    clearTimeout(respawn);
     clock = setInterval(() => { spawn(); }, 10);
 }
     
@@ -54,5 +54,5 @@ function flyRespawn() {
 function respawn() {
     clearTimeout(bugrestart);
     clearTimeout(flyrestart);
-    respawnTime = setTimeout(enemy, 5000);
+    setTimeout(enemy, 5000);
 }
