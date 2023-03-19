@@ -23,6 +23,8 @@ window.addEventListener("keydown", function(e) {
 }, false);
 
 /* 🎮🎮🎮🎮Start🎮🎮🎮🎮 */
+document.addEventListener("keydown", start, { once: true });
+
 function start() {
     const button = document.getElementById("play");
     const background = document.getElementById("background");

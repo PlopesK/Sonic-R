@@ -267,10 +267,19 @@ footer p {
 
 .block {
     animation: block linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.flying {
+    animation: block linear;
     animation-iteration-count: 1;
     animation-duration: 3s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    background-image: url('sprites/badnik2.gif');
 }
 
 @keyframes block {
