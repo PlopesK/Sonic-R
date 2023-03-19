@@ -4,6 +4,7 @@ let minDuration = 1500;
 
 function enemy(){
     stop();
+    clearTimeout(respawnTime);
     clock = setInterval(() => { spawn(); }, 10);
 }
     
@@ -34,7 +35,7 @@ function bugRespawn() {
 
     bug.classList.remove("block");
     bug.removeEventListener("animationend", respawn);
-    respawn();
+    bugrestart = setTimeout(respawn, 1500);
 }
 
 function flyRespawn() {
@@ -47,13 +48,11 @@ function flyRespawn() {
 
     fly.classList.remove("flying");
     fly.removeEventListener("animationend", respawn);
-    respawn();
+    flyrestart = setTimeout(respawn, 3000);
 }
 
 function respawn() {
-    clearTimeout(bugRespawn);
-    clearTimeout(flyRespawn);
-    setTimeout(function () {
-        enemy;
-    }, 5000);
+    clearTimeout(bugrestart);
+    clearTimeout(flyrestart);
+    respawnTime = setTimeout(enemy, 5000);
 }

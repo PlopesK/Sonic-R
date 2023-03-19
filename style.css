@@ -141,6 +141,7 @@ footer p {
     width: 27%;
     left: 0;
     background-color: #257BE6;
+    margin: auto;
     position: absolute;
     z-index: 3;
 }
@@ -150,6 +151,7 @@ footer p {
     width: 27%;
     right: 0;
     background-color: #257BE6;
+    margin: auto;
     position: absolute;
     z-index: 3;
 }
@@ -239,19 +241,23 @@ footer p {
         background-image: url("sprites/sonic-jump.gif");
         top:150px;
     }
-    25% {
+    10% {
         top: 120px;
     }
-    40% {
+    20% {
+        top: 70px;
+    }
+    25% {
         top: 70px;
     }
     50% {
         top: 70px;
     }
-    60% {
+    75% {
         top: 70px;
     }
-    75% {
+    90% {
+        background-image: url("sprites/sonic-jump.gif");
         top: 120px;
     }
     100% {
