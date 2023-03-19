@@ -136,6 +136,24 @@ footer p {
     z-index: 0;
 }
 
+.game .left-wall {
+    height: 110%;
+    width: 27%;
+    left: 0;
+    background-color: #257BE6;
+    position: absolute;
+    z-index: 3;
+}
+
+.game .right-wall {
+    height: 110%;
+    width: 27%;
+    right: 0;
+    background-color: #257BE6;
+    position: absolute;
+    z-index: 3;
+}
+
 .background {
     animation: background 6s infinite linear;
 }
@@ -289,7 +307,7 @@ footer p {
         left: 580px;
     }
     100% {
-        left: -10px;
+        left: -40px;
     }
 }
 

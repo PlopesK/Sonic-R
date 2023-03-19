@@ -1,4 +1,4 @@
-/* Enemmy */
+/* 👾👾👾👾Enemy👾👾👾👾 */
 let timer = 0;
 let minDuration = 1500;
 
@@ -40,7 +40,7 @@ function bugRespawn() {
 function flyRespawn() {
     const fly = document.getElementById("badnik2");
     const minDuration2 = 1000;
-    const maxDuration2 = 5000;
+    const maxDuration2 = 3000;
     const randomDuration2 = Math.floor(Math.random() * (maxDuration2 - minDuration2 + 1)) + minDuration2;
     const animationDuration2 = `${randomDuration2 / 1000}s`;
     fly.style.animationDuration = animationDuration2;
