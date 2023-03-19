@@ -30,7 +30,7 @@ function start() {
     const background = document.getElementById("background");
     const ground = document.getElementById("ground");
     const sonic = document.getElementById("sonic");
-    button.style.display = "none";
+    button.classList.add("hidden");
     sonic.classList.add("run");
     ground.classList.add("move");
 

@@ -252,6 +252,7 @@ footer p {
     background-repeat: no-repeat;
     position: relative;
     left: 580px;
+    left: calc(var(--left) * 1%);
     z-index: 1;
 }
 
@@ -267,10 +268,11 @@ footer p {
 
 .block {
     animation: block linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-duration: 3s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    background-image: url('sprites/badnik1.gif');
 }
 
 .flying {
@@ -300,6 +302,8 @@ footer p {
     top: 90px;
     width: 100%;
     height: 80px;
+    --left: 0;
+    left: calc(var(--left) * 1%);
     z-index: -1;
 }
 
@@ -380,4 +384,8 @@ footer p {
     .score img{
         width: 20%;
     }
+}
+
+.hidden {
+    display: none;
 }
