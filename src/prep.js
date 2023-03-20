@@ -49,30 +49,10 @@ function start() {
 
     sonic.addEventListener("animationend", function () {
         sonic.classList.remove("run");
-        ground.style.animationDuration = '9.5s'
+        ground.style.animationDuration = '8.5s'
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
 
         game ();
         enemy();
     });
-
-    function backgroundMove() {
-        let lastTime = 0;
-        let positionX = 0;
-        let speed = 50;
-    
-        function animate(timestamp) {
-            if (!lastTime) lastTime = timestamp;
-            let elapsed = timestamp - lastTime;
-            lastTime = timestamp;
-        
-            positionX -= (speed * elapsed) / 1000;
-        
-            background.style.backgroundPositionX = positionX + 'px';
-        
-            requestAnimationFrame(animate);
-        }
-    
-        requestAnimationFrame(animate);
-    }
 }

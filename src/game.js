@@ -9,6 +9,7 @@ function game() {
             }, 400);
         }   
     }
+    
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function () {
             jump();
@@ -19,19 +20,18 @@ function game() {
 function backgroundMove() {
     let lastTime = 0;
     let positionX = 0;
-    let speed = 50;
+    let speed = 100;
 
     function animate(timestamp) {
-    if (!lastTime) lastTime = timestamp;
-    let elapsed = timestamp - lastTime;
-    lastTime = timestamp;
+        if (!lastTime) lastTime = timestamp;
+        let elapsed = timestamp - lastTime;
+        lastTime = timestamp;
 
-    positionX -= (speed * elapsed) / 1000;
+        positionX -= ((speed * elapsed) / 1000);
 
-    background.style.backgroundPositionX = positionX + 'px';
+        background.style.backgroundPositionX = positionX + 'px';
 
-    requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
     }
-
     requestAnimationFrame(animate);
 }
