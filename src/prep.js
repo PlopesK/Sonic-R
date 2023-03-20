@@ -49,12 +49,15 @@ window.addEventListener("keydown", function(e) {
 }, false);
 
 /* 🎮🎮🎮🎮Start🎮🎮🎮🎮 */
-document.addEventListener("keydown", function (){
+function wait() {
     start();
     backgroundMove();
-},  { once: true });
+}
+
+document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
+    document.removeEventListener("keydown", wait,  { once: true });
     const button = document.getElementById("play");
     const sonic = document.getElementById("sonic");
     button.classList.add("hidden");
