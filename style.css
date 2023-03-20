@@ -168,7 +168,8 @@ footer p {
 .game .right-wall {
     height: 110%;
     width: 25vh;
-    right: 0;
+    transform: translateX(479%);
+    margin-right: 10px;
     background-color: #257BE6;
     margin: auto;
     position: absolute;
@@ -224,7 +225,6 @@ footer p {
         left: 14vh;
     }
     50% {
-        background-image: url("sprites/sonic-run.gif");
         left: 31vh;
     }
     75% {
@@ -335,16 +335,6 @@ footer p {
     z-index: -1;
 }
 
-.move {
-    animation: move 14s infinite linear;
-}
-
-@keyframes move {
-    to {
-        background-position-x: -556vh;
-    }
-}
-
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
 .load-wrapper {
     display: block;
@@ -424,6 +414,7 @@ footer p {
     }
 }
 
+/* 🤫🤫🤫🤫SHHHHHHH🤫🤫🤫🤫 */
 .hidden {
     display: none;
 }

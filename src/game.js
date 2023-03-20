@@ -17,10 +17,10 @@ function game() {
     });
 }
 
+/* 🏞️🏞️🏞️🏞️Background Moving🏞️🏞️🏞️🏞️ */
 let lastTime = 0;
 let speed = 100;
 let speedGround = 200;
-
 function backgroundMove() {
     let positionX = 0;
     let positionXG = 0;

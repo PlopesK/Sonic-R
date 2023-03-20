@@ -14,16 +14,30 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }, 200);
 });
 
+(function() {
+    var requestAnimationFrame = window.requestAnimationFrame || 
+                                window.mozRequestAnimationFrame || 
+                                window.webkitRequestAnimationFrame ||
+                                window.msRequestAnimationFrame;
+  
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+
+/* 🖥️🖥️🖥️🖥️Window Resize🖥️🖥️🖥️🖥️ */
 let windowHeight = window.innerHeight;
 let windowWidth = window.innerWidth;
 window.addEventListener('resize', () => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
     const parentDiv = document.getElementById("background");
-    const object = document.getElementById("left");
-    const marginLeft = parseInt(window.getComputedStyle(object).marginLeft);
+    const objectL = document.getElementById("left");
+    const objectR = document.getElementById("right");
+    const marginLeft = parseInt(window.getComputedStyle(objectL).marginLeft);
+    const marginRight = parseInt(window.getComputedStyle(objectR).marginRight);
     const leftPosition = parentDiv.offsetLeft + marginLeft;
-    object.style.left = leftPosition + "px";
+    const rightPosition = parentDiv.offsetLeft + marginRight;
+    objectL.style.left = leftPosition + "px";
+    objectR.style.left = rightPosition + "px";
 });
 
 /* 💫💫💫💫Prevent scroll using Space or Arrows💫💫💫💫 */
@@ -35,8 +49,10 @@ window.addEventListener("keydown", function(e) {
 }, false);
 
 /* 🎮🎮🎮🎮Start🎮🎮🎮🎮 */
-document.addEventListener("keydown", start,  { once: true });
-document.addEventListener("keydown", backgroundMove,  { once: true });
+document.addEventListener("keydown", function (){
+    start();
+    backgroundMove();
+},  { once: true });
 
 function start() {
     const button = document.getElementById("play");
