@@ -40,11 +40,9 @@ document.addEventListener("keydown", backgroundMove,  { once: true });
 
 function start() {
     const button = document.getElementById("play");
-    const ground = document.getElementById("ground");
     const sonic = document.getElementById("sonic");
     button.classList.add("hidden");
     sonic.classList.add("run");
-    ground.classList.add("move");
     crono();
 
     sonic.addEventListener("animationend", function () {

@@ -16,7 +16,7 @@ function score(){
     if ((millisecond += 10) == 100) {
         millisecond = 0;
         points++;
-    }
+    } 
     document.getElementById('points').innerText = returnData(points);
 }
 
