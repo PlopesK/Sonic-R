@@ -59,7 +59,8 @@ header img {
 footer {
 	padding: 30px;
     width: 100%;
-    height: 100%;
+    height: 60%;
+    margin-top: 2vh;
     text-align: center;
     background-image: url("images/header-bg.gif");
     position: absolute;
@@ -80,17 +81,17 @@ footer p {
     font-weight: 400;
     text-align: inherit;
     text-shadow: none !important;
-    font-size: 2vh;
+    font-size: 2.3vh;
     line-height: 1.2em;
     padding-right: 40px !important;
     padding-left: 40px !important;
-    margin-top: 5px;
+    margin-top: 1vh;
     word-wrap: break-word;
 }
 
 .sega {
     height: 10vh;
-    margin-top: 5vh;
+    margin-top: 6vh;
 }
 
 .logos {
@@ -114,8 +115,7 @@ footer p {
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 .area {
     width: 100%;
-    min-height: 55vh;
-    max-height: 55vh;
+    height: 55vmin;
     margin: auto;
     margin-bottom: 70px;
     padding-top: 10px;
@@ -156,8 +156,9 @@ footer p {
 
 .game .left-wall {
     height: 110%;
-    width: 45vh;
-    left: 0;
+    width: 25vh;
+    transform: translateX(-100%);
+    margin-left: 10px;
     background-color: #257BE6;
     margin: auto;
     position: absolute;
@@ -166,7 +167,7 @@ footer p {
 
 .game .right-wall {
     height: 110%;
-    width: 45vh;
+    width: 25vh;
     right: 0;
     background-color: #257BE6;
     margin: auto;
@@ -392,18 +393,17 @@ footer p {
 }
 
 /* 📱📱📱📱Mobile📱📱📱📱 */
-@media(max-width: 700px){
+@media(max-width: 800px){
     .background {
-        animation: background 50.5s infinite linear;
+        animation: moving 50.5s infinite linear;
     }
 
     .move {
         animation: move 2s infinite linear;
     }
 
-    footer p {
-        padding-left: 10px;
-        padding-right: 10px;
+    footer {
+        height: auto;
     }
 
     footer .social-media {
@@ -420,6 +420,16 @@ footer p {
     }
 
     .left-wall, .right-wall {
+        display: none;
+    }
+
+    .area {
+        margin-bottom: 125px;
+    }
+}
+
+@media(max-width: 1200px){
+    .right-wall {
         display: none;
     }
 }

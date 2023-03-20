@@ -1,6 +1,4 @@
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
 window.addEventListener("DOMContentLoaded", function (event) {
     var load = document.getElementById("load");
     var loadEffect = setInterval(function () {
@@ -16,9 +14,16 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }, 200);
 });
 
+let windowHeight = window.innerHeight;
+let windowWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-  windowWidth = window.innerWidth;
-  windowHeight = window.innerHeight;
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+    const parentDiv = document.getElementById("background");
+    const object = document.getElementById("left");
+    const marginLeft = parseInt(window.getComputedStyle(object).marginLeft);
+    const leftPosition = parentDiv.offsetLeft + marginLeft;
+    object.style.left = leftPosition + "px";
 });
 
 /* 💫💫💫💫Prevent scroll using Space or Arrows💫💫💫💫 */
