@@ -35,7 +35,7 @@ function bugRespawn() {
 
     bug.classList.remove("block");
     bug.removeEventListener("animationend", respawn);
-    bugrestart = setTimeout(respawn, 1500);
+    bugrestart = setTimeout(respawn, 5000);
 }
 
 function flyRespawn() {
@@ -48,7 +48,7 @@ function flyRespawn() {
 
     fly.classList.remove("flying");
     fly.removeEventListener("animationend", respawn);
-    flyrestart = setTimeout(respawn, 3000);
+    flyrestart = setTimeout(respawn, 8000);
 }
 
 function respawn() {

@@ -17,7 +17,6 @@ function score(){
         millisecond = 0;
         points++;
     }
-
     document.getElementById('points').innerText = returnData(points);
 }
 

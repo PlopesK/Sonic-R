@@ -14,5 +14,24 @@ function game() {
             jump();
         });
     });
-    
+}
+
+function backgroundMove() {
+    let lastTime = 0;
+    let positionX = 0;
+    let speed = 50;
+
+    function animate(timestamp) {
+    if (!lastTime) lastTime = timestamp;
+    let elapsed = timestamp - lastTime;
+    lastTime = timestamp;
+
+    positionX -= (speed * elapsed) / 1000;
+
+    background.style.backgroundPositionX = positionX + 'px';
+
+    requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
 }

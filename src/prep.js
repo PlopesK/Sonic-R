@@ -35,11 +35,11 @@ window.addEventListener("keydown", function(e) {
 }, false);
 
 /* 🎮🎮🎮🎮Start🎮🎮🎮🎮 */
-document.addEventListener("keydown", start, { once: true });
+document.addEventListener("keydown", start,  { once: true });
+document.addEventListener("keydown", backgroundMove,  { once: true });
 
 function start() {
     const button = document.getElementById("play");
-    const background = document.getElementById("background");
     const ground = document.getElementById("ground");
     const sonic = document.getElementById("sonic");
     button.classList.add("hidden");
@@ -51,9 +51,28 @@ function start() {
         sonic.classList.remove("run");
         ground.style.animationDuration = '9.5s'
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
-        background.classList.add("background");
 
         game ();
         enemy();
     });
+
+    function backgroundMove() {
+        let lastTime = 0;
+        let positionX = 0;
+        let speed = 50;
+    
+        function animate(timestamp) {
+            if (!lastTime) lastTime = timestamp;
+            let elapsed = timestamp - lastTime;
+            lastTime = timestamp;
+        
+            positionX -= (speed * elapsed) / 1000;
+        
+            background.style.backgroundPositionX = positionX + 'px';
+        
+            requestAnimationFrame(animate);
+        }
+    
+        requestAnimationFrame(animate);
+    }
 }

@@ -175,16 +175,6 @@ footer p {
     z-index: 3;
 }
 
-.background {
-    animation: moving 20s infinite linear;
-}
-
-@keyframes moving {
-    to {
-        background-position-x: -798vh;
-    }
-}
-
 .score {
     font-family: 'SF Intermosaic', sans-serif;
     font-size: 4vh;
