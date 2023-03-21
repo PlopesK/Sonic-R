@@ -48,7 +48,7 @@ header img {
 }
 
 .subheader {
-    background-image: url("images/header-bg.gif");
+    background-image: url("images/footer-bg.gif");
     height: 2vh;
     width: 100%;
     position: relative;
@@ -62,7 +62,7 @@ footer {
     height: 60%;
     margin-top: 2vh;
     text-align: center;
-    background-image: url("images/header-bg.gif");
+    background-image: url("images/footer-bg.gif");
     position: absolute;
     color: white;
 }
