@@ -13,9 +13,9 @@ function stop() {
 function spawn(){
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
-    if ((timer += 10) == (3000)) {
+    if ((timer += 10) == (2000)) {
         bug.classList.add("block");
-    } if (timer == (6000)){
+    } if (timer == (4000)){
         timer = 0;
         fly.classList.add("flying");
     }
@@ -25,7 +25,7 @@ function spawn(){
 
 function bugRespawn() {
     const bug = document.getElementById("badnik1");
-    const minDuration = 1500;
+    const minDuration = 2500;
     const maxDuration = 3500;
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
@@ -33,18 +33,16 @@ function bugRespawn() {
 
     bug.classList.remove("block");
     bug.removeEventListener("animationend", bugRespawn);
-    enemy();
 }
 
 function flyRespawn() {
     const fly = document.getElementById("badnik2");
-    const minDuration = 1500;
-    const maxDuration = 4500;
+    const minDuration = 1000;
+    const maxDuration = 2000;
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
     fly.style.animationDuration = animationDuration;
 
     fly.classList.remove("flying");
     fly.removeEventListener("animationend", flyRespawn);
-    enemy();
 }
