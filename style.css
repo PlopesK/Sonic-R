@@ -134,6 +134,19 @@ footer p {
     font-family: 'SF Intermosaic', sans-serif;
     font-size: 3vh;
     z-index: 3;
+    animation: press 2s infinite ease-in-out;
+}
+
+@keyframes press {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .button {
