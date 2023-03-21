@@ -50,7 +50,7 @@ function backgroundMove() {
     requestAnimationFrame(animate);
 }
 
-/* Objects Moving */
+/* 🌴🌴🌴🌴Objects Moving🌴🌴🌴🌴 */
 const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png'];
 let objIntervalId = 0;
 let timerObj = 0;

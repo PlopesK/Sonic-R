@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     }, 200);
 
-    /* Pre-loading images */
+    /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", "sprites/sonic-jump.gif", 'sprites/Object1.png', 'sprites/Object2.png', 'sprites/badnik1.gif', 'sprites/badnik2.gif', "sprites/ground.png", "sprites/background.gif", 'images/sonic.ico', 'images/Sonic_Runners_logo.png', "sprites/score.png", "images/footer-bg.gif", "images/header.png"];
     var images = [];
     for (var i = 0; i < imageUrls.length; i++) {
@@ -63,7 +63,6 @@ function wait() {
     backgroundMove();
     object();
 }
-
 document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
