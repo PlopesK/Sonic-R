@@ -58,8 +58,8 @@ let timerObj = 0;
 function object() {
     objInterval();
     setInterval(() => { objectSpawn(); }, 10);
-    const object4 = document.getElementById("object4");
-    object4.addEventListener("animationend", objRespawn);
+    const object5 = document.getElementById("object5");
+    object5.addEventListener("animationend", objRespawn);
 }
 
 function objInterval() {
@@ -76,35 +76,42 @@ function randItem(arr) {
 
 function objectSpawn() {
     const objectBackground = randItem(OBJECTS);
-    const decoration = document.querySelector(".object");
+    const object1 = document.getElementById("object1");
     const object2 = document.getElementById("object2");
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
+    const object5 = document.getElementById("object5");
 
-    if ((timerObj += 10) == (1500)) {
-        decoration.classList.add("move");
-        decoration.style.backgroundImage = `url(${objectBackground})`;
+    if ((timerObj += 10) == (2000)) {
+        object1.classList.add("move");
+        object1.style.backgroundImage = `url(${objectBackground})`;
     } if (timerObj == 3000) {
         object2.classList.add("move");
         object2.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 3700) {
+    } if (timerObj == 3400) {
         object3.classList.add("move");
         object3.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 5200) {
-        timerObj = 0;
+    } if (timerObj == 4400) {
         object4.classList.add("move");
         object4.style.backgroundImage = `url(${objectBackground})`;
+    } if (timerObj == 5500) {
+        timerObj = 0;
+        object5.classList.add("move");
+        object5.style.backgroundImage = `url(${objectBackground})`;
     }
 }
 
 function objRespawn() {
-    const decoration = document.querySelector(".object");
+    const object1 = document.getElementById("object1");
     const object2 = document.getElementById("object2");
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
-    decoration.classList.remove("move");
+    const object5 = document.getElementById("object5");
+
+    object1.classList.remove("move");
     object2.classList.remove("move");
     object3.classList.remove("move");
     object4.classList.remove("move");
+    object5.classList.remove("move");
     objInterval();
 }
