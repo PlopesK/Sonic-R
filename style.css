@@ -129,6 +129,7 @@ footer p {
 
 .start p {
     position: absolute;
+    text-align: center;
     top: 35%;
     color: azure;
     font-family: 'SF Intermosaic', sans-serif;
@@ -343,14 +344,14 @@ footer p {
     }
 }
 
-/* Background Objects */
+/* 🌴🌴🌴🌴Background Objects🌴🌴🌴🌴 */
 .object {
     position: absolute;
     background-repeat: no-repeat;
     width: 70vh;
-    height: 29.8vh;
+    height: 30vh;
     right: -80vh;
-    top: 53vh;
+    top: 56vh;
     z-index: -2;
 }
 
@@ -442,6 +443,7 @@ footer p {
 
     .area {
         margin-bottom: 125px;
+        margin-top: 70px;
     }
 }
 
