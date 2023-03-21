@@ -335,7 +335,7 @@ footer p {
 
 .move {
     animation: moving 1 linear;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
 }

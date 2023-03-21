@@ -58,12 +58,12 @@ let timerObj = 0;
 function object() {
     objInterval();
     setInterval(() => { objectSpawn(); }, 10);
-    const decoration = document.querySelector(".object");
-    decoration.addEventListener("animationend", objRespawn);
+    const object4 = document.getElementById("object4");
+    object4.addEventListener("animationend", objRespawn);
 }
 
 function objInterval() {
-    clearInterval(objIntervalId);
+    clearInterval(object);
 }
 
 function randInteger(min, max) {
@@ -77,21 +77,34 @@ function randItem(arr) {
 function objectSpawn() {
     const objectBackground = randItem(OBJECTS);
     const decoration = document.querySelector(".object");
-    if ((timerObj += 10) == (3000)) {
-        timerObj = 0;
+    const object2 = document.getElementById("object2");
+    const object3 = document.getElementById("object3");
+    const object4 = document.getElementById("object4");
+
+    if ((timerObj += 10) == (1500)) {
         decoration.classList.add("move");
         decoration.style.backgroundImage = `url(${objectBackground})`;
+    } if (timerObj == 3000) {
+        object2.classList.add("move");
+        object2.style.backgroundImage = `url(${objectBackground})`;
+    } if (timerObj == 3700) {
+        object3.classList.add("move");
+        object3.style.backgroundImage = `url(${objectBackground})`;
+    } if (timerObj == 5200) {
+        timerObj = 0;
+        object4.classList.add("move");
+        object4.style.backgroundImage = `url(${objectBackground})`;
     }
 }
 
 function objRespawn() {
     const decoration = document.querySelector(".object");
-    const minDuration = 2500;
-    const maxDuration = 3500;
-    const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
-    const animationDuration = `${randomDuration / 1000}s`;
-    decoration.style.animationDuration = animationDuration;
+    const object2 = document.getElementById("object2");
+    const object3 = document.getElementById("object3");
+    const object4 = document.getElementById("object4");
     decoration.classList.remove("move");
+    object2.classList.remove("move");
+    object3.classList.remove("move");
+    object4.classList.remove("move");
     objInterval();
-    objIntervalId = setInterval(() => { objectSpawn(); }, randomDuration);
 }
