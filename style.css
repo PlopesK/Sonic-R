@@ -220,6 +220,23 @@ footer p {
     margin-left: 0.3em;
 }
 
+.rings {
+    font-family: 'SF Intermosaic', sans-serif;
+    font-size: 4vh;
+    color:#103563;
+    height: 3vh;
+    width: auto;
+    right: 45vh;
+    top: 40vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5vh;
+    z-index: 4;
+}
+
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
     width: 7.7vh;

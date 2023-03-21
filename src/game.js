@@ -9,12 +9,59 @@ function game() {
             }, 400);
         }   
     }
-    
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function () {
             jump();
         });
     });
+
+    const sonic = document.getElementById("sonic");
+    const bug = document.getElementById("badnik1");
+    const fly = document.getElementById("badnik2");
+    const livesDisplay = document.getElementById("lives");
+    let lives = 3;
+    let isPaused = false;
+    let canLoseLife = true;
+
+    function checkCollision() {
+    if (isPaused) {
+        return;
+    }
+
+    if (canLoseLife && (isColliding(sonic, bug) && bug.classList.contains("block") || isColliding(sonic, fly) && bug.classList.contains("flying"))) {
+            lives--;
+            livesDisplay.innerHTML = `Lives: ${lives}`;
+
+            if (lives <= 0) {
+            gameOver();
+            } else {
+                canLoseLife = false;
+                setTimeout(() => {
+                  canLoseLife = true;
+                }, 2000);
+            }
+        }
+    }
+
+    function isColliding(a, b) {
+        let aRect = a.getBoundingClientRect();
+        let bRect = b.getBoundingClientRect();
+
+        return !(
+            aRect.bottom < bRect.top ||
+            aRect.top > bRect.bottom ||
+            aRect.right < bRect.left ||
+            aRect.left > bRect.right
+        );
+    }
+
+    function gameOver() {
+        isPaused = true;
+        alert("Game Over");
+        location.reload()
+    }
+
+    setInterval(checkCollision, 100);
 }
 
 /* 🏞️🏞️🏞️🏞️Background Moving🏞️🏞️🏞️🏞️ */
