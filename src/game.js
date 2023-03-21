@@ -43,11 +43,17 @@ function game() {
             if (lives <= 0) {
                 gameOver();
             } else {
-                lives -= 1;
-                canLoseLife = true;
-                livesDisplay.innerHTML = `Lives: ${lives}`;
+                lostLife();
             }
         }
+    }
+
+    function lostLife() {
+        setTimeout(() => {
+            lives -= 1;
+            canLoseLife = true;
+            livesDisplay.innerHTML = `Lives: ${lives}`;
+        }, 500);
     }
 
     function gameOver() {
