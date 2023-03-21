@@ -28,31 +28,26 @@ function game() {
         return;
     }
 
-    if (canLoseLife && (isColliding(sonic, bug) && bug.classList.contains("block") || isColliding(sonic, fly) && bug.classList.contains("flying"))) {
-            lives--;
-            livesDisplay.innerHTML = `Lives: ${lives}`;
+    let sonicTop = parseInt(
+        window.getComputedStyle(sonic).getPropertyValue("top"));
 
+    let obstLeft = parseInt(
+        window.getComputedStyle(bug).getPropertyValue("left"));
+    
+    let obsTop = parseInt(
+        window.getComputedStyle(fly).getPropertyValue("left"));
+
+    if (obstLeft < 40 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
+        obsTop < 40 && obsTop > 0 && sonicTop <= 140 && canLoseLife == true) {   
+            canLoseLife = false;
             if (lives <= 0) {
-            gameOver();
+                gameOver();
             } else {
-                canLoseLife = false;
-                setTimeout(() => {
-                  canLoseLife = true;
-                }, 2000);
+                lives -= 1;
+                canLoseLife = true;
+                livesDisplay.innerHTML = `Lives: ${lives}`;
             }
         }
-    }
-
-    function isColliding(a, b) {
-        let aRect = a.getBoundingClientRect();
-        let bRect = b.getBoundingClientRect();
-
-        return !(
-            aRect.bottom < bRect.top ||
-            aRect.top > bRect.bottom ||
-            aRect.right < bRect.left ||
-            aRect.left > bRect.right
-        );
     }
 
     function gameOver() {

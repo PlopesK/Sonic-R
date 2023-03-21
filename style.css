@@ -318,7 +318,7 @@ footer p {
 }
 
 .obstacle {
-    width: 10vh;
+    width: 8vh;
     height: 7vh;
     background-repeat: no-repeat;
     position: relative;
@@ -333,7 +333,8 @@ footer p {
 }
 
 #badnik2 {
-    top: 3vh;
+    width: 10vh;
+    bottom: 1.5vh;
     background-size: 10vh 7vh;
 }
 
