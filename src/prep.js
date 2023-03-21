@@ -21,6 +21,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
         img.src = imageUrls[i];
         images.push(img);
     }
+    /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
+    var audio = new Audio('sounds/Extras Menu - Sonic Mega Collection [OST].mp3');
+    audio.loop = true; 
+    audio.play();
 });
 
 (function() {
