@@ -60,8 +60,10 @@ document.addEventListener("keydown", wait,  { once: true });
 function start() {
     document.removeEventListener("keydown", wait,  { once: true });
     const button = document.getElementById("play");
+    const play = document.getElementById("play-txt");
     const sonic = document.getElementById("sonic");
     button.classList.add("hidden");
+    play.classList.add("hidden");
     sonic.classList.add("run");
     crono();
 
