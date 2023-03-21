@@ -44,9 +44,54 @@ function backgroundMove() {
 
         background.style.backgroundPositionX = positionX + 'px';
         ground.style.backgroundPositionX = positionXG + 'px';
-        console.log(`${speedGround}, ${speed}`);
 
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
+}
+
+/* Objects Moving */
+const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png'];
+let objIntervalId = 0;
+let timerObj = 0;
+
+function object() {
+    objInterval();
+    setInterval(() => { objectSpawn(); }, 10);
+    const decoration = document.querySelector(".object");
+    decoration.addEventListener("animationend", objRespawn);
+}
+
+function objInterval() {
+    clearInterval(objIntervalId);
+}
+
+function randInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randItem(arr) {
+    return arr[randInteger(0, arr.length - 1)];
+}
+
+function objectSpawn() {
+    const objectBackground = randItem(OBJECTS);
+    const decoration = document.querySelector(".object");
+    if ((timerObj += 10) == (3000)) {
+        timerObj = 0;
+        decoration.classList.add("move");
+        decoration.style.backgroundImage = `url(${objectBackground})`;
+    }
+}
+
+function objRespawn() {
+    const decoration = document.querySelector(".object");
+    const minDuration = 2500;
+    const maxDuration = 3500;
+    const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
+    const animationDuration = `${randomDuration / 1000}s`;
+    decoration.style.animationDuration = animationDuration;
+    decoration.classList.remove("move");
+    objInterval();
+    objIntervalId = setInterval(() => { objectSpawn(); }, randomDuration);
 }

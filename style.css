@@ -156,7 +156,7 @@ footer p {
 
 .game .left-wall {
     height: 110%;
-    width: 25vh;
+    width: 50vh;
     transform: translateX(-100%);
     margin-left: 10px;
     background-color: #257BE6;
@@ -167,8 +167,8 @@ footer p {
 
 .game .right-wall {
     height: 110%;
-    width: 25vh;
-    transform: translateX(479%);
+    width: 50vh;
+    transform: translateX(239.5%);
     margin-right: 10px;
     background-color: #257BE6;
     margin: auto;
@@ -297,8 +297,7 @@ footer p {
 }
 
 .block {
-    animation: block linear;
-    animation-iteration-count: 1;
+    animation: block 1 linear;
     animation-duration: 3s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -306,8 +305,7 @@ footer p {
 }
 
 .flying {
-    animation: block linear;
-    animation-iteration-count: 1;
+    animation: block 1 linear;
     animation-duration: 3s;
     backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -321,6 +319,32 @@ footer p {
     100% {
         left: -6vh;
     }
+}
+
+/* Background Objects */
+.object {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 29.8vh;
+    right: -80vh;
+    top: 53vh;
+    z-index: -2;
+}
+
+.move {
+    animation: moving 1 linear;
+    animation-duration: 3s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+@keyframes moving {
+    100% {
+        right: 130vh;
+    }
+    
 }
 
 /* 🏞️🏞️🏞️🏞️Ground🏞️🏞️🏞️🏞️ */
@@ -374,14 +398,6 @@ footer p {
 
 /* 📱📱📱📱Mobile📱📱📱📱 */
 @media(max-width: 800px){
-    .background {
-        animation: moving 50.5s infinite linear;
-    }
-
-    .move {
-        animation: move 2s infinite linear;
-    }
-
     footer {
         height: auto;
     }

@@ -3,7 +3,7 @@ let timer = 0;
 
 function enemy(){
     stop();
-    clock = setInterval(() => { spawn(); }, 10);
+    setInterval(() => { spawn(); }, 10);
 }
     
 function stop() {

@@ -52,6 +52,7 @@ window.addEventListener("keydown", function(e) {
 function wait() {
     start();
     backgroundMove();
+    object();
 }
 
 document.addEventListener("keydown", wait,  { once: true });
@@ -66,7 +67,6 @@ function start() {
 
     sonic.addEventListener("animationend", function () {
         sonic.classList.remove("run");
-        ground.style.animationDuration = '8.5s'
         sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
 
         game ();
