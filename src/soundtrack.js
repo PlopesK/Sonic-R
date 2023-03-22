@@ -13,4 +13,7 @@ var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
 Jump.volume = 1;
 
 var ScoreHit = new Audio('audios/Sonic the Hedgehog Cha Ching Sound Effect.mp3');
-ScoreHit.volume = 0.7;
+ScoreHit.volume = 0.8;
+
+var HitDamage = new Audio('audios/Sonic Getting Hit (Sound Effect).mp3');
+HitDamage.volume = 0.5;
