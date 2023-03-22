@@ -37,9 +37,12 @@
                 <div class="game" id="background">
                     <div class="left-wall" id="left"></div>
                     <div class="right-wall" id="right"></div>
-                    <div class="score"> <img loading="lazy" src="sprites/score.png"> </div>
-                    <span class="score" id="points">00</span>
-                    <span class="rings" id="lifes">Lifes: 3</span>
+                    <div class="layout">
+                        <div class="column">
+                            <div class="score"> <img loading="lazy" src="sprites/score.png"> </div>
+                            <span class="score" id="points">00</span>
+                        </div>
+                    </div>
                     <div id="sonic"></div>
                     <div class="enemies">
                         <div class="obstacle" id="badnik2"></div>
@@ -51,6 +54,12 @@
                         <div class="object" id="object3"></div>
                         <div class="object" id="object4"></div>
                         <div class="object" id="object5"></div>
+                    </div>
+                    <div class="alive">
+                        <div class="row">
+                            <div class="rings"> <img loading="lazy" src="sprites/life-icon.gif"> </div>
+                            <div class="rings" id="lifes"> </div>
+                        </div>
                     </div>
                     <div class="ground" id="ground"></div>
                 </div>

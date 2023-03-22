@@ -138,10 +138,6 @@ footer p {
     animation: press 2s infinite ease-in-out;
 }
 
-.scoreAnimation {
-    animation: press 2s 3 ease-in-out;
-}
-
 @keyframes press {
     0% {
         opacity: 1;
@@ -203,6 +199,40 @@ footer p {
     z-index: 3;
 }
 
+.layout {
+    width: 100%;
+    height: 2vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5vh;
+    z-index: 4;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 4vh;
+}
+
+.alive {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: baseline;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    position: absolute;
+    top: 17.5vh;
+    left: 2vh;
+    width: 30%;
+    height: 10vh;
+}
+
 .score {
     font-family: 'SF Intermosaic', sans-serif;
     font-size: 4vh;
@@ -218,28 +248,37 @@ footer p {
 }
 
 .score img {
-    width: 15%;
+    width: 30%;
 }
 
 #points {
     margin-left: 0.3em;
 }
 
+.scoreAnimation {
+    animation: press 2s 3 ease-in-out;
+}
+
 .rings {
-    font-family: 'SF Intermosaic', sans-serif;
-    font-size: 4vh;
     color:#103563;
-    height: 3vh;
-    width: auto;
-    right: 45vh;
-    top: 40vh;
-    position: absolute;
+    height: 8vh;
+    width: 10vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    margin-top: 1.5vh;
     z-index: 4;
+}
+
+.rings img {
+    width: 85%;
+}
+
+#lifes {
+    background-image: url("sprites/3.png");
+    background-size: 4vh 4vh;
+    height: 5.5vh;
+    width: 4vh;
+    right: 0;
+    display: flex;
+    background-repeat: no-repeat;
 }
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
@@ -374,7 +413,7 @@ footer p {
     width: 70vh;
     height: 30vh;
     right: -80vh;
-    top: 56vh;
+    top: 51vh;
     z-index: -2;
 }
 
@@ -454,15 +493,6 @@ footer p {
     .img-section {
         width: 50%;
         text-align: center;
-    }
-
-    .score img {
-        width: 20%;
-    }
-
-    .rings {
-        right: 0vh;
-        top: 45vh;
     }
 
     .left-wall, .right-wall {
