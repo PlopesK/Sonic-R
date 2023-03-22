@@ -29,7 +29,12 @@ window.addEventListener("DOMContentLoaded", function (event) {
     Menu.loop = true; 
     Menu.play();
 
-    /* ☄️☄️☄️☄️SEGA/Sonic-Team☄️☄️☄️☄️ */
+    /* ☄️☄️☄️☄️SEGA/Sonic-Team/SonicR☄️☄️☄️☄️ */
+    var SonicRunners = document.getElementById("SonicRunners");
+    SonicRunners.addEventListener('mouseover', function() {
+        SonicR.play();
+    });
+
     var Sega = document.getElementById("SEGA");
     Sega.addEventListener('mouseover', function() {
         SEGA.play();
