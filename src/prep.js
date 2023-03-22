@@ -22,9 +22,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
         images.push(img);
     }
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
-    var audio = new Audio('sounds/Extras Menu - Sonic Mega Collection [OST].mp3');
-    audio.loop = true; 
-    audio.play();
+    Menu.loop = true; 
+    Menu.play();
 });
 
 (function() {
@@ -70,6 +69,11 @@ function wait() {
 document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
+    Menu.loop = false;
+    Menu.currentTime = 172;
+    GreenHill.loop = true; 
+    GreenHill.play();
+
     document.removeEventListener("keydown", wait,  { once: true });
     const button = document.getElementById("play");
     const play = document.getElementById("play-txt");

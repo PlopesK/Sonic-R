@@ -3,11 +3,13 @@ function game() {
     function jump() {
         if (sonic.classList != "jump") {
             sonic.classList.add("jump");
+            Jump.currentTime = 0.4;
+            Jump.play();
             
-            setTimeout(function () {
+            Jump.addEventListener("ended", function() {
                 sonic.classList.remove("jump");
-            }, 400);
-        }   
+            });
+        }  
     }
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function () {
@@ -51,12 +53,21 @@ function game() {
     function lostLife() {
         setTimeout(() => {
             lives -= 1;
+            if (lives <= 0) {
+                lives = 0;
+            }
             canLoseLife = true;
-            livesDisplay.innerHTML = `Lives: ${lives}`;
+            livesDisplay.innerHTML = 'Lives: ' + lives;
         }, 500);
     }
 
     function gameOver() {
+        GreenHill.loop = false;
+        GreenHill.currentTime = 257;
+
+        GameOver.loop = true; 
+        GameOver.play();
+
         isPaused = true;
         alert("Game Over");
         location.reload()
