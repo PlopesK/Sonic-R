@@ -28,6 +28,20 @@ window.addEventListener("DOMContentLoaded", function (event) {
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
     Menu.loop = true; 
     Menu.play();
+
+    /* ☄️☄️☄️☄️SEGA/Sonic-Team☄️☄️☄️☄️ */
+    var Sega = document.getElementById("SEGA");
+    Sega.addEventListener('mouseover', function() {
+        SEGA.play();
+    });
+
+    var Sonic_Team = document.getElementById("SonicTeam");
+    Sonic_Team.addEventListener('mouseover', function() {
+        if (SonicTeam.currentTime <= 1 || SonicTeam.currentTime >= 7) {
+            SonicTeam.currentTime = 1.5;
+            SonicTeam.play();
+        }
+    });
 });
 
 (function() {

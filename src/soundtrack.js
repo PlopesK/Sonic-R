@@ -9,6 +9,12 @@ var GreenHill = new Audio('audios/Green Hill (Modern) - Sonic Generations [OST].
 GreenHill.volume = 0.3;
 
 /* 🔊🔊🔊🔊Sound-Effects🔊🔊🔊🔊 */
+var SEGA = new Audio('audios/Sega Intro.mp3');
+SEGA.volume = 1;
+
+var SonicTeam = new Audio('audios/Sega Saturn Sonic Team logo.mp3');
+SonicTeam.volume = 1;
+
 var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
 Jump.volume = 1;
 
