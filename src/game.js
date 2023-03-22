@@ -17,11 +17,12 @@ function game() {
         });
     });
 
+    /* Hit/Life System */
     const sonic = document.getElementById("sonic");
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
-    const livesDisplay = document.getElementById("lives");
-    let lives = 3;
+    const lifesDisplay = document.getElementById("lifes");
+    let lifes = 3;
     let isPaused = false;
     let canLoseLife = true;
 
@@ -42,7 +43,7 @@ function game() {
     if (obstLeft < 40 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
         obsTop < 40 && obsTop > 0 && sonicTop <= 140 && canLoseLife == true) {   
             canLoseLife = false;
-            if (lives <= 0) {
+            if (lifes <= 0) {
                 gameOver();
             } else {
                 lostLife();
@@ -52,12 +53,12 @@ function game() {
 
     function lostLife() {
         setTimeout(() => {
-            lives -= 1;
-            if (lives <= 0) {
-                lives = 0;
+            lifes -= 1;
+            if (lifes <= 0) {
+                lifes = 0;
             }
             canLoseLife = true;
-            livesDisplay.innerHTML = 'Lives: ' + lives;
+            lifesDisplay.innerHTML = 'Lifes: ' + lifes;
         }, 500);
     }
 

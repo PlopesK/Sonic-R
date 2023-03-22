@@ -25,7 +25,7 @@ function spawn(){
 
 function bugRespawn() {
     const bug = document.getElementById("badnik1");
-    const minDuration = 2000;
+    const minDuration = 1000;
     const maxDuration = 3000;
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;

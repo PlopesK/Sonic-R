@@ -13,11 +13,20 @@ function pause() {
 }
     
 function score(){
+    const score = document.getElementById('points');
     if ((millisecond += 10) == 100) {
         millisecond = 0;
         points++;
     } 
-    document.getElementById('points').innerText = returnData(points);
+    if (points % 100 === 0) {
+        score.classList.add("scoreAnimation");
+        ScoreHit.play();
+
+        ScoreHit.addEventListener("ended", function() {
+            score.classList.remove("scoreAnimation");
+        });
+    }
+    score.innerText = returnData(points);
 }
 
 function returnData(input) {

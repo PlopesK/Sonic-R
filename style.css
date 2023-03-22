@@ -138,6 +138,10 @@ footer p {
     animation: press 2s infinite ease-in-out;
 }
 
+.scoreAnimation {
+    animation: press 2s 3 ease-in-out;
+}
+
 @keyframes press {
     0% {
         opacity: 1;
