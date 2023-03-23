@@ -27,6 +27,7 @@ function game() {
     const fly = document.getElementById("badnik2");
     const lifesDisplay = document.getElementById("lifes");
     let lifes = 3;
+    let hit = 0;
     let isPaused = false;
     let canLoseLife = true;
 
@@ -63,8 +64,12 @@ function game() {
 
     if (obstLeft < 40 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
         obsTop < 40 && obsTop > 0 && sonicTop <= 120 && canLoseLife == true) {   
+            HitDamage.currentTime = 0.2;
             HitDamage.play();
             canLoseLife = false;
+            if (lifes <= 0 || hit >= 3) {
+                gameOver();
+            }
             lostLife();
             sonicDamage();
         }
@@ -73,20 +78,19 @@ function game() {
     function lostLife() {
         setTimeout(() => {
             lifes -= 1;
-            if (lifes == 2) {
-                lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
-            }
-            if (lifes == 1) {
-                lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
-            } else if (lifes <= 0) {
-                lifes = 0;
-                lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
-            }
+            hit++;
+            setInterval(function () {
+                if (lifes == 2 || hit == 1) {
+                    lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
+                }
+                if (lifes == 1 || hit == 2) {
+                    lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
+                } else if (lifes == 0 || hit == 3) {
+                    lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
+                }
+            }, 50);
             canLoseLife = true;
-        }, 300);
-        if (lifes <= 0) {
-            gameOver();
-        }
+        }, 500);
     }
 
     function gameOver() {
