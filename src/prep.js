@@ -93,9 +93,12 @@ document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
     Menu.loop = false;
-    Menu.currentTime = 172;
+    Menu.currentTime = 171.5;
     GreenHill.loop = true; 
     GreenHill.play();
+    StartTrack.currentTime = 0.7;
+    StartTrack.play();
+    HigherScoreHit.currentTime = 3;
 
     document.removeEventListener("keydown", wait,  { once: true });
     const button = document.getElementById("play");

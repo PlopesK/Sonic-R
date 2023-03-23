@@ -235,7 +235,7 @@ footer p {
 
 .score {
     font-family: 'SF Intermosaic', sans-serif;
-    font-size: 4vh;
+    font-size: 5vh;
     color:#103563;
     height: 3vh;
     width: auto;
@@ -252,7 +252,7 @@ footer p {
 }
 
 #points {
-    margin-left: 0.3em;
+    margin-left: 0.2em;
 }
 
 .scoreAnimation {

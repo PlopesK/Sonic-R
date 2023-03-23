@@ -25,6 +25,13 @@ function score(){
         ScoreHit.addEventListener("ended", function() {
             score.classList.remove("scoreAnimation");
         });
+    } if (points % 500 === 0) {
+        ScoreHit.pause();
+        HigherScoreHit.play();
+
+        HigherScoreHit.addEventListener("ended", function() {
+            score.classList.remove("scoreAnimation");
+        });
     }
     score.innerText = returnData(points);
 }

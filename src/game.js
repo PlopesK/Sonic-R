@@ -21,7 +21,7 @@ function game() {
         });
     });
 
-    /* Hit/Life System */
+    /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     const sonic = document.getElementById("sonic");
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
@@ -65,12 +65,8 @@ function game() {
         obsTop < 40 && obsTop > 0 && sonicTop <= 120 && canLoseLife == true) {   
             HitDamage.play();
             canLoseLife = false;
-            if (lifes <= 0) {
-                gameOver();
-            } else {
-                lostLife();
-                sonicDamage();
-            }
+            lostLife();
+            sonicDamage();
         }
     }
 
@@ -83,10 +79,14 @@ function game() {
             if (lifes == 1) {
                 lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
             } else if (lifes <= 0) {
+                lifes = 0;
                 lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
             }
             canLoseLife = true;
         }, 300);
+        if (lifes <= 0) {
+            gameOver();
+        }
     }
 
     function gameOver() {
