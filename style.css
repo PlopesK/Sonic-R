@@ -499,6 +499,10 @@ footer p {
         text-align: center;
     }
 
+    .score img {
+        width: 40%;
+    }
+
     .left-wall, .right-wall {
         display: none;
     }
