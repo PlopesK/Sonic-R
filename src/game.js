@@ -1,35 +1,15 @@
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
+let lifes = 3;
+let hit = 0;
+let isPaused = false;
+let canLoseLife = true;
+
 function game() {
-    function jump() {
-        if (sonic.classList != "jump") {
-            sonic.classList.add("jump");
-            Jump.currentTime = 0.4;
-            Jump.play();
-            
-            if (Jump.currentTime == 0.65) {
-                Jump.currentTime = 1;
-            }
-
-            Jump.addEventListener("ended", function() {
-                sonic.classList.remove("jump");
-            });
-        }  
-    }
-    ['keydown', 'click'].forEach(function(e) {
-        document.addEventListener(e, function () {
-            jump();
-        });
-    });
-
     /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     const sonic = document.getElementById("sonic");
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
     const lifesDisplay = document.getElementById("lifes");
-    let lifes = 3;
-    let hit = 0;
-    let isPaused = false;
-    let canLoseLife = true;
 
     const sonicHit = [
         {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 1},
@@ -66,32 +46,29 @@ function game() {
         obsTop < 40 && obsTop > 0 && sonicTop <= 120 && canLoseLife == true) {   
             HitDamage.currentTime = 0.2;
             HitDamage.play();
+            sonicDamage();
             canLoseLife = false;
             if (lifes <= 0 || hit >= 3) {
                 gameOver();
+            } else {
+                setTimeout(() => {
+                    lifes -= 1;
+                    hit++;
+                    setInterval(function () {
+                        if (lifes == 2 || hit == 1) {
+                            lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
+                        }
+                        if (lifes == 1 || hit == 2) {
+                            lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
+                        } else if (lifes == 0 || hit == 3) {
+                            lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
+                        }
+                    }, 50);
+                    canLoseLife = true;
+                }, 500);
             }
-            lostLife();
-            sonicDamage();
         }
-    }
-
-    function lostLife() {
-        setTimeout(() => {
-            lifes -= 1;
-            hit++;
-            setInterval(function () {
-                if (lifes == 2 || hit == 1) {
-                    lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
-                }
-                if (lifes == 1 || hit == 2) {
-                    lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
-                } else if (lifes == 0 || hit == 3) {
-                    lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
-                }
-            }, 50);
-            canLoseLife = true;
-        }, 500);
-    }
+    } 
 
     function gameOver() {
         GreenHill.loop = false;
@@ -106,6 +83,28 @@ function game() {
     }
 
     setInterval(checkCollision, 100);
+
+    /* Jump */
+    function jump() {
+        if (sonic.classList != "jump") {
+            sonic.classList.add("jump");
+            Jump.currentTime = 0.4;
+            Jump.play();
+            
+            if (Jump.currentTime == 0.65) {
+                Jump.currentTime = 1;
+            }
+
+            Jump.addEventListener("ended", function() {
+                sonic.classList.remove("jump");
+            });
+        }  
+    }
+    ['keydown', 'click'].forEach(function(e) {
+        document.addEventListener(e, function () {
+            jump();
+        });
+    });
 }
 
 /* 🏞️🏞️🏞️🏞️Background Moving🏞️🏞️🏞️🏞️ */
@@ -142,15 +141,20 @@ function backgroundMove() {
 }
 
 /* 🌴🌴🌴🌴Objects Moving🌴🌴🌴🌴 */
-const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png'];
+const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png', 'sprites/Object3.gif', 
+'sprites/Object4.gif', 'sprites/Object5.gif', 'sprites/Object6.png', 'sprites/Object7.gif', 'sprites/Object8.gif'];
 let objIntervalId = 0;
 let timerObj = 0;
+let BgTimer = 0;
 
 function object() {
     objInterval();
     setInterval(() => { objectSpawn(); }, 10);
+    setInterval(() => { BGObjSpawn(); }, 10);
     const object5 = document.getElementById("object5");
     object5.addEventListener("animationend", objRespawn);
+    const bg2 = document.getElementById("bg-object2");
+    bg2.addEventListener("animationend", BGObjRespawn);
 }
 
 function objInterval() {
@@ -173,23 +177,46 @@ function objectSpawn() {
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
 
-    if ((timerObj += 10) == (2000)) {
+    if ((timerObj += 10) == (1400)) {
         object1.classList.add("move");
         object1.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 3000) {
+    } if (timerObj == 2300) {
         object2.classList.add("move");
         object2.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 3400) {
+    } if (timerObj == 2800) {
         object3.classList.add("move");
         object3.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 4400) {
+    } if (timerObj == 3400) {
         object4.classList.add("move");
         object4.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 5500) {
+    } if (timerObj == 4200) {
         timerObj = 0;
         object5.classList.add("move");
         object5.style.backgroundImage = `url(${objectBackground})`;
     }
+}
+
+function BGObjSpawn() {
+    const objectBackground = randItem(OBJECTS);
+    const bg1 = document.getElementById("bg-object1");
+    const bg2 = document.getElementById("bg-object2");
+
+    if ((BgTimer += 10) == (2000)) {
+        bg1.classList.add("move");
+        bg1.style.backgroundImage = `url(${objectBackground})`;
+    } if (BgTimer == 3800) {
+        BgTimer = 0
+        bg2.classList.add("move");
+        bg2.style.backgroundImage = `url(${objectBackground})`;
+    }
+}
+
+function BGObjRespawn() {
+    const bg1 = document.getElementById("bg-object1");
+    const bg2 = document.getElementById("bg-object2");
+    bg1.classList.remove("move");
+    bg2.classList.remove("move");
+    objInterval();
 }
 
 function objRespawn() {

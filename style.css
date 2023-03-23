@@ -174,7 +174,7 @@ footer p {
     background-repeat: repeat-x;
     border-radius: 1.5vh;
     margin: auto;
-    z-index: 0;
+    z-index: -4;
 }
 
 .game .left-wall {
@@ -415,6 +415,10 @@ footer p {
     right: -80vh;
     top: 51vh;
     z-index: -2;
+}
+
+#bg-object1, #bg-object2 {
+    z-index: -3;
 }
 
 .move {
