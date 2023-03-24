@@ -83,6 +83,9 @@ function muteSound() {
   ScoreHit.muted = true;
   HigherScoreHit.muted = true;
   HitDamage.muted = true;
+  SonicR.muted = true;
+  SEGA.muted = true;
+  SonicTeam.muted = true;
 
   muted.addEventListener("click", unmuteSound, { once: true });
 }
@@ -100,6 +103,9 @@ function unmuteSound() {
   ScoreHit.muted = false;
   HigherScoreHit.muted = false;
   HitDamage.muted = false;
+  SonicR.muted = false;
+  SEGA.muted = false;
+  SonicTeam.muted = false;
 
   muted.addEventListener("click", muteSound, { once: true });
 }
