@@ -112,6 +112,87 @@ footer p {
     text-align: center;
 }
 
+.sidenav {
+    background: -webkit-gradient(linear, left top, right top, from(#142038), to(#243963));
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s; 
+    z-index: 22;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 3vh;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#closebtn {
+    font-size: 5vh;
+}
+
+.sidenav a:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2vh;
+}
+
+.settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: 20vh;
+    padding: 0;
+    width: 20vh;
+    z-index: 20;
+    rotate: 90deg;
+}
+
+.cog {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    border: 0;
+    color: azure;
+    position: absolute;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.cog p {
+    position: absolute;
+    font-size: 8vh;
+    bottom: 0;
+    right: 50%;
+    cursor: pointer;
+}
+
+.triangle {
+    width: 100%;
+    height: auto;
+    fill: #142038;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 .area {
     width: 100%;

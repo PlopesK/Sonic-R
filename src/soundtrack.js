@@ -1,3 +1,24 @@
+/* Settings */
+function openMenu() {
+  const navbar = document.querySelector("#settings");
+  const button = document.getElementById("play");
+  button.classList.remove("button");
+  navbar.style.width = "40vh";
+
+  navbar.addEventListener('click', () => {
+    navbar.style.width = "0";
+  })
+  document.removeEventListener("keydown", wait);
+    StartTrack.play();
+}
+
+function closeBtn() {
+    const close = document.querySelector("#closebtn");
+    document.addEventListener("keydown", wait,  { once: true });
+    const button = document.getElementById("play");
+    button.classList.add("button");
+}
+
 /* 🎶🎶🎶🎶Musics🎶🎶🎶🎶 */
 var Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
 Menu.volume = 0.4;
