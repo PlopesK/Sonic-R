@@ -7,6 +7,10 @@ function openMenu() {
   navbar.style.width = "25%";
   document.removeEventListener("keydown", wait);
   Select.play();
+
+  navbar.addEventListener("click", () => {
+    Return.play();
+  })
 }
 
 /* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */

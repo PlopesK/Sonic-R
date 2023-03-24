@@ -1,3 +1,13 @@
+/* 🖥️🖥️🖥️🖥️Window Animation🖥️🖥️🖥️🖥️ */
+(function() {
+    var requestAnimationFrame = window.requestAnimationFrame || 
+                                window.mozRequestAnimationFrame || 
+                                window.webkitRequestAnimationFrame ||
+                                window.msRequestAnimationFrame;
+  
+    window.requestAnimationFrame = requestAnimationFrame;
+})();
+
 /* 🖥️🖥️🖥️🖥️Window Resize🖥️🖥️🖥️🖥️ */
 let windowHeight = window.innerHeight;
 let windowWidth = window.innerWidth;
