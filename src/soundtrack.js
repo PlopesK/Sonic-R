@@ -23,7 +23,7 @@ function blueTheme() {
   document.getElementById("SonicTeam").title="Sonic Team";
   document.getElementById("SEGA").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp";
   dark.innerHTML="Dark Mode";
-  blue.innerHTML="Blue Mode (Default)";
+  blue.innerHTML="Blue Mode - Active";
 }
 
 function darkTheme() {
@@ -44,7 +44,6 @@ function darkTheme() {
 
 /* Close Settings */
 function closeBtn() {
-    const close = document.querySelector("#closebtn");
     document.addEventListener("keydown", wait,  { once: true });
 
     const button = document.getElementById("play");
