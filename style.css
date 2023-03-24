@@ -125,7 +125,6 @@ footer p {
     height: 0;
     width: 0; 
     position: fixed; 
-    z-index: 1; 
     top: 0; 
     left: 0;
     background-color: #111; 
@@ -169,6 +168,30 @@ footer p {
     position: absolute;
     top: 0;
     right: 2vh;
+}
+
+.selectMusic {
+    background-image: url("images/menu_bg.webp");
+    background-size: auto 120%;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 0;
+    width: 0; 
+    position: fixed; 
+    top: 0; 
+    justify-content: center;
+    align-items: center;
+    background-color: #111; 
+    overflow-x: hidden;
+    transition: 0.5s; 
+    z-index: 22;
+}
+
+.next {
+    right: 0;
+}
+
+.return {
+    left: 0;
 }
 
 .settings {
