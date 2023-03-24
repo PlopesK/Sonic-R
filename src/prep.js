@@ -13,11 +13,24 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     }, 200);
 
-    /* Theme Color */
-    if(localStorage.dark=="true") {
+    /* ♾️♾️♾️♾️Theme Color♾️♾️♾️♾️ */
+    if(localStorage.dark == "true") {
         darkTheme();
     } else {
         blueTheme();
+    }
+
+    /* 🔇🔇🔇🔇Muted🔇🔇🔇🔇 */
+    if(localStorage.muted == "true") {
+        muteMusic();
+    } else {
+        unmuteMusic();
+    }
+    
+    if(localStorage.mutedSound == "true") {
+        muteSound();
+    } else {
+        unmuteSound();
     }
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
@@ -27,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     'sprites/Object7.gif', 'sprites/Object8.gif', 'sprites/badnik1.gif', 'sprites/badnik2.gif', "sprites/ground.png", 
     "sprites/background.gif", 'images/sonic.ico', 'images/Sonic_Runners_logo.png', "sprites/score.png", 
     "images/footer-bg.gif", "images/header.png", 'sprites/life-icon.gif', 'sprites/0.png', 'sprites/1.png', 
-    'sprites/2.png', 'sprites/3.png'];
+    'sprites/2.png', 'sprites/3.png', 'images/sega-dark.png', 'images/footer-bg-dark.gif', 'images/header-dark.jpg'];
     var images = [];
     for (var i = 0; i < imageUrls.length; i++) {
         var img = new Image();

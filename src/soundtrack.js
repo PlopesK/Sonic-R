@@ -1,4 +1,4 @@
-/* Settings */
+/* ⚙️⚙️⚙️⚙️Settings⚙️⚙️⚙️⚙️ */
 function openMenu() {
   const navbar = document.querySelector("#settings");
   const button = document.getElementById("play");
@@ -9,7 +9,7 @@ function openMenu() {
   Select.play();
 }
 
-/* Dark/Blue Mode */
+/* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */
 function blueTheme() {
   const blue = document.querySelector('#Blue');
   const dark = document.querySelector('#Dark');
@@ -42,7 +42,69 @@ function darkTheme() {
   blue.innerHTML="Blue Mode";
 }
 
-/* Close Settings */
+/* Mute Music */
+function muteMusic() {
+  const muted = document.querySelector('#muteMusic');
+  localStorage.setItem('muted',true);
+  localStorage.removeItem('unmuted', false);
+
+  muted.innerHTML = 'Mute Music <i class="fa fa-times"></i>'
+  Menu.muted = true;
+  GameOver.muted = true;
+  GreenHill.muted = true;
+
+  muted.addEventListener("click", unmuteMusic, { once: true });
+}
+
+function unmuteMusic() {
+  const muted = document.querySelector('#muteMusic');
+  localStorage.setItem('unmuted',true);
+  localStorage.removeItem('muted', false);
+
+  muted.innerHTML = 'Mute Music'
+  Menu.muted = false;
+  GameOver.muted = false;
+  GreenHill.muted = false;
+
+  muted.addEventListener("click", muteMusic, { once: true });
+}
+
+/* Mute Sounds */
+function muteSound() {
+  const muted = document.querySelector('#muteSound');
+  localStorage.setItem('mutedSound',true);
+  localStorage.removeItem('unmutedSound', false);
+
+  muted.innerHTML = 'Mute SoundEffects <i class="fa fa-times"></i>'
+  Select.muted = true;
+  Return.muted = true;
+  Jump.muted = true;
+  StartTrack.muted = true;
+  ScoreHit.muted = true;
+  HigherScoreHit.muted = true;
+  HitDamage.muted = true;
+
+  muted.addEventListener("click", unmuteSound, { once: true });
+}
+
+function unmuteSound() {
+  const muted = document.querySelector('#muteSound');
+  localStorage.setItem('unmutedSound',true);
+  localStorage.removeItem('mutedSound', false);
+
+  muted.innerHTML = 'Mute SoundEffects'
+  Select.muted = false;
+  Return.muted = false;
+  Jump.muted = false;
+  StartTrack.muted = false;
+  ScoreHit.muted = false;
+  HigherScoreHit.muted = false;
+  HitDamage.muted = false;
+
+  muted.addEventListener("click", muteSound, { once: true });
+}
+
+/* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
     document.addEventListener("keydown", wait,  { once: true });
 

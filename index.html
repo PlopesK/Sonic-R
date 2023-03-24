@@ -17,7 +17,7 @@
     <body>
         <div class="load-wrapper active" id="load">
             <div class="load">
-                <img src="images/sonic.ico"><img>
+                <img id="loadIMG" src="images/sonic.ico"><img>
             </div>
         </div>
         <header>
@@ -42,9 +42,9 @@
                 <a class="option" id="Blue" onclick="blueTheme()"><p> Blue Mode (Default) </p></a>
                 <a class="option" id="Dark" onclick="darkTheme()"><p> Dark Mode </p></a>
                 <div class="title"><p> Soundtrack Settings </p></div>
-                <a class="option"><p> Select Music </p></a>
-                <a class="option"><p> Mute Music </p></a>
-                <a class="option"><p> Mute SoundEffects </p></a>
+                <a class="option" id="selectMusic"><p> Select Music </p></a>
+                <a class="option" onclick="muteMusic()" id="muteMusic"><p> Mute Music </p></a>
+                <a class="option" onclick="muteSound()" id="muteSound"><p> Mute SoundEffects </p></a>
             </div>
         </header>
         <div class="subheader">
