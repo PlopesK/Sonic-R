@@ -51,11 +51,12 @@ function muteMusic() {
   const muted = document.querySelector('#muteMusic');
   localStorage.setItem('muted',true);
   localStorage.removeItem('unmuted', false);
+  const musics = [Menu, GameOver, GreenHill];
 
   muted.innerHTML = 'Mute Music <i class="fa fa-times"></i>'
-  Menu.muted = true;
-  GameOver.muted = true;
-  GreenHill.muted = true;
+  musics.forEach(function(e) {
+    e.muted = true;
+  });
 
   muted.addEventListener("click", unmuteMusic, { once: true });
 }
@@ -64,11 +65,12 @@ function unmuteMusic() {
   const muted = document.querySelector('#muteMusic');
   localStorage.setItem('unmuted',true);
   localStorage.removeItem('muted', false);
+  const musics = [Menu, GameOver, GreenHill];
 
   muted.innerHTML = 'Mute Music'
-  Menu.muted = false;
-  GameOver.muted = false;
-  GreenHill.muted = false;
+  musics.forEach(function(e) {
+    e.muted = false;
+  });
 
   muted.addEventListener("click", muteMusic, { once: true });
 }
@@ -78,19 +80,13 @@ function muteSound() {
   const muted = document.querySelector('#muteSound');
   localStorage.setItem('mutedSound',true);
   localStorage.removeItem('unmutedSound', false);
+  const sounds = [Select, Selected, Return, Jump, StartTrack, ScoreHit, HigherScoreHit, 
+  HitDamage, SonicR, SEGA, SonicTeam];
 
   muted.innerHTML = 'Mute SoundEffects <i class="fa fa-times"></i>'
-  Select.muted = true;
-  Return.muted = true;
-  Jump.muted = true;
-  StartTrack.muted = true;
-  ScoreHit.muted = true;
-  HigherScoreHit.muted = true;
-  HitDamage.muted = true;
-  SonicR.muted = true;
-  SEGA.muted = true;
-  SonicTeam.muted = true;
-  Selected.muted = true;
+  sounds.forEach(function(e) {
+    e.muted = true;
+  });
 
   muted.addEventListener("click", unmuteSound, { once: true });
 }
@@ -99,19 +95,13 @@ function unmuteSound() {
   const muted = document.querySelector('#muteSound');
   localStorage.setItem('unmutedSound',true);
   localStorage.removeItem('mutedSound', false);
+  const sounds = [Select, Selected, Return, Jump, StartTrack, ScoreHit, HigherScoreHit, 
+  HitDamage, SonicR, SEGA, SonicTeam];
 
   muted.innerHTML = 'Mute SoundEffects'
-  Select.muted = false;
-  Return.muted = false;
-  Jump.muted = false;
-  StartTrack.muted = false;
-  ScoreHit.muted = false;
-  HigherScoreHit.muted = false;
-  HitDamage.muted = false;
-  SonicR.muted = false;
-  SEGA.muted = false;
-  SonicTeam.muted = false;
-  Selected.muted = false;
+  sounds.forEach(function(e) {
+    e.muted = false;
+  });
 
   muted.addEventListener("click", muteSound, { once: true });
 }
@@ -119,15 +109,15 @@ function unmuteSound() {
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
   Selected.currentTime = 3;
-    document.addEventListener("keydown", wait,  { once: true });
+  document.addEventListener("keydown", wait,  { once: true });
 
-    const button = document.getElementById("play");
-    button.classList.remove("hidden");
+  const button = document.getElementById("play");
+  button.classList.remove("hidden");
 
-    const navbar = document.querySelector("#settings");
-    navbar.style.width = "0";
-    navbar.style.height = "0";
-    Return.play();
+  const navbar = document.querySelector("#settings");
+  navbar.style.width = "0";
+  navbar.style.height = "0";
+  Return.play();
 }
 
 /* 🎶🎶🎶🎶Musics🎶🎶🎶🎶 */
