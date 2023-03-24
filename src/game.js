@@ -84,7 +84,7 @@ function game() {
 
     setInterval(checkCollision, 100);
 
-    /* Jump */
+    /* 🆙🆙🆙🆙Jump🆙🆙🆙🆙 */
     function jump() {
         if (sonic.classList != "jump") {
             sonic.classList.add("jump");

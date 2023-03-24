@@ -46,7 +46,7 @@ function darkTheme() {
   blue.innerHTML="Blue Mode";
 }
 
-/* Mute Music */
+/* 🔇🔇🔇🔇Mute Music🔇🔇🔇🔇 */
 function muteMusic() {
   const muted = document.querySelector('#muteMusic');
   localStorage.setItem('muted',true);
@@ -75,7 +75,7 @@ function unmuteMusic() {
   muted.addEventListener("click", muteMusic, { once: true });
 }
 
-/* Mute Sounds */
+/* 🔇🔇🔇🔇Mute Sounds🔇🔇🔇🔇 */
 function muteSound() {
   const muted = document.querySelector('#muteSound');
   localStorage.setItem('mutedSound',true);
