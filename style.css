@@ -5,6 +5,12 @@
     max-zoom: 1.0;
 }
 
+:root {
+    --SiteColor: #257BE6;
+    --Header: url("images/header.png");
+    --Footer: url("images/footer-bg.gif");
+}
+
 /* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
 html {
     scroll-behavior: smooth;
@@ -24,12 +30,12 @@ a {
 
 /* 🚧🚧🚧🚧Body🚧🚧🚧🚧 */
 body {
-    background-color: #257BE6;
+    background:  var(--SiteColor);
     font-size: 16px;
 }
 
 header {
-    background-image: url("images/header.png");
+    background-image: var(--Header);
     background-size: auto 30vh;
     background-repeat: repeat-x ;
     width: 100%;
@@ -48,7 +54,7 @@ header img {
 }
 
 .subheader {
-    background-image: url("images/footer-bg.gif");
+    background-image: var(--Footer);
     height: 2vh;
     width: 100%;
     position: relative;
@@ -62,7 +68,7 @@ footer {
     height: 60%;
     margin-top: 2vh;
     text-align: center;
-    background-image: url("images/footer-bg.gif");
+    background-image: var(--Footer);
     position: absolute;
     color: white;
 }
@@ -113,8 +119,10 @@ footer p {
 }
 
 .sidenav {
-    background: -webkit-gradient(linear, left top, right top, from(#142038), to(#243963));
-    height: 100%;
+    background-image: url("images/menu_bg.webp");
+    background-size: auto 120%;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 0;
     width: 0; 
     position: fixed; 
     z-index: 1; 
@@ -122,7 +130,6 @@ footer p {
     left: 0;
     background-color: #111; 
     overflow-x: hidden;
-    padding-top: 60px; 
     transition: 0.5s; 
     z-index: 22;
 }
@@ -131,9 +138,21 @@ footer p {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 3vh;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
+}
+
+.sidenav .title {
+    background-color: #142038;
+    width: 100%;
+    height: 5vh;
+    font-size: 4vh;
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    align-items: center;
+    justify-content: baseline;
 }
 
 #closebtn {
@@ -263,7 +282,7 @@ footer p {
     width: 50vh;
     transform: translateX(-100%);
     margin-left: 10px;
-    background-color: #257BE6;
+    background:  var(--SiteColor);
     margin: auto;
     position: absolute;
     z-index: 3;
@@ -274,7 +293,7 @@ footer p {
     width: 50vh;
     transform: translateX(239.5%);
     margin-right: 10px;
-    background-color: #257BE6;
+    background:  var(--SiteColor);
     margin: auto;
     position: absolute;
     z-index: 3;

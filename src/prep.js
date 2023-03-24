@@ -13,6 +13,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     }, 200);
 
+    /* Theme Color */
+    if(localStorage.dark=="true") {
+        darkTheme();
+    } else {
+        blueTheme();
+    }
+
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
     "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
