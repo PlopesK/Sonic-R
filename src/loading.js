@@ -20,19 +20,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
         blueTheme();
     }
 
-    /* 🔇🔇🔇🔇Muted🔇🔇🔇🔇 */
-    if(localStorage.muted == "true") {
-        muteMusic();
-    } else {
-        unmuteMusic();
-    }
-    
-    if(localStorage.mutedSound == "true") {
-        muteSound();
-    } else {
-        unmuteSound();
-    }
-
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
     "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
@@ -47,6 +34,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         img.src = imageUrls[i];
         images.push(img);
     }
+
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
     Menu.loop = true; 
     Menu.play();
@@ -69,4 +57,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
             SonicTeam.play();
         }
     });
+
+    /* 🔇🔇🔇🔇Muted🔇🔇🔇🔇 */
+    if(localStorage.muted == "true") {
+            muteMusic();
+    } else {
+            unmuteMusic();
+    }
+        
+    if(localStorage.mutedSound == "true") {
+            muteSound();
+    } else {
+            unmuteSound();
+    }
 });

@@ -4,12 +4,12 @@ function openMenu() {
   const button = document.getElementById("play");
   button.classList.add("hidden");
   navbar.style.height = "50%";
-  navbar.style.width = "25%";
+  navbar.style.width = "40vh";
   document.removeEventListener("keydown", wait);
   Select.play();
 
   navbar.addEventListener("click", () => {
-    Return.play();
+    Selected.play();
   })
 }
 
@@ -90,6 +90,7 @@ function muteSound() {
   SonicR.muted = true;
   SEGA.muted = true;
   SonicTeam.muted = true;
+  Selected.muted = true;
 
   muted.addEventListener("click", unmuteSound, { once: true });
 }
@@ -110,12 +111,14 @@ function unmuteSound() {
   SonicR.muted = false;
   SEGA.muted = false;
   SonicTeam.muted = false;
+  Selected.muted = false;
 
   muted.addEventListener("click", muteSound, { once: true });
 }
 
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
+  Selected.currentTime = 3;
     document.addEventListener("keydown", wait,  { once: true });
 
     const button = document.getElementById("play");
@@ -144,6 +147,9 @@ Select.volume = 0.8;
 
 var Return = new Audio('audios/Sonic Mega Collection - Game Unlocked (Sound Effect).mp3');
 Return.volume = 1;
+
+var Selected = new Audio('audios/Sonic CD Original Sound Track - Event.mp3');
+Selected.volume = 0.6;
 
 var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
 Jump.volume = 1;
