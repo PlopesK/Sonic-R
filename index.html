@@ -21,6 +21,9 @@
                 <img id="loadIMG" src="images/sonic.ico"><img>
             </div>
         </div>
+        <audio id="bg-music" loop>
+            <source src="audios/Extras Menu - Sonic Mega Collection [OST].mp3" type="audio/mpeg">
+        </audio>
         <header>
             <a href="https://www.sonicthehedgehog.com/">
                 <img loading="lazy" src="images/Sonic_Runners_logo.png" alt="Sonic Runners" 
@@ -43,21 +46,40 @@
                 <a class="option" id="Blue" onclick="blueTheme()"><p> Blue Mode (Default) </p></a>
                 <a class="option" id="Dark" onclick="darkTheme()"><p> Dark Mode </p></a>
                 <div class="title"><p> Soundtrack Settings </p></div>
-                <a class="option" id="selectMusic"><p> Select Music </p></a>
+                <a class="option" onclick="openSelect()"><p> Select Music </p></a>
                 <a class="option" onclick="muteMusic()" id="muteMusic"><p> Mute Music </p></a>
                 <a class="option" onclick="muteSound()" id="muteSound"><p> Mute SoundEffects </p></a>
             </div>
             
-            <div class="selectMusic">
+            <div class="selectMusic" id="menuMusic">
                 <div class="majorTitle"><p> Select a Music </p></div>
                 <div class="title"><p> Music for Menu</p></div>
-                <a class="option"><p> Extras Menu - Sonic Mega Collection </p></a>
+                <button onclick="selectMusic(0)"><p>Extras Menu - Sonic Mega Collection</p></button>
+                <button onclick="selectMusic(1)"><p>File Select - Sonic the Hedgehog 3 & Knuckles</p></button>
+                <button onclick="selectMusic(2)"><p></p></button>
+                <button onclick="selectMusic(3)"><p></p></button>
                 <button class="next"> Game </button>
 
-                <div class="majorTitle"><p> Select a Music </p></div>
-                <div class="title"><p> Music for the Game</p></div>
-                <a class="option"><p> Green Hill (Modern) - Sonic Generations </p></a>
-                <button class="return"> Menu </button>
+                <div class="selectGameMusic hidden" id="gameMusic">
+                    <div class="majorTitle"><p> Select a Music </p></div>
+                    <div class="title"><p> Music for the Game</p></div>
+                    <button onclick="selectMusic(0)"><p>Green Hill (Modern) - Sonic Generations</p></button>
+                    <button onclick="selectMusic(1)"><p></p></button>
+                    <button onclick="selectMusic(2)"><p></p></button>
+                    <button onclick="selectMusic(3)"><p></p></button>
+                    <button class="return"> Menu </button>
+                    <button class="next"> Game Over </button>
+                </div>
+
+                <div class="selectGameOverMusic hidden" id="gameoverMusic">
+                    <div class="majorTitle"><p> Select a Music </p></div>
+                    <div class="title"><p> Music for Game Over</p></div>
+                    <button onclick="selectMusic(0)"><p>Sonic Advance 1 2 and 3-Game Over</p></button>
+                    <button onclick="selectMusic(1)"><p></p></button>
+                    <button onclick="selectMusic(2)"><p></p></button>
+                    <button onclick="selectMusic(3)"><p></p></button>
+                    <button class="return"> Menu </button>
+                </div>
             </div>
         </header>
         <div class="subheader">

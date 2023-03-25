@@ -106,6 +106,25 @@ function unmuteSound() {
   muted.addEventListener("click", muteSound, { once: true });
 }
 
+function openSelect() {
+  const menuSelect = document.querySelector("#menuMusic");
+  menuSelect.style.height = "50%";
+}
+
+/* Select Music */
+var musicIndex = 0;
+var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', "audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "music3.mp3", "music4.mp3"];
+function selectMusic(index) {
+	var music = Menu;
+	if (index >= 0 && index < musicList.length) {
+		musicIndex = index;
+		music.src = musicList[musicIndex];
+		music.play();
+    localStorage.setItem("musicIndex", musicIndex);
+	}
+}
+var storedIndex = localStorage.getItem("musicIndex");
+
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
   Selected.currentTime = 3;
@@ -117,12 +136,14 @@ function closeBtn() {
   const navbar = document.querySelector("#settings");
   navbar.style.width = "0";
   navbar.style.height = "0";
+  const menuSelect = document.querySelector("#menuMusic");
+  menuSelect.style.height = "0";
   Return.play();
 }
 
 /* 🎶🎶🎶🎶Musics🎶🎶🎶🎶 */
 var Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
-Menu.volume = 0.4;
+Menu.volume = 0.7;
 
 var GameOver = new Audio('audios/Sonic Advance 1 2 and 3-Game Over.mp3');
 GameOver.volume = 0.4;

@@ -36,8 +36,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }
 
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
-    Menu.loop = true; 
-    Menu.play();
+    /* Menu Music */
+    if (storedIndex !== null) {
+        musicIndex = parseInt(storedIndex);
+        var music = Menu;
+        music.src = musicList[musicIndex];
+        music.loop = true;
+        music.play();
+    } 
 
     /* ☄️☄️☄️☄️SEGA/Sonic-Team/SonicR☄️☄️☄️☄️ */
     var SonicRunners = document.getElementById("SonicRunners");
