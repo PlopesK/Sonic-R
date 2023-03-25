@@ -130,6 +130,7 @@ footer p {
     background-color: #111; 
     overflow-x: hidden;
     transition: 0.5s; 
+    text-align: center;
     z-index: 22;
 }
 

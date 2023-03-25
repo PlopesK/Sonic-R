@@ -43,6 +43,7 @@ document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
     Menu.loop = false;
+    Menu.volume = 0.2;
     Menu.pause();
 
     Game.currentTime = 0;

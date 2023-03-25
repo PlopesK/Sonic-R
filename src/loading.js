@@ -47,10 +47,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
     /* Game Music */
     if (storedGameIndex !== null) {
-        gameMusicIndex = parseInt(storedIndex);
+        gameMusicIndex = parseInt(storedGameIndex);
         var gameMusic = Game;
         gameMusic.src = gameMusicList[gameMusicIndex];
         gameMusic.loop = true;
+    }
+
+    /* Game Over Music */
+    if (storedGameOverIndex !== null) {
+        gameoverMusicIndex = parseInt(storedGameOverIndex);
+        var gameoverMusic = GameOver;
+        gameoverMusic.src = gameoverMusicList[gameoverMusicIndex];
+        gameoverMusic.loop = true;
     }
 
     /* ☄️☄️☄️☄️SEGA/Sonic-Team/SonicR☄️☄️☄️☄️ */

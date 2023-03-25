@@ -156,9 +156,9 @@ var storedGameIndex = localStorage.getItem("gameMusicIndex");
 /* Game Over Music */
 var gameoverMusicIndex = 0;
 var gameoverMusicList = ['audios/Sonic Advance 1 2 and 3-Game Over.mp3', 
-"audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
-"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", 
-"audios/Comfort Zone (Main Menu) - Sonic Mania [OST].mp3"];
+"audios/Sonic CD - Game Over Music ~ Japan.mp3", "audios/Sonic CD - Game Over Music ~ USA.mp3", 
+"audios/Sonic 1 Music Game Over.mp3", "audios/Sonic 3 And Knuckles OST - Game Over.mp3", 
+"audios/Sonic Rush Groove Rush 2 GAME OVER.mp3"];
 function selectGameOverMusic(index) {
 	var gameoverMusic = GameOver;
 	if (index >= 0 && index < gameoverMusicList.length) {
@@ -187,6 +187,7 @@ function closeBtn() {
   menuSelect.style.height = "0";
   Return.play();
   Game.pause();
+  GameOver.pause();
   Menu.play();
 }
 
@@ -195,7 +196,7 @@ var Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
 Menu.volume = 0.7;
 
 var GameOver = new Audio('audios/Sonic Advance 1 2 and 3-Game Over.mp3');
-GameOver.volume = 0.4;
+GameOver.volume = 0.6;
 
 var Game = new Audio('audios/Green Hill (Modern) - Sonic Generations [OST].mp3');
 Game.volume = 0.5;
