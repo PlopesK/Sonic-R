@@ -50,6 +50,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
         music.src = musicList[musicIndex];
         music.loop = true;
         music.play();
+    } else {
+        Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
+        Menu.volume = 0.7;
+        Menu.play();
     }
 
     /* Game Music */
@@ -58,6 +62,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
         var gameMusic = Game;
         gameMusic.src = gameMusicList[gameMusicIndex];
         gameMusic.loop = true;
+    } else {
+        Game = new Audio('audios/Green Hill (Modern) - Sonic Generations [OST].mp3');
+        Game.volume = 0.5;
     }
 
     /* Game Over Music */
@@ -66,6 +73,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
         var gameoverMusic = GameOver;
         gameoverMusic.src = gameoverMusicList[gameoverMusicIndex];
         gameoverMusic.loop = true;
+    } else {
+        GameOver = new Audio('audios/Sonic Advance 1 2 and 3-Game Over.mp3');
+        GameOver.volume = 0.6;
     }
 
     /* ☄️☄️☄️☄️SEGA/Sonic-Team/SonicR☄️☄️☄️☄️ */

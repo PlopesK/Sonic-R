@@ -116,7 +116,7 @@ function openSelect() {
 var musicIndex = 0;
 var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', 
 "audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
-"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", "audios/Options Screen - Sonic R [OST].mp3", 
+"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Options Screen - Sonic R [OST].mp3", 
 "audios/A Ghost's Pumpkin Soup ... for Pumpkin Hill.mp3"];
 function selectMusic(index) {
 	var music = Menu;
@@ -136,10 +136,10 @@ var gameMusicIndex = 0;
 var gameMusicList = ['audios/Green Hill (Modern) - Sonic Generations [OST].mp3', 
 "audios/Live and Learn by Crush 40 (Main Theme of SA2).mp3", 
 "audios/Escape From the City (City Escape) - Sonic Adventure 2 [OST].mp3", "audios/BOSS BATTLE BIG ARM.mp3", 
-"audios/Crisis City - Sonic the Hedgehog [OST].mp3", "audios/Break Through It All (feat. Kellin Quinn).mp3", 
+"audios/Crisis City - Sonic the Hedgehog [OST].mp3", "audios/Kick The Rock! (feat. Hunnid-P) - Wild Canyon Theme from Sonic Adventure 2.mp3", 
 "audios/Undefeatable (feat. Kellin Quinn).mp3", "audios/Dragon Road (Day) - Sonic Unleashed [OST].mp3", 
 "audios/Doomsday Zone - Sonic & Knuckles [OST].mp3", "audios/Vela-Nova - Sonic Rush [OST].mp3", 
-"audios/Rooftop Run (Modern) - Sonic Generations [OST].mp3", "audios/Boo's House - Team Sonic Racing [OST].mp3"];
+"audios/Rooftop Run (Modern) - Sonic Generations [OST].mp3"];
 function selectGameMusic(index) {
 	var gameMusic = Game;
 	if (index >= 0 && index < gameMusicList.length) {
