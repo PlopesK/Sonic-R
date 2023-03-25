@@ -43,7 +43,15 @@ window.addEventListener("DOMContentLoaded", function (event) {
         music.src = musicList[musicIndex];
         music.loop = true;
         music.play();
-    } 
+    }
+
+    /* Game Music */
+    if (storedGameIndex !== null) {
+        gameMusicIndex = parseInt(storedIndex);
+        var gameMusic = Game;
+        gameMusic.src = gameMusicList[gameMusicIndex];
+        gameMusic.loop = true;
+    }
 
     /* ☄️☄️☄️☄️SEGA/Sonic-Team/SonicR☄️☄️☄️☄️ */
     var SonicRunners = document.getElementById("SonicRunners");

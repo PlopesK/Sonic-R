@@ -43,9 +43,12 @@ document.addEventListener("keydown", wait,  { once: true });
 
 function start() {
     Menu.loop = false;
-    Menu.currentTime = 171.5;
-    GreenHill.loop = true; 
-    GreenHill.play();
+    Menu.pause();
+
+    Game.currentTime = 0;
+    Game.loop = true; 
+    Game.play();
+    
     StartTrack.currentTime = 0.7;
     StartTrack.play();
     HigherScoreHit.currentTime = 3;

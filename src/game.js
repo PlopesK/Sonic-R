@@ -71,8 +71,8 @@ function game() {
     } 
 
     function gameOver() {
-        GreenHill.loop = false;
-        GreenHill.currentTime = 257;
+        Game.loop = false;
+        Game.pause();
 
         GameOver.loop = true; 
         GameOver.play();

@@ -51,7 +51,7 @@ function muteMusic() {
   const muted = document.querySelector('#muteMusic');
   localStorage.setItem('muted',true);
   localStorage.removeItem('unmuted', false);
-  const musics = [Menu, GameOver, GreenHill];
+  const musics = [Menu, GameOver, Game];
 
   muted.innerHTML = 'Mute Music <i class="fa fa-times"></i>'
   musics.forEach(function(e) {
@@ -65,7 +65,7 @@ function unmuteMusic() {
   const muted = document.querySelector('#muteMusic');
   localStorage.setItem('unmuted',true);
   localStorage.removeItem('muted', false);
-  const musics = [Menu, GameOver, GreenHill];
+  const musics = [Menu, GameOver, Game];
 
   muted.innerHTML = 'Mute Music'
   musics.forEach(function(e) {
@@ -106,24 +106,72 @@ function unmuteSound() {
   muted.addEventListener("click", muteSound, { once: true });
 }
 
+/* Select Music */
 function openSelect() {
   const menuSelect = document.querySelector("#menuMusic");
   menuSelect.style.height = "50%";
 }
 
-/* Select Music */
+/* Menu Music */
 var musicIndex = 0;
-var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', "audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "music3.mp3", "music4.mp3"];
+var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', 
+"audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
+"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", 
+"audios/Comfort Zone (Main Menu) - Sonic Mania [OST].mp3", "audios/Options Screen - Sonic R [OST].mp3", 
+"audios/A Ghost's Pumpkin Soup ... for Pumpkin Hill.mp3"];
 function selectMusic(index) {
 	var music = Menu;
 	if (index >= 0 && index < musicList.length) {
 		musicIndex = index;
 		music.src = musicList[musicIndex];
 		music.play();
+    Game.pause();
+    GameOver.pause();
     localStorage.setItem("musicIndex", musicIndex);
 	}
 }
 var storedIndex = localStorage.getItem("musicIndex");
+
+/* Game Music */
+var gameMusicIndex = 0;
+var gameMusicList = ['audios/Green Hill (Modern) - Sonic Generations [OST].mp3', 
+"audios/Live and Learn by Crush 40 (Main Theme of SA2).mp3", 
+"audios/Escape From the City (City Escape) - Sonic Adventure 2 [OST].mp3", "audios/BOSS BATTLE BIG ARM.mp3", 
+"audios/Crisis City - Sonic the Hedgehog [OST].mp3", "audios/Break Through It All (feat. Kellin Quinn).mp3", 
+"audios/Undefeatable (feat. Kellin Quinn).mp3", "audios/Dragon Road (Day) - Sonic Unleashed [OST].mp3", 
+"audios/Doomsday Zone - Sonic & Knuckles [OST].mp3", "audios/Vela-Nova - Sonic Rush [OST].mp3", 
+"audios/Rooftop Run (Modern) - Sonic Generations [OST].mp3", "audios/Boo's House - Team Sonic Racing [OST].mp3"];
+function selectGameMusic(index) {
+	var gameMusic = Game;
+	if (index >= 0 && index < gameMusicList.length) {
+		gameMusicIndex = index;
+		gameMusic.src = gameMusicList[gameMusicIndex];
+    Menu.pause();
+    GameOver.pause();
+		gameMusic.play();
+    localStorage.setItem("gameMusicIndex", gameMusicIndex);
+	}
+}
+var storedGameIndex = localStorage.getItem("gameMusicIndex");
+
+/* Game Over Music */
+var gameoverMusicIndex = 0;
+var gameoverMusicList = ['audios/Sonic Advance 1 2 and 3-Game Over.mp3', 
+"audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
+"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", 
+"audios/Comfort Zone (Main Menu) - Sonic Mania [OST].mp3"];
+function selectGameOverMusic(index) {
+	var gameoverMusic = GameOver;
+	if (index >= 0 && index < gameoverMusicList.length) {
+		gameoverMusicIndex = index;
+		gameoverMusic.src = gameoverMusicList[gameoverMusicIndex];
+		gameoverMusic.play();
+    Game.pause();
+    Menu.pause();
+    localStorage.setItem("gameoverMusicIndex", gameoverMusicIndex);
+	}
+}
+var storedGameOverIndex = localStorage.getItem("gameoverMusicIndex");
 
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
@@ -139,6 +187,8 @@ function closeBtn() {
   const menuSelect = document.querySelector("#menuMusic");
   menuSelect.style.height = "0";
   Return.play();
+  Game.pause();
+  Menu.play();
 }
 
 /* 🎶🎶🎶🎶Musics🎶🎶🎶🎶 */
@@ -148,8 +198,8 @@ Menu.volume = 0.7;
 var GameOver = new Audio('audios/Sonic Advance 1 2 and 3-Game Over.mp3');
 GameOver.volume = 0.4;
 
-var GreenHill = new Audio('audios/Green Hill (Modern) - Sonic Generations [OST].mp3');
-GreenHill.volume = 0.3;
+var Game = new Audio('audios/Green Hill (Modern) - Sonic Generations [OST].mp3');
+Game.volume = 0.5;
 
 
 /* 🔊🔊🔊🔊Sound-Effects🔊🔊🔊🔊 */
