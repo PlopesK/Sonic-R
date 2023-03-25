@@ -13,6 +13,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     }, 200);
 
+    const play = document.getElementById("play-txt");
+    if (( window.innerWidth <= 800 )){
+        play.innerHTML="Tap the button to start!";
+    } else {
+        play.innerHTML="Press any key or click the button to start!";
+    }
+
     /* ♾️♾️♾️♾️Theme Color♾️♾️♾️♾️ */
     if(localStorage.dark == "true") {
         darkTheme();
