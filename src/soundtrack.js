@@ -116,8 +116,7 @@ function openSelect() {
 var musicIndex = 0;
 var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', 
 "audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
-"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", 
-"audios/Comfort Zone (Main Menu) - Sonic Mania [OST].mp3", "audios/Options Screen - Sonic R [OST].mp3", 
+"audios/Chun-nan (Night) - Sonic Unleashed [OST].mp3", "audios/Sonic Rush OST - What u need (Main Menu ver).mp3", "audios/Options Screen - Sonic R [OST].mp3", 
 "audios/A Ghost's Pumpkin Soup ... for Pumpkin Hill.mp3"];
 function selectMusic(index) {
 	var music = Menu;

@@ -200,13 +200,14 @@ footer p {
 }
 
 .selectMusic .title {
+    background-color: #142038;
     align-items: center;
     text-align: center;
-    justify-content: baseline;
+    justify-content: center;
     margin-top: 1.5vh;
     margin-bottom: 2vh;
     width: 100%;
-    height: 5vh;
+    height: 6.5vh;
 }
 
 .selectMusic button {
@@ -659,6 +660,22 @@ footer p {
     .img-section {
         width: 50%;
         text-align: center;
+    }
+
+    .selectMusic, .sidenav {
+        max-width: 38vh;
+    }
+
+    .selectMusic .majorTitle {
+        font-size: 2.7vh;
+    }
+
+    .selectMusic {
+        left: 38vh;
+    }
+
+    .selectMusic button {
+        font-size: 2.8vh;
     }
 
     .score img {
