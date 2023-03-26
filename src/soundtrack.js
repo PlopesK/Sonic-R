@@ -106,13 +106,13 @@ function unmuteSound() {
   muted.addEventListener("click", muteSound, { once: true });
 }
 
-/* Select Music */
+/* ✅✅✅✅Select Music✅✅✅✅ */
 function openSelect() {
   const menuSelect = document.querySelector("#menuMusic");
   menuSelect.style.height = "50%";
 }
 
-/* Menu Music */
+/* 📋📋📋📋Menu Music📋📋📋📋 */
 var musicIndex = 0;
 var musicList = ['audios/Extras Menu - Sonic Mega Collection [OST].mp3', 
 "audios/File Select - Sonic the Hedgehog 3 & Knuckles.mp3", "audios/Sonic Mega Collection Main Menu Theme.mp3", 
@@ -123,6 +123,7 @@ function selectMusic(index) {
 	if (index >= 0 && index < musicList.length) {
 		musicIndex = index;
 		music.src = musicList[musicIndex];
+    music.loop = true;
 		music.play();
     Game.pause();
     GameOver.pause();
@@ -131,7 +132,7 @@ function selectMusic(index) {
 }
 var storedIndex = localStorage.getItem("musicIndex");
 
-/* Game Music */
+/* 🎮🎮🎮🎮Game Music🎮🎮🎮🎮 */
 var gameMusicIndex = 0;
 var gameMusicList = ['audios/Green Hill (Modern) - Sonic Generations [OST].mp3', 
 "audios/Live and Learn by Crush 40 (Main Theme of SA2).mp3", 
@@ -145,6 +146,7 @@ function selectGameMusic(index) {
 	if (index >= 0 && index < gameMusicList.length) {
 		gameMusicIndex = index;
 		gameMusic.src = gameMusicList[gameMusicIndex];
+    gameMusic.loop = true;
     Menu.pause();
     GameOver.pause();
 		gameMusic.play();
@@ -153,7 +155,7 @@ function selectGameMusic(index) {
 }
 var storedGameIndex = localStorage.getItem("gameMusicIndex");
 
-/* Game Over Music */
+/* 👾👾👾👾Game Over Music👾👾👾👾 */
 var gameoverMusicIndex = 0;
 var gameoverMusicList = ['audios/Sonic Advance 1 2 and 3-Game Over.mp3', 
 "audios/Sonic CD - Game Over Music ~ Japan.mp3", "audios/Sonic CD - Game Over Music ~ USA.mp3", 
@@ -164,6 +166,7 @@ function selectGameOverMusic(index) {
 	if (index >= 0 && index < gameoverMusicList.length) {
 		gameoverMusicIndex = index;
 		gameoverMusic.src = gameoverMusicList[gameoverMusicIndex];
+    gameoverMusic.loop = true;
 		gameoverMusic.play();
     Game.pause();
     Menu.pause();

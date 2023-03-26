@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }
 
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
-    /* Menu Music */
+    /* 📋📋📋📋Menu Music📋📋📋📋 */
     if (storedIndex !== null) {
         musicIndex = parseInt(storedIndex);
         var music = Menu;
@@ -53,10 +53,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
     } else {
         Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
         Menu.volume = 0.7;
+        Menu.loop = true;
         Menu.play();
     }
 
-    /* Game Music */
+    /* 🎮🎮🎮🎮Game Music🎮🎮🎮🎮 */
     if (storedGameIndex !== null) {
         gameMusicIndex = parseInt(storedGameIndex);
         var gameMusic = Game;
@@ -67,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         Game.volume = 0.5;
     }
 
-    /* Game Over Music */
+    /* 👾👾👾👾Game Over Music👾👾👾👾 */
     if (storedGameOverIndex !== null) {
         gameoverMusicIndex = parseInt(storedGameOverIndex);
         var gameoverMusic = GameOver;
