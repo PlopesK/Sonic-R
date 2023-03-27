@@ -165,7 +165,7 @@ function openMenu() {
     const muted = document.querySelector('#muteSound');
     localStorage.setItem('mutedSound',true);
     localStorage.removeItem('unmutedSound', false);
-    const sounds = [Select, Selected, Return];
+    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam];
   
     muted.innerHTML = 'Mute SoundEffects <i class="fa fa-times"></i>'
     sounds.forEach(function(e) {
@@ -179,7 +179,7 @@ function openMenu() {
     const muted = document.querySelector('#muteSound');
     localStorage.setItem('unmutedSound',true);
     localStorage.removeItem('mutedSound', false);
-    const sounds = [Select, Selected, Return];
+    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam];
   
     muted.innerHTML = 'Mute SoundEffects'
     sounds.forEach(function(e) {
