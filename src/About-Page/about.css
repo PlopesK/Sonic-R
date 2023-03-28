@@ -41,6 +41,7 @@
     margin-top: 3vh;
     margin-bottom: 4vh;
     border-radius: 1.5vh;
+    cursor: pointer;
 }
 
 h1, h2 {
@@ -58,6 +59,11 @@ h1 {
 
 h2 {
     font-size: 4vh;
+}
+
+.extra {
+    font-size: 2vh;
+    opacity: 0.5;
 }
 
 /* 📱📱📱📱Mobile📱📱📱📱 */
