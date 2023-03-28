@@ -54,6 +54,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     });
 
+    /* Sounds for About page details */
+    var FlyBad = document.getElementById("flyenemy");
+    FlyBad.addEventListener('mouseover', function() {
+      HitDamage.play();
+    });
+
+    var Jumping = document.getElementById("jumped");
+    Jumping.addEventListener('mouseover', function() {
+      Jump.play();
+    });
+
     /* 🔇🔇🔇🔇Muted🔇🔇🔇🔇 */
     if(localStorage.muted == "true") {
             muteMusic();
@@ -239,6 +250,12 @@ function openMenu() {
   
   var Selected = new Audio('audios/Sonic CD Original Sound Track - Event.mp3');
   Selected.volume = 0.6;
+
+  var HitDamage = new Audio('audios/Sonic Getting Hit (Sound Effect).mp3');
+  HitDamage.volume = 0.5;
+
+  var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
+  Jump.volume = 1;
   
   
   /* 🦔🦔🦔🦔Logos🦔🦔🦔🦔 */
