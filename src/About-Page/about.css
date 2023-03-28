@@ -14,7 +14,7 @@
 .text-content {
     padding: 6.2vh;
     width: 100%;
-    background-color: #2470e3;
+    background-color: #2888FC;
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
@@ -31,9 +31,10 @@
 
 h1, h2 {
     font-family: 'Sonic Logo', sans-serif;
-    margin-bottom: 1vh;
-    margin-top: 2vh;
-    background-color: #14437D;
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+    background-color: #FCA80F;
+    color: #257BE6;
 }
 
 h1 {
