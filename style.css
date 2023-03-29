@@ -458,32 +458,47 @@ footer p {
 
 .gameover {
     width: 100%;
-    top: 35%;
+    top: 38%;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: absolute;
     display: flex;
+    font-family: 'SF Intermosaic', sans-serif;
     font-size: 3vh;
     z-index: 30;
 }
 
 .restart {
     width: 80vh;
-    height: 60vh;
+    height: 55vh;
     margin: auto;
     border-radius: 1.5vh;
-    background: var(--Footer);
+    background: url("images/footer-bg-dark.gif");
     align-items: center;
     justify-content: center;
     text-align: center;
     display: flex;
     flex-direction: column;
+    color: azure;
     opacity: 0.8;
 }
 
 .restart button {
     position: relative;
+    margin-top: 2vh;
+    background-color: #142038;
+    color: azure;
+    border-color: azure;
+}
+
+.restart a {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.restart img {
+    opacity: 1;
 }
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
