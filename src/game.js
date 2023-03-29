@@ -85,32 +85,22 @@ function game() {
     setInterval(checkCollision, 100);
 
     /* 🆙🆙🆙🆙Jump🆙🆙🆙🆙 */
-    let hasJumped = false;
-
     function jump() {
-        if (!hasJumped) {
-            if (sonic.classList != "jump") {
-                hasJumped = true;
-                sonic.classList.add("jump");
-                Jump.currentTime = 0.4;
-                Jump.play();
+        if (sonic.classList != "jump") {
+            sonic.classList.add("jump");
+            Jump.currentTime = 0.4;
+            Jump.play();
 
-                if (Jump.currentTime >= 0.65) {
-                    Jump.currentTime = 1;
-                }
+            Jump.addEventListener("ended", function() {
+                sonic.classList.remove("jump");
+            });
 
-                Jump.addEventListener("ended", function() {
-                    sonic.classList.remove("jump");
-                    hasJumped = false;
-                });
-
-                ['keydown', 'click'].forEach(function(e) {
-                    document.addEventListener(e, sonicDJump, {once: true});
-                    setTimeout (() => {
-                        document.removeEventListener(e, sonicDJump, {once: true});
-                    }, 400);
-                });
-            }
+            ['keydown', 'click'].forEach(function(e) {
+                document.addEventListener(e, sonicDJump, {once: true});
+                setTimeout (() => {
+                    document.removeEventListener(e, sonicDJump, {once: true});
+                }, 400);
+            });
         }
     }
 
@@ -130,13 +120,8 @@ function game() {
     }
 
     function sonicDJump() {
-        if (hasJumped) {
-            DoubleJump.play();
-            sonic.animate(sonicDoubleJump, sonicDJumpTimming);
-            DoubleJump.addEventListener("ended", function() {
-                hasJumped = false;
-            });
-        }
+        DoubleJump.play();
+        sonic.animate(sonicDoubleJump, sonicDJumpTimming);
     }
 
     ['keydown', 'click'].forEach(function(e) {
