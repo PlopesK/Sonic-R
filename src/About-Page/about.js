@@ -65,6 +65,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
       Jump.play();
     });
 
+    var DoubleJumping = document.getElementById("djumped");
+    DoubleJumping.addEventListener('mouseover', function() {
+      DoubleJump.play();
+    });
+
     /* 🔇🔇🔇🔇Muted🔇🔇🔇🔇 */
     if(localStorage.muted == "true") {
             muteMusic();
@@ -186,7 +191,7 @@ function openMenu() {
     const muted = document.querySelector('#muteSound');
     localStorage.setItem('mutedSound',true);
     localStorage.removeItem('unmutedSound', false);
-    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam, HitDamage, Jump];
+    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam, HitDamage, Jump, DoubleJump];
   
     muted.innerHTML = 'Mute SoundEffects <i class="fa fa-times"></i>'
     sounds.forEach(function(e) {
@@ -200,7 +205,7 @@ function openMenu() {
     const muted = document.querySelector('#muteSound');
     localStorage.setItem('unmutedSound',true);
     localStorage.removeItem('mutedSound', false);
-    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam, HitDamage, Jump];
+    const sounds = [Select, Selected, Return, SonicR, SEGA, SonicTeam, HitDamage, Jump, DoubleJump];
   
     muted.innerHTML = 'Mute SoundEffects'
     sounds.forEach(function(e) {
@@ -266,6 +271,9 @@ function openMenu() {
 
   var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
   Jump.volume = 1;
+
+  var DoubleJump = new Audio('audios/Modern Sonic jump sound effect.mp3');
+  DoubleJump.volume = 1;
   
   
   /* 🦔🦔🦔🦔Logos🦔🦔🦔🦔 */

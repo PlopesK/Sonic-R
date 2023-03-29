@@ -80,7 +80,7 @@ function muteSound() {
   const muted = document.querySelector('#muteSound');
   localStorage.setItem('mutedSound',true);
   localStorage.removeItem('unmutedSound', false);
-  const sounds = [Select, Selected, Return, Jump, StartTrack, ScoreHit, HigherScoreHit, 
+  const sounds = [Select, Selected, Return, Jump, DoubleJump, StartTrack, ScoreHit, HigherScoreHit, 
   HitDamage, SonicR, SEGA, SonicTeam];
 
   muted.innerHTML = 'Mute SoundEffects <i class="fa fa-times"></i>'
@@ -95,7 +95,7 @@ function unmuteSound() {
   const muted = document.querySelector('#muteSound');
   localStorage.setItem('unmutedSound',true);
   localStorage.removeItem('mutedSound', false);
-  const sounds = [Select, Selected, Return, Jump, StartTrack, ScoreHit, HigherScoreHit, 
+  const sounds = [Select, Selected, Return, Jump, DoubleJump, StartTrack, ScoreHit, HigherScoreHit, 
   HitDamage, SonicR, SEGA, SonicTeam];
 
   muted.innerHTML = 'Mute SoundEffects'
