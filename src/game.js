@@ -1,16 +1,14 @@
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 let lifes = 3;
-let hit = 0;
-let isPaused = false;
 let canLoseLife = true;
 
 function game() {
-    /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     const sonic = document.getElementById("sonic");
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
     const lifesDisplay = document.getElementById("lifes");
 
+    /* 💥💥💥💥Sonic Damage Animation💥💥💥💥 */
     const sonicHit = [
         {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 1},
         {opacity: 0},
@@ -28,11 +26,8 @@ function game() {
         sonic.animate(sonicHit, sonicHitTimming);
     }
 
+    /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     function checkCollision() {
-    if (isPaused) {
-        return;
-    }
-
     let sonicTop = parseInt(
         window.getComputedStyle(sonic).getPropertyValue("top"));
 
@@ -42,28 +37,25 @@ function game() {
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
 
-    if (obstLeft < 50 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
-        obsTop < 50 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 45 && canLoseLife == true) {   
+    if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
+        obsTop < 60 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 40 && canLoseLife == true) {   
             HitDamage.currentTime = 0.2;
             HitDamage.play();
             sonicDamage();
             canLoseLife = false;
-            if (lifes <= 0 || hit >= 3) {
+            if (lifes <= 0) {
                 gameOver();
             } else {
                 setTimeout(() => {
                     lifes -= 1;
-                    hit++;
-                    setInterval(function () {
-                        if (lifes == 2 || hit == 1) {
-                            lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
-                        }
-                        if (lifes == 1 || hit == 2) {
-                            lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
-                        } else if (lifes == 0 || hit == 3) {
-                            lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
-                        }
-                    }, 50);
+                    if (lifes == 2) {
+                        lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
+                    }
+                    if (lifes == 1) {
+                        lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
+                    } else if (lifes == 0) {
+                        lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
+                    }
                     canLoseLife = true;
                 }, 500);
             }
@@ -77,7 +69,6 @@ function game() {
         GameOver.loop = true; 
         GameOver.play();
 
-        isPaused = true;
         alert("Game Over");
         location.reload()
     }
@@ -104,6 +95,13 @@ function game() {
         }
     }
 
+    ['keydown', 'click'].forEach(function(e) {
+        document.addEventListener(e, function () {
+            jump();
+        });
+    });
+
+    /* 🌀🌀🌀🌀Sonic Double Jump Animation🌀🌀🌀🌀 */
     const sonicDoubleJump = [
         {backgroundImage: 'url(sprites/sonic-doublejump.gif)', top: '9vh'},
         {top: '0vh'},
@@ -123,12 +121,6 @@ function game() {
         DoubleJump.play();
         sonic.animate(sonicDoubleJump, sonicDJumpTimming);
     }
-
-    ['keydown', 'click'].forEach(function(e) {
-        document.addEventListener(e, function () {
-            jump();
-        });
-    });
 }
 
 /* 🏞️🏞️🏞️🏞️Background Moving🏞️🏞️🏞️🏞️ */
