@@ -290,17 +290,27 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'SF Intermosaic', sans-serif;
+    font-size: 3vh;
+    z-index: 3;
 }
 
 .start p {
     position: absolute;
     text-align: center;
-    top: 35%;
     color: azure;
-    font-family: 'SF Intermosaic', sans-serif;
-    font-size: 3vh;
-    z-index: 3;
+    top: 35%;
     animation: press 2s infinite ease-in-out;
+}
+
+.extra {
+    width: 100%;
+    height: auto;
+    top: 90%;
+    text-align: center;
+    color: azure;
+    opacity: 0.5;
+    position: absolute;
 }
 
 @keyframes press {
@@ -691,6 +701,10 @@ footer p {
     .area {
         margin-bottom: 125px;
         margin-top: 70px;
+    }
+
+    .extra {
+        top: 95%;
     }
 }
 

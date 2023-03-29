@@ -61,11 +61,6 @@ h2 {
     font-size: 4vh;
 }
 
-.extra {
-    font-size: 2vh;
-    opacity: 0.5;
-}
-
 /* 📱📱📱📱Mobile📱📱📱📱 */
 @media(max-width: 800px){
     .text-area {
