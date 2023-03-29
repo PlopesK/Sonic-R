@@ -115,12 +115,12 @@ function game() {
     }
 
     const sonicDoubleJump = [
-        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '9vh'},
+        {backgroundImage: 'url(sprites/sonic-doublejump.gif)', top: '9vh'},
         {top: '0vh'},
         {top: '0vh'},
         {top: '0vh'},
-        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '11vh'},
-        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '18.6vh'},
+        {top: '11vh'},
+        {backgroundImage: 'url(sprites/sonic-doublejump.gif)', top: '18.6vh'},
         {top: '23vh'}
     ]
 
@@ -131,10 +131,9 @@ function game() {
 
     function sonicDJump() {
         if (hasJumped) {
-            Jump.currentTime = 0.4;
-            Jump.play();
+            DoubleJump.play();
             sonic.animate(sonicDoubleJump, sonicDJumpTimming);
-            Jump.addEventListener("ended", function() {
+            DoubleJump.addEventListener("ended", function() {
                 hasJumped = false;
             });
         }

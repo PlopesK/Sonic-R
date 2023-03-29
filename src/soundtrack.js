@@ -218,6 +218,9 @@ Selected.volume = 0.6;
 var Jump = new Audio('audios/Sonic Jump Sound Effect.mp3');
 Jump.volume = 1;
 
+var DoubleJump = new Audio('audios/Modern Sonic jump sound effect.mp3');
+DoubleJump.volume = 1;
+
 var StartTrack = new Audio('audios/Sonic Checkpoint SFX.mp3');
 StartTrack.volume = 1;
 
