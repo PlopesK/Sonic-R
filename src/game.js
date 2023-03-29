@@ -13,8 +13,8 @@ function game() {
 
     const sonicHit = [
         {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 1},
-        {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 0},
-        {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 1},
+        {opacity: 0},
+        {opacity: 1},
         {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 0},
         {backgroundImage: 'url(sprites/sonic-run.gif)', opacity: 1}
     ]
@@ -42,8 +42,8 @@ function game() {
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
 
-    if (obstLeft < 40 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
-        obsTop < 40 && obsTop > 0 && sonicTop <= 120 && canLoseLife == true) {   
+    if (obstLeft < 50 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
+        obsTop < 50 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 45 && canLoseLife == true) {   
             HitDamage.currentTime = 0.2;
             HitDamage.play();
             sonicDamage();
@@ -85,21 +85,61 @@ function game() {
     setInterval(checkCollision, 100);
 
     /* 🆙🆙🆙🆙Jump🆙🆙🆙🆙 */
+    let hasJumped = false;
+
     function jump() {
-        if (sonic.classList != "jump") {
-            sonic.classList.add("jump");
+        if (!hasJumped) {
+            if (sonic.classList != "jump") {
+                hasJumped = true;
+                sonic.classList.add("jump");
+                Jump.currentTime = 0.4;
+                Jump.play();
+
+                if (Jump.currentTime >= 0.65) {
+                    Jump.currentTime = 1;
+                }
+
+                Jump.addEventListener("ended", function() {
+                    sonic.classList.remove("jump");
+                    hasJumped = false;
+                });
+
+                ['keydown', 'click'].forEach(function(e) {
+                    document.addEventListener(e, sonicDJump, {once: true});
+                    setTimeout (() => {
+                        document.removeEventListener(e, sonicDJump, {once: true});
+                    }, 400);
+                });
+            }
+        }
+    }
+
+    const sonicDoubleJump = [
+        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '9vh'},
+        {top: '0vh'},
+        {top: '0vh'},
+        {top: '0vh'},
+        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '11vh'},
+        {backgroundImage: 'url(sprites/sonic-jump.gif)', top: '18.6vh'},
+        {top: '23vh'}
+    ]
+
+    const sonicDJumpTimming = {
+        duration: 750,
+        iterations: 1,
+    }
+
+    function sonicDJump() {
+        if (hasJumped) {
             Jump.currentTime = 0.4;
             Jump.play();
-            
-            if (Jump.currentTime == 0.65) {
-                Jump.currentTime = 1;
-            }
-
+            sonic.animate(sonicDoubleJump, sonicDJumpTimming);
             Jump.addEventListener("ended", function() {
-                sonic.classList.remove("jump");
+                hasJumped = false;
             });
-        }  
+        }
     }
+
     ['keydown', 'click'].forEach(function(e) {
         document.addEventListener(e, function () {
             jump();

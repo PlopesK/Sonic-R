@@ -25,8 +25,8 @@ function spawn(){
 
 function bugRespawn() {
     const bug = document.getElementById("badnik1");
-    const minDuration = 1000;
-    const maxDuration = 2400;
+    const minDuration = 700;
+    const maxDuration = 2500;
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
     bug.style.animationDuration = animationDuration;
@@ -37,7 +37,7 @@ function bugRespawn() {
 
 function flyRespawn() {
     const fly = document.getElementById("badnik2");
-    const minDuration = 1000;
+    const minDuration = 700;
     const maxDuration = 1500;
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
