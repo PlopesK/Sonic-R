@@ -456,6 +456,36 @@ footer p {
     background-repeat: no-repeat;
 }
 
+.gameover {
+    width: 100%;
+    top: 35%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    font-size: 3vh;
+    z-index: 30;
+}
+
+.restart {
+    width: 80vh;
+    height: 60vh;
+    margin: auto;
+    border-radius: 1.5vh;
+    background: var(--Footer);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.8;
+}
+
+.restart button {
+    position: relative;
+}
+
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
     width: 7.7vh;
