@@ -229,7 +229,7 @@ function objectSpawn() {
     } if (timerObj == 3400) {
         object4.classList.add("move");
         object4.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 4200) {
+    } if (timerObj == 4000) {
         timerObj = 0;
         object5.classList.add("move");
         object5.style.backgroundImage = `url(${objectBackground})`;

@@ -706,6 +706,10 @@ footer p {
     .extra {
         top: 95%;
     }
+
+    #object5 {
+        opacity: 0;
+    }
 }
 
 @media(max-width: 1200px){
