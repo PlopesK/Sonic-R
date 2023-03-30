@@ -115,5 +115,5 @@ window.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function test() {
-    document.documentElement.style.setProperty('--Idle', 'url(sprites/sonic3-idle.gif)');
+    document.documentElement.style.setProperty('--Idle', 'url(sprites/ClassicSonic/sonic3-idle.gif)');
 }
