@@ -113,3 +113,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
             unmuteSound();
     }
 });
+
+function test() {
+    document.documentElement.style.setProperty('--Idle', 'url(sprites/sonic3-idle.gif)');
+}
