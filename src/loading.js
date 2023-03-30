@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
-    "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
+    "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/sonic-death.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
     'sprites/Object3.gif', 'sprites/Object4.gif', 'sprites/Object5.gif', 'sprites/Object6.png', 
     'sprites/Object7.gif', 'sprites/Object8.gif', 'sprites/badnik1.gif', 'sprites/badnik2.gif', "sprites/ground.png", 
     "sprites/background.gif", 'images/sonic.ico', 'images/Sonic_Runners_logo.png', "sprites/score.png", 

@@ -75,6 +75,9 @@ function game() {
             const GameOverScreen = document.getElementById('gameover');
             GameOverScreen.classList.remove("hidden");
             sonic.style.opacity = 0;
+            document.addEventListener("keydown", () => {
+                location.reload();
+            },  { once: true });
         }, 1000);
     }
 
