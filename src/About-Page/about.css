@@ -61,9 +61,26 @@ h2 {
     font-size: 4vh;
 }
 
+.transition {
+    font-family: 'Sonic Logo', sans-serif;
+    font-size: 3vh;
+    width: 70%;
+    height: 4vh;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    background: var(--TitleBg);
+    color: var(--TitleText);
+    border-radius: 1vh;
+}
+
 .extramessage {
     font-size: 2vh;
     opacity: 0.5;
+}
+
+.sonic {
+    width: 15vh; 
+    height: 15vh;
 }
 
 /* 📱📱📱📱Mobile📱📱📱📱 */
