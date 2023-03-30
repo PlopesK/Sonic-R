@@ -22,7 +22,7 @@ function blueTheme() {
   document.documentElement.style.setProperty('--SiteColor', '#257BE6');
   document.documentElement.style.setProperty('--Header', 'url(images/header.png)');
   document.documentElement.style.setProperty('--Footer', 'url(images/footer-bg.gif)');
-  document.getElementById("SonicTeam").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/sonic_team.png.webp";
+  document.getElementById("SonicTeam").src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png";
   document.getElementById("SonicTeam").title="Sonic Team";
   document.getElementById("SEGA").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp";
   dark.innerHTML="Dark Mode";

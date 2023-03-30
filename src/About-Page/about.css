@@ -8,6 +8,11 @@
     --LinkHover: #000097;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .text-area {
     padding: 6.2vh;
     width: 100%;
@@ -81,6 +86,40 @@ h2 {
 .sonic {
     width: 15vh; 
     height: 15vh;
+}
+
+.options {
+    position: fixed;
+    width: 100%;
+    text-decoration: none;
+    font-size: 3.5vh;
+    z-index: 20;
+}
+
+.options a {
+    color: var(--TitleText);
+}
+
+.return {
+    position: fixed;
+    left: 4vh;
+    width: 6vh;
+    height: 6vh;
+    text-align: center;
+    border-radius: 4vh;
+    background: var(--TitleBg);
+    bottom: 4vh;
+}
+
+.go {
+    position: fixed;
+    right: 4vh;
+    width: 6vh;
+    height: 6vh;
+    text-align: center;
+    border-radius: 4vh;
+    background: var(--TitleBg);
+    bottom: 4vh;
 }
 
 /* 📱📱📱📱Mobile📱📱📱📱 */

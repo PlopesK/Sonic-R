@@ -47,13 +47,15 @@ window.addEventListener("DOMContentLoaded", function (event) {
         SEGA.play();
     });
 
-    var Sonic_Team = document.getElementById("SonicTeam");
-    Sonic_Team.addEventListener('mouseover', function() {
-        if (SonicTeam.currentTime <= 1 || SonicTeam.currentTime >= 7) {
-            SonicTeam.currentTime = 1.5;
-            SonicTeam.play();
-        }
-    });
+    var Sonic_Team = document.querySelectorAll(".team");
+    Sonic_Team.forEach(element => {
+      element.addEventListener('mouseover', function() {
+          if (SonicTeam.currentTime <= 1 || SonicTeam.currentTime >= 7) {
+              SonicTeam.currentTime = 1.5;
+              SonicTeam.play();
+          }
+      });
+    })
 
     /* 🔊🔊🔊🔊Sounds for About page details🔊🔊🔊🔊 */
     var FlyBad = document.getElementById("flyenemy");
@@ -129,7 +131,7 @@ function openMenu() {
     document.documentElement.style.setProperty('--TitleText', '#13b8ff');
     document.documentElement.style.setProperty('--Link', '#0043ef');
     document.documentElement.style.setProperty('--LinkHover', '#000097');
-    document.getElementById("SonicTeam").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/sonic_team.png.webp";
+    document.getElementById("SonicTeam").src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png";
     document.getElementById("SonicTeam").title="Sonic Team";
     document.getElementById("SEGA").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp";
     dark.innerHTML="Dark Mode";
