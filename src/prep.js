@@ -65,7 +65,7 @@ function start() {
 
     sonic.addEventListener("animationend", function () {
         sonic.classList.remove("run");
-        sonic.style.backgroundImage = "url(sprites/sonic-run.gif)";
+        sonic.style.backgroundImage = 'var(--Run)';
 
         game ();
         enemy();

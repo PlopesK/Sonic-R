@@ -10,11 +10,11 @@ function game() {
 
     /* 💥💥💥💥Sonic Damage Animation💥💥💥💥 */
     const sonicHit = [
-        {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 1},
+        {backgroundImage: 'var(--Damage)', opacity: 1},
         {opacity: 0},
         {opacity: 1},
-        {backgroundImage: 'url(sprites/sonic-damage.gif)', opacity: 0},
-        {backgroundImage: 'url(sprites/sonic-run.gif)', opacity: 1}
+        {backgroundImage: 'var(--Damage)', opacity: 0},
+        {backgroundImage: 'var(--Run)', opacity: 1}
     ]
 
     const sonicHitTimming = {
@@ -78,18 +78,18 @@ function game() {
             document.addEventListener("keydown", () => {
                 location.reload();
             },  { once: true });
-        }, 1000);
+        }, 1300);
     }
 
     const sonicDeath = [
-        {backgroundImage: 'url(sprites/sonic-death.gif)', top: '23vh'},
+        {backgroundImage: 'var(--Death)', top: '23vh'},
         {top: '12vh'},
         {top: '27vh'},
-        {backgroundImage: 'url(sprites/sonic-death.gif)', top: '40vh'}
+        {backgroundImage: 'var(--Death)', top: '40vh'}
     ]
 
     const sonicDeathTimming = {
-        duration: 1200,
+        duration: 1300,
         iterations: 1,
     }
 
@@ -129,12 +129,12 @@ function game() {
 
     /* 🌀🌀🌀🌀Sonic Double Jump Animation🌀🌀🌀🌀 */
     const sonicDoubleJump = [
-        {backgroundImage: 'url(sprites/sonic-doublejump.gif)', top: '9vh'},
+        {backgroundImage: 'var(--DoubleJump)', top: '9vh'},
         {top: '0vh'},
         {top: '0vh'},
         {top: '0vh'},
         {top: '11vh'},
-        {backgroundImage: 'url(sprites/sonic-doublejump.gif)', top: '18.6vh'},
+        {backgroundImage: 'var(--DoubleJump)', top: '18.6vh'},
         {top: '23vh'}
     ]
 

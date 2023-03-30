@@ -1,6 +1,5 @@
 /* 👾👾👾👾Enemy👾👾👾👾 */
 let timer = 0;
-let obst;
 
 function enemy(){
     stop();
