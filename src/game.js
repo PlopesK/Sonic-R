@@ -66,36 +66,55 @@ function game() {
         isGameOver = true;
         Game.loop = false;
         Game.pause();
-        gameoverscore();
-        gameoverenemy();
-        gameoverobject();
-
-        const GameOverScreen = document.getElementById('gameover');
-        GameOverScreen.classList.remove("hidden");
 
         GameOver.loop = true; 
         GameOver.play();
+        sonicDying();
+
+        setTimeout(() => {
+            const GameOverScreen = document.getElementById('gameover');
+            GameOverScreen.classList.remove("hidden");
+            sonic.style.opacity = 0;
+        }, 1000);
+    }
+
+    const sonicDeath = [
+        {backgroundImage: 'url(sprites/sonic-death.gif)', top: '23vh'},
+        {top: '12vh'},
+        {top: '27vh'},
+        {backgroundImage: 'url(sprites/sonic-death.gif)', top: '40vh'}
+    ]
+
+    const sonicDeathTimming = {
+        duration: 1200,
+        iterations: 1,
+    }
+
+    function sonicDying() {
+        sonic.animate(sonicDeath, sonicDeathTimming);
     }
 
     setInterval(checkCollision, 100);
 
     /* 🆙🆙🆙🆙Jump🆙🆙🆙🆙 */
     function jump() {
-        if (sonic.classList != "jump") {
-            sonic.classList.add("jump");
-            Jump.currentTime = 0.4;
-            Jump.play();
+        if (!isGameOver) {
+            if (sonic.classList != "jump") {
+                sonic.classList.add("jump");
+                Jump.currentTime = 0.4;
+                Jump.play();
 
-            Jump.addEventListener("ended", function() {
-                sonic.classList.remove("jump");
-            });
+                Jump.addEventListener("ended", function() {
+                    sonic.classList.remove("jump");
+                });
 
-            ['keydown', 'click'].forEach(function(e) {
-                document.addEventListener(e, sonicDJump, {once: true});
-                setTimeout (() => {
-                    document.removeEventListener(e, sonicDJump, {once: true});
-                }, 400);
-            });
+                ['keydown', 'click'].forEach(function(e) {
+                    document.addEventListener(e, sonicDJump, {once: true});
+                    setTimeout (() => {
+                        document.removeEventListener(e, sonicDJump, {once: true});
+                    }, 400);
+                });
+            }
         }
     }
 
@@ -175,23 +194,16 @@ let ObjInterval;
 
 function object() {
     objInterval();
+    const object5 = document.getElementById("object5");
+    const bg2 = document.getElementById("bg-object2");
     ObjInterval = setInterval(() => { objectSpawn(); }, 10);
     BgInterval = setInterval(() => { BGObjSpawn(); }, 10);
-    const object5 = document.getElementById("object5");
     object5.addEventListener("animationend", objRespawn);
-    const bg2 = document.getElementById("bg-object2");
     bg2.addEventListener("animationend", BGObjRespawn);
 }
 
 function objInterval() {
     clearInterval(object);
-}
-
-function gameoverobject() {
-    clearInterval(ObjInterval);
-    clearInterval(BgInterval);
-    const object5 = document.getElementById("object5");
-    object5.classList.add("hidden");
 }
 
 function randInteger(min, max) {
@@ -210,22 +222,24 @@ function objectSpawn() {
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
 
-    if ((timerObj += 10) == (1400)) {
-        object1.classList.add("move");
-        object1.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 2300) {
-        object2.classList.add("move");
-        object2.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 2800) {
-        object3.classList.add("move");
-        object3.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 3400) {
-        object4.classList.add("move");
-        object4.style.backgroundImage = `url(${objectBackground})`;
-    } if (timerObj == 4000) {
-        timerObj = 0;
-        object5.classList.add("move");
-        object5.style.backgroundImage = `url(${objectBackground})`;
+    if (!isGameOver) {
+        if ((timerObj += 10) == (1400)) {
+            object1.classList.add("move");
+            object1.style.backgroundImage = `url(${objectBackground})`;
+        } if (timerObj == 2300) {
+            object2.classList.add("move");
+            object2.style.backgroundImage = `url(${objectBackground})`;
+        } if (timerObj == 2800) {
+            object3.classList.add("move");
+            object3.style.backgroundImage = `url(${objectBackground})`;
+        } if (timerObj == 3400) {
+            object4.classList.add("move");
+            object4.style.backgroundImage = `url(${objectBackground})`;
+        } if (timerObj == 4000) {
+            timerObj = 0;
+            object5.classList.add("move");
+            object5.style.backgroundImage = `url(${objectBackground})`;
+        }
     }
 }
 
@@ -234,13 +248,15 @@ function BGObjSpawn() {
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
 
-    if ((BgTimer += 10) == (2000)) {
-        bg1.classList.add("move");
-        bg1.style.backgroundImage = `url(${objectBackground})`;
-    } if (BgTimer == 3800) {
-        BgTimer = 0
-        bg2.classList.add("move");
-        bg2.style.backgroundImage = `url(${objectBackground})`;
+    if (!isGameOver) {
+        if ((BgTimer += 10) == (2000)) {
+            bg1.classList.add("move");
+            bg1.style.backgroundImage = `url(${objectBackground})`;
+        } if (BgTimer == 3800) {
+            BgTimer = 0
+            bg2.classList.add("move");
+            bg2.style.backgroundImage = `url(${objectBackground})`;
+        }
     }
 }
 

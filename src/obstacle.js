@@ -10,10 +10,6 @@ function enemy(){
 function stop() {
     clearInterval(enemy);
 }
-
-function gameoverenemy() {
-    clearInterval(obst);
-}
     
 function spawn(){
     const bug = document.getElementById("badnik1");
@@ -30,6 +26,8 @@ function spawn(){
     } else {
         bug.removeEventListener("animationend", bugRespawn);
         fly.removeEventListener("animationend", flyRespawn);
+        bug.classList.add('hidden');
+        fly.classList.add('hidden');
     }
 }
 
