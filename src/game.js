@@ -63,14 +63,18 @@ function game() {
     } 
 
     function gameOver() {
+        isGameOver = true;
         Game.loop = false;
         Game.pause();
+        gameoverscore();
+        gameoverenemy();
+        gameoverobject();
+
+        const GameOverScreen = document.getElementById('gameover');
+        GameOverScreen.classList.remove("hidden");
 
         GameOver.loop = true; 
         GameOver.play();
-
-        alert("Game Over");
-        location.reload()
     }
 
     setInterval(checkCollision, 100);
@@ -127,6 +131,8 @@ function game() {
 let lastTime = 0;
 let speed = 100;
 let speedGround = 200;
+let isGameOver = false;
+
 function backgroundMove() {
     let positionX = 0;
     let positionXG = 0;
@@ -151,7 +157,9 @@ function backgroundMove() {
         background.style.backgroundPositionX = positionX + 'px';
         ground.style.backgroundPositionX = positionXG + 'px';
 
-        requestAnimationFrame(animate);
+        if (!isGameOver) {
+            requestAnimationFrame(animate);
+        }
     }
     requestAnimationFrame(animate);
 }
@@ -162,11 +170,13 @@ const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png', 'sprites/Object3.
 let objIntervalId = 0;
 let timerObj = 0;
 let BgTimer = 0;
+let BgInterval;
+let ObjInterval;
 
 function object() {
     objInterval();
-    setInterval(() => { objectSpawn(); }, 10);
-    setInterval(() => { BGObjSpawn(); }, 10);
+    ObjInterval = setInterval(() => { objectSpawn(); }, 10);
+    BgInterval = setInterval(() => { BGObjSpawn(); }, 10);
     const object5 = document.getElementById("object5");
     object5.addEventListener("animationend", objRespawn);
     const bg2 = document.getElementById("bg-object2");
@@ -175,6 +185,13 @@ function object() {
 
 function objInterval() {
     clearInterval(object);
+}
+
+function gameoverobject() {
+    clearInterval(ObjInterval);
+    clearInterval(BgInterval);
+    const object5 = document.getElementById("object5");
+    object5.classList.add("hidden");
 }
 
 function randInteger(min, max) {

@@ -125,14 +125,14 @@
                 </div>
                 <div class="extra hid" id="tip">Tip: You can <b> DOUBLE JUMP </b> if you press jump 2 times!</div>
             </div>
-            <div class="gameover">
+            <div class="gameover hidden" id="gameover">
                 <div class="restart">
                     <img src="sprites/gameover.png" title="Game Over!" alt="Game Over" style="width: 45vh; 
                     height: 6vh; margin-bottom: 2vh;">
                     <a id="earned-points"> Score: </a><br>
-                    <a id="highscore"> Highscore: </a><br>
-                    <a id="newhighscore"> NEW HIGHSCORE! </a><br>
-                    <button class="button" id="restart">
+                    <a id="highscore"> HighScore: </a><br>
+                    <a id="newhighscore" class="hidden"> NEW HIGHSCORE! </a><br>
+                    <button class="button" id="restart" onclick="location.reload()">
                         <i class="fa fa-undo"></i>
                     </button>
                     <img src="sprites/gameover-sonic.gif" title="Continue?" alt="Continue?" style="width: 24vh; 

@@ -12,9 +12,17 @@ function crono(){
 function pause() {
     clearInterval(crono);
 }
+
+function gameoverscore() {
+    clearInterval(cron);
+}
     
 function score(){
     const score = document.getElementById('points');
+    const yourScore = document.getElementById('earned-points');
+    const HighScore = document.getElementById('highscore');
+    const NewHS = document.getElementById('newhighscore');
+
     if ((millisecond += 10) == 100) {
         millisecond = 0;
         points++;
@@ -36,8 +44,11 @@ function score(){
     } if (points > highScore) {
         highScore = points;
         localStorage.setItem('highScore', highScore);
+        NewHS.classList.remove("hidden");
     }
-    score.innerText = returnData(points) + ' | High Score: ' + returnData(highScore);
+    score.innerText = returnData(points)
+    yourScore.innerText = 'Score: ' + returnData(points);
+    HighScore.innerText = 'HighScore: ' + returnData(highScore);
 }
 
 function returnData(input) {

@@ -1,26 +1,36 @@
 /* 👾👾👾👾Enemy👾👾👾👾 */
 let timer = 0;
+let obst;
 
 function enemy(){
     stop();
-    setInterval(() => { spawn(); }, 10);
+    obst = setInterval(() => { spawn(); }, 10);
 }
     
 function stop() {
     clearInterval(enemy);
 }
+
+function gameoverenemy() {
+    clearInterval(obst);
+}
     
 function spawn(){
     const bug = document.getElementById("badnik1");
     const fly = document.getElementById("badnik2");
-    if ((timer += 10) == (2000)) {
-        bug.classList.add("block");
-    } if (timer == (3200)){
-        timer = 0;
-        fly.classList.add("flying");
+    if (!isGameOver) {
+        if ((timer += 10) == (2000)) {
+            bug.classList.add("block");
+        } if (timer == (3200)){
+            timer = 0;
+            fly.classList.add("flying");
+        }
+        bug.addEventListener("animationend", bugRespawn);
+        fly.addEventListener("animationend", flyRespawn);
+    } else {
+        bug.removeEventListener("animationend", bugRespawn);
+        fly.removeEventListener("animationend", flyRespawn);
     }
-    bug.addEventListener("animationend", bugRespawn);
-    fly.addEventListener("animationend", flyRespawn);
 }
 
 function bugRespawn() {

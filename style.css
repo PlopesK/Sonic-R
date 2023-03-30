@@ -481,7 +481,7 @@ footer p {
     display: flex;
     flex-direction: column;
     color: azure;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .restart button {
@@ -499,6 +499,22 @@ footer p {
 
 .restart img {
     opacity: 1;
+}
+
+#newhighscore {
+    animation: highscore 1s infinite linear;
+}
+
+@keyframes highscore {
+    0% {
+        color:darkgoldenrod
+    }
+    50% {
+        color: azure;
+    }
+    100% {
+        color:darkgoldenrod
+    }
 }
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
