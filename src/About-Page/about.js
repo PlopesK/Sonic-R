@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         }
     });
 
-    /* Sounds for About page details */
+    /* 🔊🔊🔊🔊Sounds for About page details🔊🔊🔊🔊 */
     var FlyBad = document.getElementById("flyenemy");
     FlyBad.addEventListener('mouseover', function() {
       HitDamage.play();
