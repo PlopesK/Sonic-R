@@ -17,8 +17,7 @@ function openMenu() {
 function blueTheme() {
   const blue = document.querySelector('#Blue');
   const dark = document.querySelector('#Dark');
-  localStorage.setItem('blue',true);
-  localStorage.removeItem('dark', false);
+  localStorage.setItem('theme', 'blue');
 
   document.documentElement.style.setProperty('--SiteColor', '#257BE6');
   document.documentElement.style.setProperty('--Header', 'url(images/header.png)');
@@ -33,8 +32,7 @@ function blueTheme() {
 function darkTheme() {
   const blue = document.querySelector('#Blue');
   const dark = document.querySelector('#Dark');
-  localStorage.setItem('dark',true);
-  localStorage.removeItem('blue', false);
+  localStorage.setItem('theme', 'dark');
 
   document.documentElement.style.setProperty('--SiteColor', '#252525');
   document.documentElement.style.setProperty('--Header', 'url(images/header-dark.jpg)');

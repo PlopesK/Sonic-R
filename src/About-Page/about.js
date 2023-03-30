@@ -14,10 +14,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }, 200);
 
     /* ♾️♾️♾️♾️Theme Color♾️♾️♾️♾️ */
-    if(localStorage.dark == "true") {
-        darkTheme();
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme === 'dark') {
+      darkTheme();
     } else {
-        blueTheme();
+      blueTheme();
     }
 
     /* 🎶🎶🎶🎶Music🎶🎶🎶🎶 */
@@ -118,8 +119,7 @@ function openMenu() {
   function blueTheme() {
     const blue = document.querySelector('#Blue');
     const dark = document.querySelector('#Dark');
-    localStorage.setItem('blue',true);
-    localStorage.removeItem('dark', false);
+    localStorage.setItem('theme', 'blue');
   
     document.documentElement.style.setProperty('--SiteColor', '#257BE6');
     document.documentElement.style.setProperty('--Header', 'url(images/header.png)');
@@ -139,8 +139,7 @@ function openMenu() {
   function darkTheme() {
     const blue = document.querySelector('#Blue');
     const dark = document.querySelector('#Dark');
-    localStorage.setItem('dark',true);
-    localStorage.removeItem('blue', false);
+    localStorage.setItem('theme', 'dark');
   
     document.documentElement.style.setProperty('--SiteColor', '#252525');
     document.documentElement.style.setProperty('--Header', 'url(images/header-dark.jpg)');
