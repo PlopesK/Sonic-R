@@ -116,4 +116,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
 function test() {
     document.documentElement.style.setProperty('--Idle', 'url(sprites/ClassicSonic/sonic3-idle.gif)');
+    document.documentElement.style.setProperty('--Start', 'url(sprites/ClassicSonic/sonic3-start.gif)');
+    document.documentElement.style.setProperty('--Run', 'url(sprites/ClassicSonic/sonic3-run.gif)');
+    document.documentElement.style.setProperty('--Jump', 'url(sprites/ClassicSonic/sonic3-jump.gif)');
+    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/ClassicSonic/sonic3-doublejump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
 }
