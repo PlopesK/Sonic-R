@@ -28,6 +28,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
         blueTheme();
       }
 
+      /* Characters */
+    const selectedCharacter = localStorage.getItem('characters');
+    if(selectedCharacter === 'Sonic' || selectedCharacter == null) {
+        Sonic();
+      } else {
+        ClassicSonic();
+      }
+
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
     "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/sonic-death.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
@@ -114,7 +122,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 
-function test() {
+function ClassicSonic() {
+    localStorage.setItem('characters', 'ClassicSonic');
+
     document.documentElement.style.setProperty('--Idle', 'url(sprites/ClassicSonic/sonic3-idle.gif)');
     document.documentElement.style.setProperty('--Start', 'url(sprites/ClassicSonic/sonic3-start.gif)');
     document.documentElement.style.setProperty('--Run', 'url(sprites/ClassicSonic/sonic3-run.gif)');
@@ -122,4 +132,16 @@ function test() {
     document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/ClassicSonic/sonic3-doublejump.gif)');
     document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
+}
+
+function Sonic() {
+    localStorage.setItem('characters', 'Sonic');
+
+    document.documentElement.style.setProperty('--Idle', 'url(sprites/sonic-idle.gif)');
+    document.documentElement.style.setProperty('--Start', 'url(sprites/sonic-start.gif)');
+    document.documentElement.style.setProperty('--Run', 'url(sprites/sonic-run.gif)');
+    document.documentElement.style.setProperty('--Jump', 'url(sprites/sonic-jump.gif)');
+    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/sonic-doublejump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/sonic-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/sonic-death.gif)');
 }
