@@ -132,6 +132,7 @@ function ClassicSonic() {
     document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/ClassicSonic/sonic3-doublejump.gif)');
     document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
+    document.getElementById("life-icon").src="sprites/ClassicSonic/sonic3-life.gif";
 }
 
 function Sonic() {
@@ -144,4 +145,5 @@ function Sonic() {
     document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/sonic-doublejump.gif)');
     document.documentElement.style.setProperty('--Damage', 'url(sprites/sonic-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/sonic-death.gif)');
+    document.getElementById("life-icon").src="sprites/life-icon.gif";
 }
