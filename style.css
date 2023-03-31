@@ -289,7 +289,7 @@ footer p {
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 .area {
     width: 100%;
-    height: 47vh;
+    height: fit-content;
     margin: auto;
     margin-bottom: 70px;
     padding-top: 10px;
@@ -524,6 +524,33 @@ footer p {
     100% {
         color:darkgoldenrod
     }
+}
+
+.select-area {
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+.select {
+    position: relative;
+    background: url('images/select-a-character.png');
+    background-size: 100% 10vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #606060;
+    border: #3B3B3B 3.5px outset;
+    width: 55vh;
+    height: 10vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    cursor: pointer;
+    z-index: 20;
 }
 
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
@@ -779,6 +806,10 @@ footer p {
 
     #object5 {
         opacity: 0;
+    }
+
+    .select {
+        background-size: 153% 8vh;
     }
 }
 
