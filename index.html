@@ -9,10 +9,11 @@
         <link rel="shortcut icon" href="images/sonic.ico"/>
         <script as="script" src="src/loading.js"></script>
         <script as="script" src="src/prep.js"></script>
-        <script as="script" src="src/game.js"></script> 
+        <script rel="preload" as="script" src="src/game.js"></script> 
         <script as="script" src="src/score.js"></script> 
-        <script as="script" src="src/soundtrack.js"></script> 
-        <script as="script" src="src/obstacle.js"></script>
+        <script rel="preload" as="script" src="src/soundtrack.js"></script> 
+        <script rel="preload" as="script" src="src/obstacle.js"></script>
+        <script as="script" src="src/characters.js"></script>
         <title>Sonic Runner</title>
     </head>
     <body>
@@ -87,8 +88,6 @@
         <div class="subheader">
         </div>
         <div class="area">
-            <button class="button" onclick="ClassicSonic()"></button><br>
-            <button class="button" onclick="Sonic()"></button>
             <div class="start">
                 <a id="play" class="button hid" onclick="wait()">
                     <i class="fa fa-play"></i>
@@ -141,6 +140,9 @@
                     height: 16vh;">
                 </div>
             </div>
+            <button class="button" onclick="ClassicSonic()"></button><br>
+            <button class="button" onclick="Sonic()"></button><br>
+            <button class="button" onclick="MetalSonic()"></button><br>
         </div>
 
         <footer>

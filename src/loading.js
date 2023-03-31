@@ -28,23 +28,13 @@ window.addEventListener("DOMContentLoaded", function (event) {
         blueTheme();
       }
 
-      /* Characters */
-    const selectedCharacter = localStorage.getItem('characters');
-    if(selectedCharacter === 'Sonic' || selectedCharacter == null) {
-        Sonic();
-      } else {
-        ClassicSonic();
-      }
-
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
-    var imageUrls = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
-    "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/sonic-death.gif', 'sprites/Object1.png', 'sprites/Object2.png', 
-    'sprites/Object3.gif', 'sprites/Object4.gif', 'sprites/Object5.gif', 'sprites/Object6.png', 
-    'sprites/Object7.gif', 'sprites/Object8.gif', 'sprites/badnik1.gif', 'sprites/badnik2.gif', "sprites/ground.png", 
-    "sprites/background.gif", 'images/sonic.ico', 'images/Sonic_Runners_logo.png', "sprites/score.png", 
-    "images/footer-bg.gif", "images/header.png", 'sprites/life-icon.gif', 'sprites/0.png', 'sprites/1.png', 
-    'sprites/2.png', 'sprites/3.png', 'images/sega-dark.png', 'images/footer-bg-dark.gif', 'images/header-dark.jpg', 
-    "sprites/gameover.png", "sprites/gameover-sonic.gif"];
+    var imageUrls = ['sprites/Object1.png', 'sprites/Object2.png', 'sprites/Object3.gif', 'sprites/Object4.gif', 
+    'sprites/Object5.gif', 'sprites/Object6.png', 'sprites/Object7.gif', 'sprites/Object8.gif', 'sprites/badnik1.gif', 
+    'sprites/badnik2.gif', "sprites/ground.png", "sprites/background.gif", 'images/sonic.ico', 
+    'images/Sonic_Runners_logo.png', "sprites/score.png", "images/footer-bg.gif", "images/header.png", 
+    'sprites/0.png', 'sprites/1.png', 'sprites/2.png', 'sprites/3.png', 'images/sega-dark.png', 
+    'images/footer-bg-dark.gif', 'images/header-dark.jpg', "sprites/gameover.png", "sprites/gameover-sonic.gif"];
     var images = [];
     for (var i = 0; i < imageUrls.length; i++) {
         var img = new Image();
