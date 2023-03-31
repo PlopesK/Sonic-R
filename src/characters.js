@@ -55,9 +55,9 @@ function MetalSonic() {
     document.documentElement.style.setProperty('--Idle', 'url(sprites/MetalSonic/metalsonic-idle.gif)');
     document.documentElement.style.setProperty('--Start', 'url(sprites/MetalSonic/metalsonic-start.gif)');
     document.documentElement.style.setProperty('--Run', 'url(sprites/MetalSonic/metalsonic-run.gif)');
-    document.documentElement.style.setProperty('--Jump', 'url(sprites/ClassicSonic/sonic3-jump.gif)');
-    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/ClassicSonic/sonic3-doublejump.gif)');
-    document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
-    document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
-    document.getElementById("life-icon").src="sprites/ClassicSonic/sonic3-life.gif";
+    document.documentElement.style.setProperty('--Jump', 'url(sprites/MetalSonic/metalsonic-jump.gif)');
+    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/MetalSonic/metalsonic-doublejump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/MetalSonic/metalsonic-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/MetalSonic/metalsonic-death.gif)');
+    document.getElementById("life-icon").src="sprites/MetalSonic/metalsonic-life.gif";
 }
