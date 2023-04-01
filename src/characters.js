@@ -7,6 +7,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
         ClassicSonic();
     } if (selectedCharacter === 'MetalSonic') {
         MetalSonic();
+    } if (selectedCharacter === 'Shadow') {
+        Shadow();
     }
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
@@ -66,4 +68,19 @@ function MetalSonic() {
     document.getElementById("life-icon").src="sprites/MetalSonic/metalsonic-life.gif";
     document.getElementById("charName").innerText= 'Metal Sonic';
     document.getElementById("extraInfo").innerHTML= 'Sonic CD and <a href="https://info.sonicretro.org/Metal_Sonic_in_Sonic_the_Hedgehog_2">Sonic 2 (HackRoom)</a>';
+}
+
+function Shadow() {
+    localStorage.setItem('characters', 'Shadow');
+
+    document.documentElement.style.setProperty('--Idle', 'url(sprites/Shadow/shadow-idle.gif)');
+    document.documentElement.style.setProperty('--Start', 'url(sprites/sonic-start.gif)');
+    document.documentElement.style.setProperty('--Run', 'url(sprites/Shadow/shadow-run.gif)');
+    document.documentElement.style.setProperty('--Jump', 'url(sprites/sonic-jump.gif)');
+    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/sonic-doublejump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/sonic-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/sonic-death.gif)');
+    document.getElementById("life-icon").src="sprites/life-icon.gif";
+    document.getElementById("charName").innerText= 'Shadow';
+    document.getElementById("extraInfo").innerText= 'Sonic Battle';
 }
