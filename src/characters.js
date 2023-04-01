@@ -78,8 +78,8 @@ function Shadow() {
     document.documentElement.style.setProperty('--Run', 'url(sprites/Shadow/shadow-run.gif)');
     document.documentElement.style.setProperty('--Jump', 'url(sprites/Shadow/shadow-jump.gif)');
     document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/Shadow/shadow-doublejump.gif)');
-    document.documentElement.style.setProperty('--Damage', 'url(sprites/Shadow/shadow-jump.gif)');
-    document.documentElement.style.setProperty('--Death', 'url(sprites/Shadow/shadow-jump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/Shadow/shadow-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/Shadow/shadow-death.gif)');
     document.getElementById("life-icon").src="sprites/Shadow/shadow-life.gif";
     document.getElementById("charName").innerText= 'Shadow';
     document.getElementById("extraInfo").innerText= 'Sonic Battle';
