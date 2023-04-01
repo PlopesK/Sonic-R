@@ -142,40 +142,40 @@
                 </div>
             </div>
             <div class="select-area" id="charArea">
-                <button class="select"></button>
+                <button class="select" onclick="openCharSelect()"></button>
                 <div class="charOpt" id="charOpt">
                     <!-- Row 1 -->
-                    <div class="charRow">
+                    <div class="charRow hidden option">
                         <button class="char" onclick="ClassicSonic()" style="background-image: url(sprites/ClassicSonic/sonic3-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="Sonic()" style="background-image: url(sprites/sonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="MetalSonic()" style="background-image: url(sprites/MetalSonic/metalsonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="MetalSonic()"style="background-image: url(sprites/MetalSonic/metalsonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="MetalSonic()"style="background-image: url(sprites/MetalSonic/metalsonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                     </div>
-                    <div class="mobile">
+                    <div class="mobile hidden option">
                         <button class="char" onclick="ClassicSonic()" style="background-image: url(sprites/ClassicSonic/sonic3-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="Sonic()" style="background-image: url(sprites/sonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="MetalSonic()" style="background-image: url(sprites/MetalSonic/metalsonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                     </div>
 
                     <!-- Row 2 -->
-                    <div class="charRow">
+                    <div class="charRow hidden option">
                         <button class="char" onclick="ClassicSonic()"></button>
                         <button class="char" onclick="Sonic()"></button>
                         <button class="char" onclick="MetalSonic()"></button>
                         <button class="char" onclick="MetalSonic()"></button>
                         <button class="char" onclick="MetalSonic()"></button>
                     </div>
-                    <div class="mobile">
+                    <div class="mobile hidden option">
                         <button class="char" onclick="ClassicSonic()" style="background-image: url(sprites/ClassicSonic/sonic3-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="Sonic()" style="background-image: url(sprites/sonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                         <button class="char" onclick="MetalSonic()" style="background-image: url(sprites/MetalSonic/metalsonic-run.gif); background-repeat: no-repeat; background-size: 10vh 10vh; background-position: center;"></button>
                     </div>
 
                     <!-- Info -->
-                    <p id="charName"> Character Select </p>
-                    <p id="extraInfo"> </p>
-                    <button class="charClose" id="charClose"> Close <i class="fa fa-times"></i></button>
+                    <p class="hidden option" id="charName"> Character Select </p>
+                    <p class="hidden option" id="extraInfo"> </p>
+                    <button class="charClose hidden option" id="charClose" onclick="closeCharSelect()"> Close <i class="fa fa-times"></i></button>
                 </div>
                 <button class="select"></button>
             </div>

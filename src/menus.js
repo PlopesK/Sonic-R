@@ -66,3 +66,35 @@ function closeBtn() {
     GameOver.pause();
     Menu.play();
   }
+
+  /* Open Character Select */
+  function openCharSelect() {
+    const charSelect = document.querySelector("#charOpt");
+    const characters = document.querySelectorAll(".option");
+    charSelect.style.height = "52vh";
+    charSelect.style.width = "120vh";
+    charSelect.style.border = '5px outset #0050a8';
+    setTimeout(() => {
+      characters.forEach(element => {
+        element.classList.remove("hidden");
+      });
+    }, 400);
+    Select.play();
+  
+    charSelect.addEventListener("click", () => {
+      Selected.play();
+    })
+  }
+
+  function closeCharSelect() {
+    const charSelect = document.querySelector("#charOpt");
+    const characters = document.querySelectorAll(".option");
+    charSelect.style.height = "0";
+    charSelect.style.width = "0";
+    charSelect.style.border = '0px outset #0050a8';
+    characters.forEach(element => {
+      element.classList.add("hidden");
+    });
+    Selected.currentTime = 3;
+    Return.play();
+  }
