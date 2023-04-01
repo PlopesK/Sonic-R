@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         Sonic();
     } if (selectedCharacter === 'ClassicSonic') {
         ClassicSonic();
-    } else {
+    } if (selectedCharacter === 'MetalSonic') {
         MetalSonic();
     }
 
@@ -34,6 +34,8 @@ function ClassicSonic() {
     document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
     document.getElementById("life-icon").src="sprites/ClassicSonic/sonic3-life.gif";
+    document.getElementById("charName").innerText= 'Classic Sonic';
+    document.getElementById("extraInfo").innerText= 'Sonic the Hedgehog 3 (& Knuckles)';
 }
 
 function Sonic() {
@@ -47,6 +49,8 @@ function Sonic() {
     document.documentElement.style.setProperty('--Damage', 'url(sprites/sonic-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/sonic-death.gif)');
     document.getElementById("life-icon").src="sprites/life-icon.gif";
+    document.getElementById("charName").innerText= 'Sonic';
+    document.getElementById("extraInfo").innerText= 'Sonic Advance 1, 2, 3 and Sonic Battle';
 }
 
 function MetalSonic() {
@@ -60,4 +64,6 @@ function MetalSonic() {
     document.documentElement.style.setProperty('--Damage', 'url(sprites/MetalSonic/metalsonic-damage.gif)');
     document.documentElement.style.setProperty('--Death', 'url(sprites/MetalSonic/metalsonic-death.gif)');
     document.getElementById("life-icon").src="sprites/MetalSonic/metalsonic-life.gif";
+    document.getElementById("charName").innerText= 'Metal Sonic';
+    document.getElementById("extraInfo").innerHTML= 'Sonic CD and <a href="https://info.sonicretro.org/Metal_Sonic_in_Sonic_the_Hedgehog_2">Sonic 2 (HackRoom)</a>';
 }

@@ -9,6 +9,8 @@
     --SiteColor: #257BE6;
     --Header: url("images/header.png");
     --Footer: url("images/footer-bg.gif");
+    --CharSelect: url("images/charselect.png");
+    --CharColor: #0080d0;
     
     /* Player */
     --Idle:  url("sprites/sonic-idle.gif");
@@ -553,6 +555,87 @@ footer p {
     z-index: 20;
 }
 
+.charOpt {
+    width: 120vh;
+    height: 58vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 22;
+    background: var(--CharSelect);
+    background-size: auto 55vh;
+    background-repeat: repeat-x;
+    border: 5px outset #0050a8;
+    transition: 0.5s;
+}
+
+.charOpt a {
+    text-decoration: none;
+    color: azure;
+}
+
+.mobile {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+.charOpt p {
+    font-size: 4vh;
+    font-family: 'SF Intermosaic', sans-serif;
+    text-align: center;
+    color: azure;
+}
+
+#extraInfo {
+    font-size: 3vh;
+    opacity: 0.8;
+}
+
+.charClose {
+    width: 20vh;
+    height: 8vh;
+    font-size: 3vh;
+    background-color: var(--CharColor);
+    border: 3px solid black;
+    font-family: 'SF Intermosaic', sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.char {
+    position: relative;
+    width: 20vh;
+    height: 10vh;
+    background-color: var(--CharColor);
+    border: 3px solid black;
+    margin-top: 2vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+.charRow {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
 /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
 #sonic {
     width: 10vh;
@@ -810,6 +893,22 @@ footer p {
 
     .select {
         background-size: 153% 8vh;
+    }
+
+    .charRow{
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    #extraInfo {
+        width: 50%;
+    }
+
+    #charName {
+        width: 50%;
     }
 }
 
