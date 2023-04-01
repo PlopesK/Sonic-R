@@ -535,7 +535,7 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 15vh;
+    margin-top: 20vh;
 }
 
 .select {
@@ -548,7 +548,6 @@ footer p {
     border: #3B3B3B 3.5px outset;
     width: 55vh;
     height: 10vh;
-    margin-top: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
     cursor: pointer;
@@ -565,10 +564,10 @@ footer p {
     justify-content: center;
     z-index: 20;
     background: var(--CharSelect);
-    background-size: auto 52vh;
+    background-size: auto 55vh;
     background-repeat: repeat-x;
     border: 0px outset #0050a8;
-    margin-top: 10vh;
+    margin-top: 2vh;
     transition: 0.5s;
 }
 
@@ -894,6 +893,7 @@ footer p {
 
     .select {
         background-size: 153% 8vh;
+        margin-top: 5vh;
     }
 
     .charRow{

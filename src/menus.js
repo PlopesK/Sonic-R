@@ -71,7 +71,7 @@ function closeBtn() {
   function openCharSelect() {
     const charSelect = document.querySelector("#charOpt");
     const characters = document.querySelectorAll(".option");
-    charSelect.style.height = "52vh";
+    charSelect.style.height = "55vh";
     charSelect.style.width = "120vh";
     charSelect.style.border = '5px outset #0050a8';
     setTimeout(() => {
