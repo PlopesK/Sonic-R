@@ -34,7 +34,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
     'sprites/badnik2.gif', "sprites/ground.png", "sprites/background.gif", 'images/sonic.ico', 
     'images/Sonic_Runners_logo.png', "sprites/score.png", "images/footer-bg.gif", "images/header.png", 
     'sprites/0.png', 'sprites/1.png', 'sprites/2.png', 'sprites/3.png', 'images/sega-dark.png', 
-    'images/footer-bg-dark.gif', 'images/header-dark.jpg', "sprites/gameover.png", "sprites/gameover-sonic.gif"];
+    'images/footer-bg-dark.gif', 'images/header-dark.jpg', "sprites/gameover.png", "sprites/gameover-sonic.gif", 
+    "images/charselect.png", "images/charselect-dark.png", 'images/select-a-character.png'];
     var images = [];
     for (var i = 0; i < imageUrls.length; i++) {
         var img = new Image();
@@ -111,29 +112,3 @@ window.addEventListener("DOMContentLoaded", function (event) {
             unmuteSound();
     }
 });
-
-function ClassicSonic() {
-    localStorage.setItem('characters', 'ClassicSonic');
-
-    document.documentElement.style.setProperty('--Idle', 'url(sprites/ClassicSonic/sonic3-idle.gif)');
-    document.documentElement.style.setProperty('--Start', 'url(sprites/ClassicSonic/sonic3-start.gif)');
-    document.documentElement.style.setProperty('--Run', 'url(sprites/ClassicSonic/sonic3-run.gif)');
-    document.documentElement.style.setProperty('--Jump', 'url(sprites/ClassicSonic/sonic3-jump.gif)');
-    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/ClassicSonic/sonic3-doublejump.gif)');
-    document.documentElement.style.setProperty('--Damage', 'url(sprites/ClassicSonic/sonic3-damage.gif)');
-    document.documentElement.style.setProperty('--Death', 'url(sprites/ClassicSonic/sonic3-death.gif)');
-    document.getElementById("life-icon").src="sprites/ClassicSonic/sonic3-life.gif";
-}
-
-function Sonic() {
-    localStorage.setItem('characters', 'Sonic');
-
-    document.documentElement.style.setProperty('--Idle', 'url(sprites/sonic-idle.gif)');
-    document.documentElement.style.setProperty('--Start', 'url(sprites/sonic-start.gif)');
-    document.documentElement.style.setProperty('--Run', 'url(sprites/sonic-run.gif)');
-    document.documentElement.style.setProperty('--Jump', 'url(sprites/sonic-jump.gif)');
-    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/sonic-doublejump.gif)');
-    document.documentElement.style.setProperty('--Damage', 'url(sprites/sonic-damage.gif)');
-    document.documentElement.style.setProperty('--Death', 'url(sprites/sonic-death.gif)');
-    document.getElementById("life-icon").src="sprites/life-icon.gif";
-}
