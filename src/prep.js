@@ -55,6 +55,7 @@ function start() {
     HigherScoreHit.currentTime = 3;
 
     document.removeEventListener("keydown", wait,  { once: true });
+    document.getElementById("charArea").style.display = 'none';
     const tohide = document.querySelectorAll(".hid");
     const sonic = document.getElementById("sonic");
     tohide.forEach(element => {
