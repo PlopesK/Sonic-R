@@ -27,16 +27,8 @@ function game() {
     }
 
     document.addEventListener(`blur`, () => {
-        lifes -= 1;
+        lifelost();
         HitDamage.play();
-        if (lifes == 2) {
-            lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
-        }
-        if (lifes == 1) {
-            lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
-        } else if (lifes == 0) {
-            lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
-        }
         if (lifes <= 0) {
             gameOver();
         }
@@ -63,20 +55,24 @@ function game() {
                 gameOver();
             } else {
                 setTimeout(() => {
-                    lifes -= 1;
-                    if (lifes == 2) {
-                        lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
-                    }
-                    if (lifes == 1) {
-                        lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
-                    } else if (lifes == 0) {
-                        lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
-                    }
-                    canLoseLife = true;
+                    lifelost();
                 }, 500);
             }
         }
     } 
+
+    function lifelost() {
+        lifes -= 1;
+        if (lifes == 2) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
+        }
+        if (lifes == 1) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
+        } else if (lifes == 0) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
+        }
+        canLoseLife = true;
+    }
 
     function gameOver() {
         isGameOver = true;
