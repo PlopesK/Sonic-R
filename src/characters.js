@@ -9,6 +9,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
         MetalSonic();
     } if (selectedCharacter === 'Shadow') {
         Shadow();
+    } if (selectedCharacter === 'Amy') {
+        Amy();
     }
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
@@ -83,4 +85,19 @@ function Shadow() {
     document.getElementById("life-icon").src="sprites/Shadow/shadow-life.gif";
     document.getElementById("charName").innerText= 'Shadow';
     document.getElementById("extraInfo").innerText= 'Sonic Battle';
+}
+
+function Amy() {
+    localStorage.setItem('characters', 'Amy');
+
+    document.documentElement.style.setProperty('--Idle', 'url(sprites/Amy/amy-idle.gif)');
+    document.documentElement.style.setProperty('--Start', 'url(sprites/Amy/amy-start.gif)');
+    document.documentElement.style.setProperty('--Run', 'url(sprites/Amy/amy-run.gif)');
+    document.documentElement.style.setProperty('--Jump', 'url(sprites/Amy/amy-jump.gif)');
+    document.documentElement.style.setProperty('--DoubleJump', 'url(sprites/Amy/amy-doublejump.gif)');
+    document.documentElement.style.setProperty('--Damage', 'url(sprites/Amy/amy-damage.gif)');
+    document.documentElement.style.setProperty('--Death', 'url(sprites/Amy/amy-death.gif)');
+    document.getElementById("life-icon").src="sprites/Amy/amy-life.gif";
+    document.getElementById("charName").innerText= 'Amy';
+    document.getElementById("extraInfo").innerText= 'Sonic Advance 1, 2, 3 and Sonic Battle';
 }
