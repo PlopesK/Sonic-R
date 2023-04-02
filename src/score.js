@@ -19,31 +19,31 @@ function score(){
     const HighScore = document.getElementById('highscore');
     const NewHS = document.getElementById('newhighscore');
 
-    if (!isGameOver) {
-        if ((millisecond += 10) == 100) {
-            millisecond = 0;
-            points++;
-        } 
-        if (points % 100 === 0) {
-            score.classList.add("scoreAnimation");
-            ScoreHit.play();
+        if (!isGameOver) {
+            if ((millisecond += 10) == 100) {
+                millisecond = 0;
+                points++;
+            } 
+            if (points % 100 === 0) {
+                score.classList.add("scoreAnimation");
+                ScoreHit.play();
 
-            ScoreHit.addEventListener("ended", function() {
-                score.classList.remove("scoreAnimation");
-            });
-        } if (points % 500 === 0) {
-            ScoreHit.pause();
-            HigherScoreHit.play();
+                ScoreHit.addEventListener("ended", function() {
+                    score.classList.remove("scoreAnimation");
+                });
+            } if (points % 500 === 0) {
+                ScoreHit.pause();
+                HigherScoreHit.play();
 
-            HigherScoreHit.addEventListener("ended", function() {
-                score.classList.remove("scoreAnimation");
-            });
-        } if (points > highScore) {
-            highScore = points;
-            localStorage.setItem('highScore', highScore);
-            NewHS.classList.remove("hidden");
+                HigherScoreHit.addEventListener("ended", function() {
+                    score.classList.remove("scoreAnimation");
+                });
+            } if (points > highScore) {
+                highScore = points;
+                localStorage.setItem('highScore', highScore);
+                NewHS.classList.remove("hidden");
+            }
         }
-    }
     score.innerText = returnData(points)
     yourScore.innerText = 'Score: ' + returnData(points);
     HighScore.innerText = 'HighScore: ' + returnData(highScore);

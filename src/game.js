@@ -26,6 +26,22 @@ function game() {
         sonic.animate(sonicHit, sonicHitTimming);
     }
 
+    document.addEventListener(`blur`, () => {
+        lifes -= 1;
+        HitDamage.play();
+        if (lifes == 2) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/2.png)';
+        }
+        if (lifes == 1) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/1.png)';
+        } else if (lifes == 0) {
+            lifesDisplay.style.backgroundImage = 'url(sprites/0.png)';
+        }
+        if (lifes <= 0) {
+            gameOver();
+        }
+    });
+
     /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     function checkCollision() {
     let sonicTop = parseInt(
