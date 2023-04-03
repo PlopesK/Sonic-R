@@ -99,3 +99,8 @@ function closeBtn() {
     Selected.currentTime = 3;
     Return.play();
   }
+
+  /* Stage Select Menu */
+  function Stage() {
+    alert("Coming Soon!");
+  }
