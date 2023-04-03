@@ -67,7 +67,7 @@ function closeBtn() {
     Menu.play();
   }
 
-  /* Open Character Select */
+  /* 🌀🌀🌀🌀Open Character Select🌀🌀🌀🌀 */
   function openCharSelect() {
     const charSelect = document.querySelector("#charOpt");
     const characters = document.querySelectorAll(".option");
@@ -86,6 +86,7 @@ function closeBtn() {
     })
   }
 
+  /* 🌀🌀🌀🌀Close🌀🌀🌀🌀 */
   function closeCharSelect() {
     const charSelect = document.querySelector("#charOpt");
     const characters = document.querySelectorAll(".option");

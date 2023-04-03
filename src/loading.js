@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     'images/Sonic_Runners_logo.png', "sprites/score.png", "images/footer-bg.gif", "images/header.png", 
     'sprites/0.png', 'sprites/1.png', 'sprites/2.png', 'sprites/3.png', 'images/sega-dark.png', 
     'images/footer-bg-dark.gif', 'images/header-dark.jpg', "sprites/gameover.png", "sprites/gameover-sonic.gif", 
-    "images/charselect.png", "images/charselect-dark.png", 'images/select-a-character.png'];
+    "images/charselect.png", "images/charselect-dark.png", 'images/select-a-character.png', 'images/coming.png'];
     var images = [];
     for (var i = 0; i < imageUrls.length; i++) {
         var img = new Image();

@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function (event) {
-    /* Characters */
+    /* 🌀🌀🌀🌀Characters🌀🌀🌀🌀 */
     const selectedCharacter = localStorage.getItem('characters');
     if(selectedCharacter === 'Sonic' || selectedCharacter == null) {
         Sonic();
@@ -13,12 +13,20 @@ window.addEventListener("DOMContentLoaded", function (event) {
         Amy();
     }
 
-    /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
+    /* 🖼️🖼️🖼️🖼️Pre-loading Characters🖼️🖼️🖼️🖼️ */
     var charURL = ['sprites/sonic-idle.gif', "sprites/sonic-start.gif", "sprites/sonic-run.gif", 
     "sprites/sonic-jump.gif", 'sprites/sonic-damage.gif', 'sprites/sonic-death.gif', 'sprites/life-icon,.gif',
     "sprites/ClassicSonic/sonic3-idle.gif", 'sprites/ClassicSonic/sonic3-start.gif', 'sprites/ClassicSonic/sonic3-run.gif',
     'sprites/ClassicSonic/sonic3-jump.gif', 'sprites/ClassicSonic/sonic3-doublejump.gif', 'sprites/ClassicSonic/sonic3-damage.gif',
-    'sprites/ClassicSonic/sonic3-death.gif'];
+    'sprites/ClassicSonic/sonic3-death.gif', 
+    'sprites/MetalSonic/metalsonic-idle.gif', 'sprites/MetalSonic/metalsonic-start.gif', 
+    'sprites/MetalSonic/metalsonic-run.gif', 'sprites/MetalSonic/metalsonic-jump.gif', 'sprites/MetalSonic/metalsonic-doublejump.gif', 
+    'sprites/MetalSonic/metalsonic-damage.gif', 'sprites/MetalSonic/metalsonic-death.gif', 'sprites/MetalSonic/metalsonic-life.gif',
+    'sprites/Shadow/shadow-idle.gif', 'sprites/Shadow/shadow-start.gif', 'sprites/Shadow/shadow-run.gif', 
+    'sprites/Shadow/shadow-jump.gif', 'sprites/Shadow/shadow-doublejump.gif', 'sprites/Shadow/shadow-damage.gif', 
+    'sprites/Shadow/shadow-death.gif', 'sprites/Shadow/shadow-life.gif', 
+    'sprites/Amy/amy-idle.gif', 'sprites/Amy/amy-start.gif', 'sprites/Amy/amy-run.gif', 'sprites/Amy/amy-jump.gif', 
+    'sprites/Amy/amy-doublejump.gif', 'sprites/Amy/amy-damage.gif', 'sprites/Amy/amy-death.gif', 'sprites/Amy/amy-life.gif'];
     var images = [];
     for (var i = 0; i < charURL.length; i++) {
         var img = new Image();
