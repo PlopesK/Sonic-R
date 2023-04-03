@@ -101,3 +101,8 @@ function Amy() {
     document.getElementById("charName").innerText= 'Amy';
     document.getElementById("extraInfo").innerText= 'Sonic Advance 1, 2, 3 and Sonic Battle';
 }
+
+function ComingSoon() {
+    document.getElementById("charName").innerText= 'Coming Soon';
+    document.getElementById("extraInfo").innerText= 'Wait till it is ready!';
+}
