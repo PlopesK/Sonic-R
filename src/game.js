@@ -46,7 +46,20 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-
+    if (( window.innerHeight <= 600 )){
+        if (obstLeft < 60 && obstLeft > 0 && (!sonic.classList.contains("jump")) && canLoseLife == true || 
+            obsTop < 60 && obsTop > 0 && sonicTop <= 95 && sonicTop >= 15 && canLoseLife == true) {  
+                sonicDamage();
+                canLoseLife = false;
+                if (lifes <= 0) {
+                    gameOver();
+                } else {
+                    setTimeout(() => {
+                        lifelost();
+                    }, 500);
+                } 
+            }
+    } else {
         if (obstLeft < 55 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
             obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
                 console.log(`${sonicTop}`);
@@ -60,6 +73,7 @@ function game() {
                     }, 500);
                 }
             }
+        }
     } 
 
     function lifelost() {
@@ -284,6 +298,11 @@ function BGObjSpawn() {
     const bg2 = document.getElementById("bg-object2");
     if (( window.innerWidth <= 800 )){
         bg1.classList.add("hidden");
+        if ((BgTimer += 10) == (2000)) {
+            BgTimer = 0
+                bg2.classList.add("move");
+                bg2.style.backgroundImage = `url(${objectBackground})`;
+            }
     } else {
         if (!isGameOver) {
             if ((BgTimer += 10) == (2000)) {
