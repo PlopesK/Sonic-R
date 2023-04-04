@@ -4,7 +4,7 @@ function openMenu() {
     const button = document.getElementById("play");
     button.classList.add("hidden");
     navbar.style.height = "50%";
-    navbar.style.width = "20%";
+    navbar.style.width = "40%";
     document.removeEventListener("keydown", wait);
     Select.play();
   
