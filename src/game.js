@@ -46,7 +46,7 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-        if (navigator.userAgent.match(/Mobile/)) {
+        if (/Mobi/.test(navigator.userAgent)) {
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
@@ -188,9 +188,9 @@ function backgroundMove() {
 
     function animate(timestamp) {
         if (speed >= 400 && speedGround >= 600){
-            if (navigator.userAgent.match(/Mobile/)) {
-                speed = 300;
-                speedGround = 500;
+            if (/Mobi/.test(navigator.userAgent)) {
+                speed = 200;
+                speedGround = 400;
             } else {
                 speed = 400;
                 speedGround = 600;
@@ -253,12 +253,13 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (navigator.userAgent.match(/Mobile/)) {
-        object2.classList.add("hidden");
+    if (/Mobi/.test(navigator.userAgent)) {
+        object1.classList.add("hidden");
+        object4.classList.add("hidden");
         if (!isGameOver) {
             if ((timerObj += 10) == (1400)) {
-                object1.classList.add("move");
-                object1.style.backgroundImage = `url(${objectBackground})`;
+                object2.classList.add("move");
+                object2.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 2800) {
                 object3.classList.add("move");
                 object3.style.backgroundImage = `url(${objectBackground})`;
@@ -295,7 +296,7 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    if (navigator.userAgent.match(/Mobile/)) {
+    if (/Mobi/.test(navigator.userAgent)) {
         clearInterval(BgInterval);
         bg1.classList.add("hidden");
         bg2.classList.add("hidden");
