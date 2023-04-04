@@ -647,6 +647,7 @@ footer p {
     top: 23vh;
     left: 3vh;
     z-index: 3;
+    transition: none;
 }
 
 .run {
@@ -720,7 +721,7 @@ footer p {
     height: 7vh;
     background-repeat: no-repeat;
     position: relative;
-    left: 120vh;
+    left: 120%;
     left: calc(var(--left) * 1%);
     z-index: 1;
 }
@@ -754,10 +755,10 @@ footer p {
 
 @keyframes block {
     0%{
-        left: 120vh;
+        left: 120%;
     }
     100% {
-        left: -6vh;
+        left: -30%;
     }
 }
 
