@@ -28,8 +28,8 @@
 I learned a lot developting this project, and had a lot of fun! :) <br>
 This project was more like a love letter to the Sonic franchise! So I hope everyone seeing this have fun playing!<br>
 
-<h3>🔷 Take a look at the website here: <a href=""> Sonic Runner </a> 🔷</h3>
-<h3>🌐 See more of the production here: <a href=""> About Page </a> 🌐</h3>
+<h3>🔷 Take a look at the website here: <a href="https://plopesk.github.io/Sonic-R/"> Sonic Runner </a> 🔷</h3>
+<h3>🌐 See more of the production here: <a href="https://plopesk.github.io/Sonic-R/about.html"> About Page </a> 🌐</h3>
 <div style="display: flex; flex-direction: row">
   <img src="images/sonic.ico" style="width:150px; height: auto;" title="Icon"> 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
