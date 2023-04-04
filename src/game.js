@@ -229,12 +229,8 @@ let ObjInterval;
 
 function object() {
     objInterval();
-    const object5 = document.getElementById("object5");
-    const bg2 = document.getElementById("bg-object2");
     ObjInterval = setInterval(() => { objectSpawn(); }, 10);
     BgInterval = setInterval(() => { BGObjSpawn(); }, 10);
-    object5.addEventListener("animationend", objRespawn);
-    bg2.addEventListener("animationend", BGObjRespawn);
 }
 
 function objInterval() {
@@ -290,6 +286,7 @@ function objectSpawn() {
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
             }
+            object5.addEventListener("animationend", objRespawn);
         }
     }
 }
@@ -299,12 +296,9 @@ function BGObjSpawn() {
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
     if (( window.innerWidth <= 800 )){
+        clearInterval(BgInterval);
         bg1.classList.add("hidden");
-        if ((BgTimer += 20) == (2000)) {
-            BgTimer = 0
-                bg2.classList.add("move");
-                bg2.style.backgroundImage = `url(${objectBackground})`;
-            }
+        bg2.classList.add("hidden");
     } else {
         if (!isGameOver) {
             if ((BgTimer += 10) == (2000)) {
@@ -315,6 +309,7 @@ function BGObjSpawn() {
                 bg2.classList.add("move");
                 bg2.style.backgroundImage = `url(${objectBackground})`;
             }
+            bg2.addEventListener("animationend", BGObjRespawn);
         }
     }
 }
