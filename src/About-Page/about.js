@@ -131,6 +131,7 @@ function openMenu() {
     document.documentElement.style.setProperty('--TitleText', '#13b8ff');
     document.documentElement.style.setProperty('--Link', '#0043ef');
     document.documentElement.style.setProperty('--LinkHover', '#000097');
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#257BE6');
     document.getElementById("SonicTeam").src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png";
     document.getElementById("SonicTeam").title="Sonic Team";
     document.getElementById("SEGA").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp";
@@ -151,6 +152,7 @@ function openMenu() {
     document.documentElement.style.setProperty('--TitleText', '#212121');
     document.documentElement.style.setProperty('--Link', '#616161');
     document.documentElement.style.setProperty('--LinkHover', '#000000');
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#252525');
     document.getElementById("SonicTeam").src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3b7997c1-7e9b-4257-8243-4d9acf4cbd0a/d4kn36i-2fe1b899-9e11-4cef-be8c-0a884b9d4621.png/v1/fill/w_1280,h_416,strp/__team_shadow_logo___by_kaiser_art_d4kn36i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE2IiwicGF0aCI6IlwvZlwvM2I3OTk3YzEtN2U5Yi00MjU3LTgyNDMtNGQ5YWNmNGNiZDBhXC9kNGtuMzZpLTJmZTFiODk5LTllMTEtNGNlZi1iZThjLTBhODg0YjlkNDYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NZDxbeGOENEkB2XpR1Gd_083vm9U3UAYxWemPgnjpgo";
     document.getElementById("SonicTeam").title="Art by: kaiser-art"
     document.getElementById("SEGA").src="images/sega-dark.png";
