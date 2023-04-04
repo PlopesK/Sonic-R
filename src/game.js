@@ -48,7 +48,7 @@ function game() {
         window.getComputedStyle(fly).getPropertyValue("left"));
     if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 60 && obsTop > 0 && sonicTop <= 90 && sonicTop >= 20 && canLoseLife == true) {  
+            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {
@@ -189,8 +189,13 @@ function backgroundMove() {
 
     function animate(timestamp) {
         if (speed >= 400 && speedGround >= 600){
-            speed = 400;
-            speedGround = 600;
+            if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
+                speed = 300;
+                speedGround = 500;
+            } else {
+                speed = 400;
+                speedGround = 600;
+            }
         }
         else {
             speed++;
@@ -254,7 +259,7 @@ function objectSpawn() {
     if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
         object2.classList.add("hidden");
         if (!isGameOver) {
-            if ((timerObj += 10) == (1400)) {
+            if ((timerObj += 20) == (1400)) {
                 object1.classList.add("move");
                 object1.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 2800) {
@@ -295,7 +300,7 @@ function BGObjSpawn() {
     const bg2 = document.getElementById("bg-object2");
     if (( window.innerWidth <= 800 )){
         bg1.classList.add("hidden");
-        if ((BgTimer += 10) == (2000)) {
+        if ((BgTimer += 20) == (2000)) {
             BgTimer = 0
                 bg2.classList.add("move");
                 bg2.style.backgroundImage = `url(${objectBackground})`;

@@ -852,8 +852,11 @@ footer p {
 
     .img-section {
         width: 50%;
-        margin-right: 3vh;
         text-align: center;
+    }
+
+    #SEGA {
+        margin-right: 2vh;
     }
 
     .sidenav .title {
