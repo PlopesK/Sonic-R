@@ -931,12 +931,6 @@ footer p {
     }
 }
 
-@media(max-width: 1200px){
-    .right-wall {
-        display: none;
-    }
-}
-
 /* 🤫🤫🤫🤫SHHHHHHH🤫🤫🤫🤫 */
 .hidden {
     display: none;
