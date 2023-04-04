@@ -765,10 +765,10 @@ footer p {
 .object {
     position: absolute;
     background-repeat: no-repeat;
-    width: 70vh;
-    height: 30vh;
-    right: -80vh;
-    top: 51vh;
+    width: 50%;
+    height: 30%;
+    right: -30%;
+    top: 50%;
     z-index: -2;
 }
 
@@ -785,7 +785,7 @@ footer p {
 
 @keyframes moving {
     100% {
-        right: 130vh;
+        right: 110%;
     }
     
 }
@@ -889,6 +889,13 @@ footer p {
 
     .extra {
         top: 95%;
+    }
+
+    .object {
+        right: -70%;
+        width: 60%;
+        height: 40%;
+        top: 51%;
     }
 
     #object5 {
