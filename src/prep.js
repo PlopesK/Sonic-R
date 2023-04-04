@@ -23,6 +23,13 @@ window.addEventListener('resize', () => {
     const rightPosition = parentDiv.offsetLeft + marginRight;
     objectL.style.left = leftPosition + "px";
     objectR.style.left = rightPosition + "px";
+
+    const play = document.getElementById("play-txt");
+    if (( window.innerWidth <= 800 )){
+        play.innerHTML="Tap the button to start!";
+    } else {
+        play.innerHTML="Press any key or click the button to start!";
+    }
 });
 
 /* 💫💫💫💫Prevent scroll using Space or Arrows💫💫💫💫 */

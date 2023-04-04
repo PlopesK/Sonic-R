@@ -852,12 +852,12 @@ footer p {
 
     .img-section {
         width: 50%;
-        margin-right: 1vh;
+        margin-right: 3vh;
         text-align: center;
     }
 
     .sidenav .title {
-        font-size: 2vh;
+        font-size: 3vh;
     }
 
     .selectMusic, .sidenav {
@@ -936,11 +936,11 @@ footer p {
     }
 }
 
-@media(max-height: 600px){
+@media(max-height: 700px){
     .object {
         right: -80%;
         width: 60%;
-        height: 40%;
+        height: 50%;
         top: 70%;
     }
 }
