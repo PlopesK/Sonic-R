@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }, 200);
 
     const play = document.getElementById("play-txt");
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         play.innerHTML="Tap the button to start!";
     } else {
         play.innerHTML="Press any key or click the button to start!";

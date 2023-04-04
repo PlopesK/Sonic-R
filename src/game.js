@@ -46,9 +46,9 @@ function game() {
     
     let obsTop = parseInt(
     window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 900 )){
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 50 && canLoseLife == true) {  
+            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {
@@ -190,11 +190,10 @@ function backgroundMove() {
         if (speed >= 400 && speedGround >= 600){
             speed = 400;
             speedGround = 600;
-        } if (( window.innerWidth <= 800 )){
+        } if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
             speed = 200;
             speedGround = 400;
-        }
-        else {
+        } else {
             speed++;
             speedGround++;
         }
@@ -253,7 +252,7 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         object1.classList.add("hidden");
         object2.classList.add("hidden");
         object3.classList.add("hidden");

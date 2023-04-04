@@ -8,6 +8,10 @@
     --LinkHover: #000097;
 }
 
+body {
+    word-wrap: break-word;
+}
+
 a {
     text-decoration: none;
     font-weight: bold;

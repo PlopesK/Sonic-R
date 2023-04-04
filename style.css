@@ -50,7 +50,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: static;
     color: white;
 }
 
@@ -63,7 +63,7 @@ header img {
     background-image: var(--Footer);
     height: 2vh;
     width: 100%;
-    position: relative;
+    position: static;
     padding-top: 10px;
     margin-bottom: 50px;
 }
@@ -71,11 +71,11 @@ header img {
 footer {
 	padding: 30px;
     width: 100%;
-    height: 60%;
+    height: 100%;
     margin-top: 2vh;
     text-align: center;
     background-image: var(--Footer);
-    position: absolute;
+    position: static;
     color: white;
 }
 
@@ -91,8 +91,7 @@ footer a {
 
 footer p {
     font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
-    font-weight: 400;
-    text-align: inherit;
+    font-weight: 500;
     text-shadow: none !important;
     font-size: 2.3vh;
     line-height: 1.2em;
@@ -158,7 +157,7 @@ footer p {
     font-size: 4vh;
     margin-top: 1.5vh;
     margin-bottom: 2vh;
-    font-weight: 500;
+    font-weight: 600;
     align-items: center;
     justify-content: baseline;
 }
@@ -202,15 +201,17 @@ footer p {
     width: 100%;
     height: 5vh;
     font-size: 3vh;
+    font-weight: 600;
     margin-top: 1.5vh;
     align-items: center;
-    justify-content: baseline;
+    justify-content: center;
 }
 
 .selectMusic .title {
     background-color: #142038;
     align-items: center;
     text-align: center;
+    font-weight: 600;
     justify-content: center;
     margin-top: 1.5vh;
     margin-bottom: 2vh;
@@ -220,6 +221,7 @@ footer p {
 
 .selectMusic button {
     padding: 8px 8px 8px 32px;
+    width: 100%;
     text-decoration: none;
     font-size: 3vh;
     color: white;
@@ -231,14 +233,6 @@ footer p {
 .selectMusic button:hover {
     cursor: pointer;
     color: #f1f1f1;
-}
-
-.next {
-    right: 0;
-}
-
-.return {
-    left: 0;
 }
 
 .settings {
