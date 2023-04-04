@@ -24,7 +24,6 @@
   # You can't make any changes after starting a game, so be sure when to start!
   # On the PC, you can start without having to press the button, just by pressing a key! Both to Start and Restart...
 ```
-<br>
 <h2> 🌐 Conclusion 🌐 </h2>
 I learned a lot developting this project, and had a lot of fun! :) <br>
 This project was more like a love letter to the Sonic franchise! So I hope everyone seeing this have fun playing!<br>
