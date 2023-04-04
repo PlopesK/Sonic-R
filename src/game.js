@@ -46,9 +46,10 @@ function game() {
     
     let obsTop = parseInt(
     window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerWidth <= 900 )){
-        if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
+
+     if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
+        if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
+            obsTop < 55 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {
@@ -190,13 +191,13 @@ function backgroundMove() {
         if (speed >= 400 && speedGround >= 600){
             speed = 400;
             speedGround = 600;
-        } if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
+        } else if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
             speed = 200;
             speedGround = 400;
         } else {
             speed++;
             speedGround++;
-        }
+        } 
         if (!lastTime) lastTime = timestamp;
         let elapsed = timestamp - lastTime;
         lastTime = timestamp;
@@ -263,6 +264,9 @@ function objectSpawn() {
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
             }
+            object5.addEventListener("animationend", () => {
+                object5.style.backgroundImage = ``;
+            })
         }
     } else {
         if (!isGameOver) {
@@ -291,9 +295,13 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         bg1.classList.add("hidden");
-        bg2.classList.add("hidden");
+        if ((BgTimer += 10) == (2000)) {
+            BgTimer = 0
+            bg2.classList.add("move");
+            bg2.style.backgroundImage = `url(${objectBackground})`;
+        }
     } else {
         if (!isGameOver) {
             if ((BgTimer += 10) == (2000)) {
