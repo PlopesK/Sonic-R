@@ -255,15 +255,11 @@ function objectSpawn() {
     const object5 = document.getElementById("object5");
     if (/Mobi/.test(navigator.userAgent)) {
         object1.classList.add("hidden");
+        object2.classList.add("hidden");
+        object3.classList.add("hidden");
         object4.classList.add("hidden");
         if (!isGameOver) {
-            if ((timerObj += 10) == (1400)) {
-                object2.classList.add("move");
-                object2.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 2800) {
-                object3.classList.add("move");
-                object3.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 4000) {
+            if ((timerObj += 10) == (2000)) {
                 timerObj = 0;
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
