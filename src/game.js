@@ -46,7 +46,7 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerHeight <= 600 )){
+        if (navigator.userAgent.match(/Mobile/)) {
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
@@ -62,7 +62,6 @@ function game() {
     } else {
         if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
-                console.log(`${sonicTop}`);
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {
@@ -189,7 +188,7 @@ function backgroundMove() {
 
     function animate(timestamp) {
         if (speed >= 400 && speedGround >= 600){
-            if (( window.innerHeight <= 600 )){
+            if (navigator.userAgent.match(/Mobile/)) {
                 speed = 300;
                 speedGround = 500;
             } else {
@@ -231,6 +230,8 @@ function object() {
     objInterval();
     ObjInterval = setInterval(() => { objectSpawn(); }, 10);
     BgInterval = setInterval(() => { BGObjSpawn(); }, 10);
+    const object5 = document.getElementById("object5");
+    object5.addEventListener("animationend", objRespawn);
 }
 
 function objInterval() {
@@ -252,10 +253,10 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
+    if (navigator.userAgent.match(/Mobile/)) {
         object2.classList.add("hidden");
         if (!isGameOver) {
-            if ((timerObj += 20) == (1400)) {
+            if ((timerObj += 10) == (1400)) {
                 object1.classList.add("move");
                 object1.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 2800) {
@@ -286,7 +287,6 @@ function objectSpawn() {
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
             }
-            object5.addEventListener("animationend", objRespawn);
         }
     }
 }
@@ -295,7 +295,7 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    if (( window.innerWidth <= 800 )){
+    if (navigator.userAgent.match(/Mobile/)) {
         clearInterval(BgInterval);
         bg1.classList.add("hidden");
         bg2.classList.add("hidden");

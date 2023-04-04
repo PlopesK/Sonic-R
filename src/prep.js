@@ -45,9 +45,11 @@ function wait() {
     start();
     backgroundMove();
     object();
+    Started = true;
 }
 document.addEventListener("keydown", wait,  { once: true });
 
+let Started = false;
 function start() {
     Menu.loop = false;
     Menu.volume = 0.2;

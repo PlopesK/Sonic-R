@@ -15,7 +15,7 @@ function openMenu() {
     navbar.addEventListener("click", () => {
       Selected.play();
     })
-  }
+}
   
   /* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */
   function blueTheme() {
@@ -57,12 +57,18 @@ function openMenu() {
   /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
     Selected.currentTime = 3;
-    document.addEventListener("keydown", wait,  { once: true });
-  
     const button = document.getElementById("play");
-    button.classList.remove("hidden");
-  
     const navbar = document.querySelector("#settings");
+
+    if (!Started) {
+      document.addEventListener("keydown", wait,  { once: true });
+      const button = document.getElementById("play");
+      button.classList.remove("hidden");
+    } else {
+      document.removeEventListener("keydown", wait,  { once: true });
+      button.classList.add("hidden");
+    }
+
     navbar.style.width = "0";
     navbar.style.height = "0";
     const menuSelect = document.querySelector("#menuMusic");
