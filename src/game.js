@@ -60,8 +60,8 @@ function game() {
                 } 
             }
     } else {
-        if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 80 && canLoseLife == true || 
-            obsTop < 60 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
+        if (obstLeft < 55 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
+            obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
                 console.log(`${sonicTop}`);
                 sonicDamage();
                 canLoseLife = false;
