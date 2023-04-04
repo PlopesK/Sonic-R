@@ -48,7 +48,7 @@ function game() {
     window.getComputedStyle(fly).getPropertyValue("left"));
     if (( window.innerWidth <= 800 )){
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
+            obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 50 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {

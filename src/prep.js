@@ -14,16 +14,6 @@ let windowWidth = window.innerWidth;
 window.addEventListener('resize', () => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
-    const parentDiv = document.getElementById("background");
-    const objectL = document.getElementById("left");
-    const objectR = document.getElementById("right");
-    const marginLeft = parseInt(window.getComputedStyle(objectL).marginLeft);
-    const marginRight = parseInt(window.getComputedStyle(objectR).marginRight);
-    const leftPosition = parentDiv.offsetLeft + marginLeft;
-    const rightPosition = parentDiv.offsetLeft + marginRight;
-    objectL.style.left = leftPosition + "px";
-    objectR.style.left = rightPosition + "px";
-
     const play = document.getElementById("play-txt");
     if (( window.innerWidth <= 900 )){
         play.innerHTML="Tap the button to start!";
