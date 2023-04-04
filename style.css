@@ -300,7 +300,7 @@ footer p {
     z-index: 3;
 }
 
-.area p {
+#play-txt {
     text-align: center;
     color: azure;
     animation: press 2s infinite ease-in-out;
@@ -636,7 +636,7 @@ footer p {
     background-repeat: no-repeat;
     position: relative;
     top: 23vh;
-    left: 3vh;
+    left: 1vh;
     z-index: 3;
     transition: none;
 }
@@ -650,7 +650,7 @@ footer p {
 @keyframes run {
     0% {
         background-image: var(--Start);
-        left: 3vh;
+        left: 1vh;
     }
     25% {
         left: 14vh;
@@ -663,7 +663,7 @@ footer p {
     }
     100% {
         background-image: var(--Run);
-        left: 3vh;
+        left: 1vh;
     }
 }
 
