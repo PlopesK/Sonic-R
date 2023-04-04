@@ -4,7 +4,11 @@ function openMenu() {
     const button = document.getElementById("play");
     button.classList.add("hidden");
     navbar.style.height = "50%";
-    navbar.style.width = "40%";
+    if (( window.innerWidth <= 800 )){
+      navbar.style.width = "50%";
+    } else {
+      navbar.style.width = "25%";
+    }
     document.removeEventListener("keydown", wait);
     Select.play();
   
@@ -71,7 +75,7 @@ function closeBtn() {
   function openCharSelect() {
     const charSelect = document.querySelector("#charOpt");
     const characters = document.querySelectorAll(".option");
-    charSelect.style.height = "55vh";
+    charSelect.style.height = "70%";
     charSelect.style.width = "120vh";
     charSelect.style.border = '5px outset #0050a8';
     setTimeout(() => {

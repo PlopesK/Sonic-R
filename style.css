@@ -189,10 +189,10 @@ footer p {
     background-position-x: right;
     font-family: 'SF Intermosaic', sans-serif;
     height: 0;
-    width: 40%; 
+    width: 25%; 
     position: fixed; 
     top: 0; 
-    left: 40%;
+    left: 25%;
     justify-content: center;
     align-items: center;
     background-color: #111; 
@@ -546,7 +546,7 @@ footer p {
     background-repeat: no-repeat;
     background-color: #606060;
     border: #3B3B3B 3.5px outset;
-    width: 55vh;
+    width: 60vh;
     height: 10vh;
     margin-left: 5vh;
     margin-right: 5vh;
@@ -564,7 +564,7 @@ footer p {
     justify-content: center;
     z-index: 20;
     background: var(--CharSelect);
-    background-size: auto 55vh;
+    background-size: auto 101%;
     background-repeat: repeat-x;
     border: 0px outset #0050a8;
     margin-top: 2vh;
@@ -852,6 +852,7 @@ footer p {
 
     .sega {
         left: 0;
+        margin-right: 10px;
     }
 
     .img-section {
@@ -861,6 +862,14 @@ footer p {
 
     .sidenav .title {
         font-size: 2vh;
+    }
+
+    .selectMusic, .sidenav {
+        width: 50%;
+    }
+
+    .selectMusic {
+        left: 50%;
     }
 
     .selectMusic .majorTitle {
@@ -904,9 +913,12 @@ footer p {
     }
 
     .select {
-        width: 100%;
         background-size: 153% 8vh;
         margin-top: 5vh;
+    }
+
+    .charOpt {
+        max-width: 100%;
     }
 
     .charRow{
@@ -937,7 +949,7 @@ footer p {
         right: -80%;
         width: 60%;
         height: 40%;
-        top: 70%;
+        top: 60%;
     }
 }
 
