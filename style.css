@@ -850,13 +850,9 @@ footer p {
         font-size: 10vh;
     }
 
-    .sega {
-        left: 0;
-        margin-right: 10px;
-    }
-
     .img-section {
         width: 50%;
+        margin-right: 1vh;
         text-align: center;
     }
 
@@ -945,7 +941,7 @@ footer p {
         right: -80%;
         width: 60%;
         height: 40%;
-        top: 60%;
+        top: 70%;
     }
 }
 
