@@ -712,7 +712,7 @@ footer p {
     height: 7vh;
     background-repeat: no-repeat;
     position: relative;
-    left: 120%;
+    left: 100%;
     z-index: 1;
 }
 
@@ -768,7 +768,7 @@ footer p {
     background-size: 55% 100%;
     width: 55%;
     height: 165%;
-    left: 120%;
+    left: 100%;
     top: 0;
     z-index: -2;
     position: absolute;
@@ -907,10 +907,6 @@ footer p {
 
     .object {
         width: 100%;
-    }
-
-    #object5 {
-        opacity: 0;
     }
 
     .select {

@@ -45,8 +45,8 @@ function game() {
         window.getComputedStyle(bug).getPropertyValue("left"));
     
     let obsTop = parseInt(
-        window.getComputedStyle(fly).getPropertyValue("left"));
-        if (/Mobi/.test(navigator.userAgent)) {
+    window.getComputedStyle(fly).getPropertyValue("left"));
+    if (( window.innerWidth <= 800 )){
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
@@ -188,13 +188,11 @@ function backgroundMove() {
 
     function animate(timestamp) {
         if (speed >= 400 && speedGround >= 600){
-            if (/Mobi/.test(navigator.userAgent)) {
-                speed = 200;
-                speedGround = 400;
-            } else {
-                speed = 400;
-                speedGround = 600;
-            }
+            speed = 400;
+            speedGround = 600;
+        } if (( window.innerWidth <= 800 )){
+            speed = 200;
+            speedGround = 400;
         }
         else {
             speed++;
@@ -228,10 +226,12 @@ let ObjInterval;
 
 function object() {
     objInterval();
-    ObjInterval = setInterval(() => { objectSpawn(); }, 10);
-    BgInterval = setInterval(() => { BGObjSpawn(); }, 10);
+    setInterval(() => { objectSpawn(); }, 10);
+    setInterval(() => { BGObjSpawn(); }, 10);
     const object5 = document.getElementById("object5");
     object5.addEventListener("animationend", objRespawn);
+    const bg2 = document.getElementById("bg-object2");
+    bg2.addEventListener("animationend", BGObjRespawn);
 }
 
 function objInterval() {
@@ -253,7 +253,7 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (/Mobi/.test(navigator.userAgent)) {
+    if (( window.innerWidth <= 800 )){
         object1.classList.add("hidden");
         object2.classList.add("hidden");
         object3.classList.add("hidden");
@@ -267,7 +267,7 @@ function objectSpawn() {
         }
     } else {
         if (!isGameOver) {
-            if ((timerObj += 10) == (1400)) {
+            if ((timerObj += 10) == (1800)) {
                 object1.classList.add("move");
                 object1.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 2300) {
@@ -292,8 +292,7 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    if (/Mobi/.test(navigator.userAgent)) {
-        clearInterval(BgInterval);
+    if (( window.innerWidth <= 800 )){
         bg1.classList.add("hidden");
         bg2.classList.add("hidden");
     } else {
@@ -306,7 +305,6 @@ function BGObjSpawn() {
                 bg2.classList.add("move");
                 bg2.style.backgroundImage = `url(${objectBackground})`;
             }
-            bg2.addEventListener("animationend", BGObjRespawn);
         }
     }
 }
