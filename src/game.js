@@ -46,7 +46,7 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
+    if (( window.innerHeight <= 600 )){
         if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
@@ -189,7 +189,7 @@ function backgroundMove() {
 
     function animate(timestamp) {
         if (speed >= 400 && speedGround >= 600){
-            if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
+            if (( window.innerHeight <= 600 )){
                 speed = 300;
                 speedGround = 500;
             } else {

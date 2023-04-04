@@ -855,6 +855,11 @@ footer p {
         text-align: center;
     }
 
+    .sega img {
+        width: auto;
+        height: 6vh;
+    }
+
     #SEGA {
         margin-right: 2vh;
     }
@@ -904,7 +909,7 @@ footer p {
         width: 100%;
     }
 
-    #object5 {
+    #object5, #object4 {
         opacity: 0;
     }
 
