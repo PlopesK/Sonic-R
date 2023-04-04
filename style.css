@@ -1,8 +1,4 @@
 @import url('https://fonts.cdnfonts.com/css/sf-intermosaic');
-@viewport {
-    min-zoom: 1.0;
-    max-zoom: 1.0;
-}
 
 :root {
     --SiteColor: #257BE6;
@@ -366,7 +362,7 @@ footer p {
     background:  var(--SiteColor);
     margin: auto;
     position: absolute;
-    z-index: 3;
+    z-index: 1000;
 }
 
 .game .right-wall {
@@ -377,7 +373,7 @@ footer p {
     background:  var(--SiteColor);
     margin: auto;
     position: absolute;
-    z-index: 3;
+    z-index: 1000;
 }
 
 .layout {
@@ -902,7 +898,7 @@ footer p {
     }
 
     .object {
-        width: 70%;
+        width: 100%;
     }
 
     #object5 {

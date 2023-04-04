@@ -46,7 +46,7 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerHeight <= 450 )){
+    if (( window.innerHeight <= 600 )){
         if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 80 && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 95 && sonicTop >= 15 && canLoseLife == true) {  
                 sonicDamage();
