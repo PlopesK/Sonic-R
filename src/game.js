@@ -46,8 +46,8 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-    if (( window.innerHeight <= 600 )){
-        if (obstLeft < 60 && obstLeft > 0 && (!sonic.classList.contains("jump")) && canLoseLife == true || 
+    if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
+        if (obstLeft < 60 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 60 && obsTop > 0 && sonicTop <= 95 && sonicTop >= 15 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
@@ -60,8 +60,8 @@ function game() {
                 } 
             }
     } else {
-        if (obstLeft < 55 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
-            obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
+        if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
+            obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && (sonic.classList == "jump") && canLoseLife == true) { 
                 console.log(`${sonicTop}`);
                 sonicDamage();
                 canLoseLife = false;
@@ -251,7 +251,7 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 )){
         object2.classList.add("hidden");
         if (!isGameOver) {
             if ((timerObj += 10) == (1400)) {
@@ -260,9 +260,6 @@ function objectSpawn() {
             } if (timerObj == 2800) {
                 object3.classList.add("move");
                 object3.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 3400) {
-                object4.classList.add("move");
-                object4.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 4000) {
                 timerObj = 0;
                 object5.classList.add("move");
