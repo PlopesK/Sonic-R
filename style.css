@@ -294,34 +294,30 @@ footer p {
     height: fit-content;
     margin: auto;
     margin-bottom: 70px;
-    padding-top: 10px;
+    font-family: 'SF Intermosaic', sans-serif;
+    font-size: 3vh;
 }
 
 .start {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'SF Intermosaic', sans-serif;
-    font-size: 3vh;
     z-index: 3;
 }
 
-.start p {
-    position: absolute;
+.area p {
     text-align: center;
     color: azure;
-    top: 35%;
     animation: press 2s infinite ease-in-out;
 }
 
 .extra {
     width: 100%;
     height: auto;
-    top: 90%;
+    bottom: 0;
     text-align: center;
     color: azure;
     opacity: 0.5;
-    position: absolute;
 }
 
 @keyframes press {
@@ -413,7 +409,7 @@ footer p {
     flex-direction: row;
     align-items: baseline;
     position: absolute;
-    top: 17.5vh;
+    top: 3.5vh;
     left: 2vh;
     width: 30%;
     height: 10vh;
@@ -722,18 +718,17 @@ footer p {
     background-repeat: no-repeat;
     position: relative;
     left: 120%;
-    left: calc(var(--left) * 1%);
     z-index: 1;
 }
 
 #badnik1 {
-    top: 8.5vh;
+    bottom: 5vh;
     background-size: 7.7vh 7vh;
 }
 
 #badnik2 {
     width: 10vh;
-    bottom: 1.5vh;
+    bottom: 12vh;
     background-size: 10vh 7vh;
 }
 
@@ -763,14 +758,24 @@ footer p {
 }
 
 /* 🌴🌴🌴🌴Background Objects🌴🌴🌴🌴 */
+.objects-bg {
+    width: 105%;
+    height: 33%;
+    position: relative;
+}
+
+.objects-bg img {
+    width: 100%;
+}
+
 .object {
-    position: absolute;
     background-repeat: no-repeat;
+    background-size: 50% 100%;
     width: 50%;
-    height: 30%;
-    right: -30%;
-    top: 50%;
+    height: 165%;
+    left: 120%;
     z-index: -2;
+    position: absolute;
 }
 
 #bg-object1, #bg-object2 {
@@ -786,7 +791,7 @@ footer p {
 
 @keyframes moving {
     100% {
-        right: 110%;
+        left: -50%;
     }
     
 }
@@ -794,10 +799,9 @@ footer p {
 /* 🏞️🏞️🏞️🏞️Ground🏞️🏞️🏞️🏞️ */
 #ground {
     background-image: url("sprites/ground.png");
-    background-size: 34vh 12.4vh;
+    background-size: 34vh 100%;
     border-radius: 1.5vh;
     position: relative;
-    top: 14vh;
     width: 100%;
     height: 12.4vh;
     z-index: -1;
@@ -898,10 +902,7 @@ footer p {
     }
 
     .object {
-        right: -70%;
-        width: 60%;
-        height: 40%;
-        top: 51%;
+        width: 70%;
     }
 
     .select {
@@ -933,15 +934,6 @@ footer p {
 @media(max-width: 1200px){
     .right-wall {
         display: none;
-    }
-}
-
-@media(max-height: 700px){
-    .object {
-        right: -80%;
-        width: 60%;
-        height: 50%;
-        top: 70%;
     }
 }
 

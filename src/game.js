@@ -23,6 +23,8 @@ function game() {
     }
 
     function sonicDamage() {
+        HitDamage.currentTime = 0.2;
+        HitDamage.play();
         sonic.animate(sonicHit, sonicHitTimming);
     }
 
@@ -44,19 +46,31 @@ function game() {
     
     let obsTop = parseInt(
         window.getComputedStyle(fly).getPropertyValue("left"));
-
-    if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 140 && canLoseLife == true || 
-        obsTop < 60 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 40 && canLoseLife == true) {   
-            HitDamage.currentTime = 0.2;
-            HitDamage.play();
-            sonicDamage();
-            canLoseLife = false;
-            if (lifes <= 0) {
-                gameOver();
-            } else {
-                setTimeout(() => {
-                    lifelost();
-                }, 500);
+    if (( window.innerHeight <= 450 )){
+        if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 80 && canLoseLife == true || 
+            obsTop < 60 && obsTop > 0 && sonicTop <= 95 && sonicTop >= 15 && canLoseLife == true) {  
+                sonicDamage();
+                canLoseLife = false;
+                if (lifes <= 0) {
+                    gameOver();
+                } else {
+                    setTimeout(() => {
+                        lifelost();
+                    }, 500);
+                } 
+            }
+    } else {
+        if (obstLeft < 60 && obstLeft > 0 && sonicTop >= 80 && canLoseLife == true || 
+            obsTop < 60 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 60 && canLoseLife == true) { 
+                sonicDamage();
+                canLoseLife = false;
+                if (lifes <= 0) {
+                    gameOver();
+                } else {
+                    setTimeout(() => {
+                        lifelost();
+                    }, 500);
+                }
             }
         }
     } 

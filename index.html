@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.00, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale=1.00, maximum-scale=1.00, user-scalable=no">
         <meta name="theme-color" content="#257BE6" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-intermosaic">
@@ -90,11 +90,11 @@
         <div class="subheader">
         </div>
         <div class="area">
+            <p id="play-txt" class="hid">Press any key or click the button to start!</p>
             <div class="start">
                 <a id="play" class="button hid" onclick="wait()">
                     <i class="fa fa-play"></i>
                 </a>
-                <p id="play-txt" class="hid">Press any key or click the button to start!</p>
                 <div class="game" id="background">
                     <div class="left-wall" id="left"></div>
                     <div class="right-wall" id="right"></div>
@@ -105,10 +105,6 @@
                         </div>
                     </div>
                     <div id="sonic"></div>
-                    <div class="enemies">
-                        <div class="obstacle" id="badnik2"></div>
-                        <div class="obstacle" id="badnik1"></div>
-                    </div>
                     <div class= "objects-bg">
                         <div class="object" id="bg-object1"></div>
                         <div class="object" id="bg-object2"></div>
@@ -118,6 +114,10 @@
                         <div class="object" id="object4"></div>
                         <div class="object" id="object5"></div>
                     </div>
+                    <div class="enemies">
+                        <div class="obstacle" id="badnik2"></div>
+                        <div class="obstacle" id="badnik1"></div>
+                    </div>
                     <div class="alive">
                         <div class="row">
                             <div class="rings"> <img loading="lazy" id="life-icon" src="sprites/life-icon.gif"> </div>
@@ -125,8 +125,8 @@
                         </div>
                     </div>
                     <div class="ground" id="ground"></div>
+                    <div class="extra hid" id="tip">Tip: You can <b> DOUBLE JUMP </b> if you press jump 2 times!</div>
                 </div>
-                <div class="extra hid" id="tip">Tip: You can <b> DOUBLE JUMP </b> if you press jump 2 times!</div>
             </div>
             <div class="gameover hidden" id="gameover">
                 <div class="restart">
