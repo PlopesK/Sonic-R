@@ -1,6 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/sf-intermosaic');
 @viewport {
-    zoom: 1.0;
     min-zoom: 1.0;
     max-zoom: 1.0;
 }
@@ -774,6 +773,7 @@ footer p {
     width: 50%;
     height: 165%;
     left: 120%;
+    top: 0;
     z-index: -2;
     position: absolute;
 }
@@ -903,6 +903,10 @@ footer p {
 
     .object {
         width: 70%;
+    }
+
+    #object5 {
+        opacity: 0;
     }
 
     .select {

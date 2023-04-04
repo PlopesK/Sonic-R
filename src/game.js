@@ -252,7 +252,6 @@ function objectSpawn() {
     const object5 = document.getElementById("object5");
     if (( window.innerWidth <= 800 )){
         object2.classList.add("hidden");
-        object4.classList.add("hidden");
         if (!isGameOver) {
             if ((timerObj += 10) == (1400)) {
                 object1.classList.add("move");
@@ -260,6 +259,9 @@ function objectSpawn() {
             } if (timerObj == 2800) {
                 object3.classList.add("move");
                 object3.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 3400) {
+                object4.classList.add("move");
+                object4.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 4000) {
                 timerObj = 0;
                 object5.classList.add("move");
