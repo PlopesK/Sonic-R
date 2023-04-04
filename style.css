@@ -849,13 +849,26 @@ footer p {
         font-size: 10vh;
     }
 
+    .sega {
+        left: 0;
+    }
+
     .img-section {
         width: 50%;
         text-align: center;
     }
 
     .selectMusic, .sidenav {
-        max-width: 38vh;
+        font-size: 2.4vh;
+        max-width: 35vh;
+    }
+
+    .sidenav .title {
+        font-size: 2.8vh;
+    }
+
+    .selectMusic {
+        left: 35vh;
     }
 
     .selectMusic .majorTitle {
@@ -892,6 +905,7 @@ footer p {
     }
 
     .select {
+        width: 100%;
         background-size: 153% 8vh;
         margin-top: 5vh;
     }
