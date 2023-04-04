@@ -189,10 +189,10 @@ footer p {
     background-position-x: right;
     font-family: 'SF Intermosaic', sans-serif;
     height: 0;
-    width: 40vh; 
+    width: 20%; 
     position: fixed; 
     top: 0; 
-    left: 40vh;
+    left: 20%;
     justify-content: center;
     align-items: center;
     background-color: #111; 
@@ -858,29 +858,20 @@ footer p {
         text-align: center;
     }
 
-    .selectMusic, .sidenav {
-        font-size: 2.4vh;
-        max-width: 35vh;
-    }
-
     .sidenav .title {
-        font-size: 2.8vh;
-    }
-
-    .selectMusic {
-        left: 35vh;
+        font-size: 2vh;
     }
 
     .selectMusic .majorTitle {
-        font-size: 2.7vh;
-    }
-
-    .selectMusic {
-        left: 38vh;
+        font-size: 2vh;
     }
 
     .selectMusic button {
         font-size: 2.8vh;
+    }
+
+    .game {
+        width: 100%;
     }
 
     .score img {
