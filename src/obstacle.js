@@ -32,8 +32,15 @@ function spawn(){
 
 function bugRespawn() {
     const bug = document.getElementById("badnik1");
-    const minDuration = 1200;
-    const maxDuration = 2000;
+    var minDuration;
+    var maxDuration;
+    if (( window.innerWidth <= 800 )){
+        minDuration = 2000;
+        maxDuration = 3000;
+    } else {
+        minDuration = 1200;
+        maxDuration = 2000;
+    }
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
     bug.style.animationDuration = animationDuration;
@@ -44,8 +51,15 @@ function bugRespawn() {
 
 function flyRespawn() {
     const fly = document.getElementById("badnik2");
-    const minDuration = 1200;
-    const maxDuration = 1500;
+    var minDuration;
+    var maxDuration;
+    if (( window.innerWidth <= 800 )){
+        minDuration = 2000;
+        maxDuration = 2500;
+    } else {
+        minDuration = 1200;
+        maxDuration = 1500;
+    }
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
     fly.style.animationDuration = animationDuration;

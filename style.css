@@ -353,10 +353,10 @@ footer p {
 }
 
 .game {
-    width: 120vh;
+    width: 55%;
     height: 42vh;
     background-image: url("sprites/background.gif");
-    background-size: 75vh 42vh;
+    background-size: 75vh 100%;
     background-repeat: repeat-x;
     border-radius: 1.5vh;
     margin: auto;
@@ -365,7 +365,7 @@ footer p {
 
 .game .left-wall {
     height: 110%;
-    width: 50vh;
+    width: 22.5%;
     transform: translateX(-100%);
     margin-left: 10px;
     background:  var(--SiteColor);
@@ -376,8 +376,8 @@ footer p {
 
 .game .right-wall {
     height: 110%;
-    width: 50vh;
-    transform: translateX(239.5%);
+    width: 22.5%;
+    transform: translateX(244%);
     margin-right: 10px;
     background:  var(--SiteColor);
     margin: auto;
@@ -908,10 +908,6 @@ footer p {
         top: 51%;
     }
 
-    #object5 {
-        opacity: 0;
-    }
-
     .select {
         background-size: 153% 8vh;
         margin-top: 5vh;
@@ -944,7 +940,7 @@ footer p {
     }
 }
 
-@media(max-height: 800px){
+@media(max-height: 600px){
     .object {
         right: -80%;
         width: 60%;

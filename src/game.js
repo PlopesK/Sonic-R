@@ -236,24 +236,41 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-
-    if (!isGameOver) {
-        if ((timerObj += 10) == (1400)) {
-            object1.classList.add("move");
-            object1.style.backgroundImage = `url(${objectBackground})`;
-        } if (timerObj == 2300) {
-            object2.classList.add("move");
-            object2.style.backgroundImage = `url(${objectBackground})`;
-        } if (timerObj == 2800) {
-            object3.classList.add("move");
-            object3.style.backgroundImage = `url(${objectBackground})`;
-        } if (timerObj == 3400) {
-            object4.classList.add("move");
-            object4.style.backgroundImage = `url(${objectBackground})`;
-        } if (timerObj == 4000) {
-            timerObj = 0;
-            object5.classList.add("move");
-            object5.style.backgroundImage = `url(${objectBackground})`;
+    if (( window.innerWidth <= 800 )){
+        object2.classList.add("hidden");
+        object4.classList.add("hidden");
+        if (!isGameOver) {
+            if ((timerObj += 10) == (1400)) {
+                object1.classList.add("move");
+                object1.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 2800) {
+                object3.classList.add("move");
+                object3.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 4000) {
+                timerObj = 0;
+                object5.classList.add("move");
+                object5.style.backgroundImage = `url(${objectBackground})`;
+            }
+        }
+    } else {
+        if (!isGameOver) {
+            if ((timerObj += 10) == (1400)) {
+                object1.classList.add("move");
+                object1.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 2300) {
+                object2.classList.add("move");
+                object2.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 2800) {
+                object3.classList.add("move");
+                object3.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 3400) {
+                object4.classList.add("move");
+                object4.style.backgroundImage = `url(${objectBackground})`;
+            } if (timerObj == 4000) {
+                timerObj = 0;
+                object5.classList.add("move");
+                object5.style.backgroundImage = `url(${objectBackground})`;
+            }
         }
     }
 }
@@ -262,15 +279,18 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-
-    if (!isGameOver) {
-        if ((BgTimer += 10) == (2000)) {
-            bg1.classList.add("move");
-            bg1.style.backgroundImage = `url(${objectBackground})`;
-        } if (BgTimer == 3800) {
-            BgTimer = 0
-            bg2.classList.add("move");
-            bg2.style.backgroundImage = `url(${objectBackground})`;
+    if (( window.innerWidth <= 800 )){
+        bg1.classList.add("hidden");
+    } else {
+        if (!isGameOver) {
+            if ((BgTimer += 10) == (2000)) {
+                bg1.classList.add("move");
+                bg1.style.backgroundImage = `url(${objectBackground})`;
+            } if (BgTimer == 3800) {
+                BgTimer = 0
+                bg2.classList.add("move");
+                bg2.style.backgroundImage = `url(${objectBackground})`;
+            }
         }
     }
 }
