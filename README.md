@@ -30,8 +30,4 @@ This project was more like a love letter to the Sonic franchise! So I hope every
 
 <h3>🔷 Take a look at the website here: <a href="https://plopesk.github.io/Sonic-R/"> Sonic Runner </a> 🔷</h3>
 <h3>🌐 See more of the production here: <a href="https://plopesk.github.io/Sonic-R/about.html"> About Page </a> 🌐</h3>
-<div style="display: flex; flex-direction: row">
-  <img src="images/sonic.ico" style="width:150px; height: auto;" title="Icon"> 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/Sonic_Runners_logo.png" style="width:200px; height: auto;" title="Logo">
-</div>
+<img src="images/sonic.ico" style="width:150px; height: auto;" title="Icon"> 
