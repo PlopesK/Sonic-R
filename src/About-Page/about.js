@@ -109,7 +109,11 @@ window.addEventListener('resize', () => {
 function openMenu() {
     const navbar = document.querySelector("#settings");
     navbar.style.height = "50%";
-    navbar.style.width = "40vh";
+    if (( window.innerWidth <= 800 )){
+      navbar.style.width = "50%";
+    } else {
+      navbar.style.width = "25%";
+    }
     Select.play();
   
     navbar.addEventListener("click", () => {
