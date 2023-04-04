@@ -36,7 +36,7 @@ function bugRespawn() {
     var maxDuration;
     if (( window.innerWidth <= 800 )){
         minDuration = 1600;
-        maxDuration = 2200;
+        maxDuration = 2000;
     } else {
         minDuration = 1200;
         maxDuration = 2000;
@@ -55,7 +55,7 @@ function flyRespawn() {
     var maxDuration;
     if (( window.innerWidth <= 800 )){
         minDuration = 1400;
-        maxDuration = 2200;
+        maxDuration = 1600;
     } else {
         minDuration = 1200;
         maxDuration = 1500;

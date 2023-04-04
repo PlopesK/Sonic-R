@@ -25,7 +25,7 @@ window.addEventListener('resize', () => {
     objectR.style.left = rightPosition + "px";
 
     const play = document.getElementById("play-txt");
-    if (( window.innerWidth <= 800 )){
+    if (( window.innerWidth <= 900 )){
         play.innerHTML="Tap the button to start!";
     } else {
         play.innerHTML="Press any key or click the button to start!";

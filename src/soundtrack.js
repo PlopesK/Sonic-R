@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+window.addEventListener("loaded", () => {
   Menu.play();
 })
 /* 🔇🔇🔇🔇Mute Music🔇🔇🔇🔇 */
