@@ -83,6 +83,7 @@ function game() {
         canLoseLife = true;
     }
 
+    /* Game Over */
     function gameOver() {
         isGameOver = true;
         Game.loop = false;
@@ -165,12 +166,14 @@ function game() {
     }
 
     function sonicDJump() {
-        canLoseLife = false;
-        DoubleJump.play();
-        sonic.animate(sonicDoubleJump, sonicDJumpTimming);
-        setTimeout(() => {
-            canLoseLife = true;
-        }, 500);
+        if (!isGameOver) {
+            canLoseLife = false;
+            DoubleJump.play();
+            sonic.animate(sonicDoubleJump, sonicDJumpTimming);
+            setTimeout(() => {
+                canLoseLife = true;
+            }, 200);
+        }
     }
 }
 

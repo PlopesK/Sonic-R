@@ -758,7 +758,7 @@ footer p {
 
 .object {
     background-repeat: no-repeat;
-    background-size: 80% 100%;
+    background-size: 75% 100%;
     width: 50%;
     height: 165%;
     left: 100%;
@@ -892,6 +892,10 @@ footer p {
     .area {
         margin-bottom: 125px;
         margin-top: 70px;
+    }
+
+    .object{
+        background-size: 90% 100%;
     }
 
     .extra {
