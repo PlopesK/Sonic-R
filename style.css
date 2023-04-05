@@ -697,8 +697,14 @@ footer p {
 }
 
 /* 🐞🐞🐞🐞Obstacle🐞🐞🐞🐞 */
-.enemies {
+.ground-enemy {
     height: 5vh;
+    position: static;
+}
+.flying-enemy {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
 }
 
 .obstacle {
@@ -715,7 +721,7 @@ footer p {
 }
 
 #badnik2 {
-    top: 58%;
+    bottom: 13vh;
     width: 10vh;
     background-size: 10vh 7vh;
 }
