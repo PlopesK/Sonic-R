@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
         if (load.style.opacity > 0) {
             load.style.opacity -= 0.3;
         } else {
-            Menu.play();
             setTimeout(function(){
                 window.scrollTo(0, 1);
             }, 0);
@@ -60,6 +59,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
         Menu = new Audio('audios/Extras Menu - Sonic Mega Collection [OST].mp3');
         Menu.volume = 0.7;
         Menu.loop = true;
+        Menu.play();
     }
 
     /* 🎮🎮🎮🎮Game Music🎮🎮🎮🎮 */

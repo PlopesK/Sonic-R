@@ -35,11 +35,11 @@ function bugRespawn() {
     var minDuration;
     var maxDuration;
     if (( window.innerWidth <= 800 )){
-        minDuration = 1600;
+        minDuration = 1200;
         maxDuration = 2000;
     } else {
-        minDuration = 2000;
-        maxDuration = 3000;
+        minDuration = 2500;
+        maxDuration = 3500;
     }
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
@@ -54,7 +54,7 @@ function flyRespawn() {
     var minDuration;
     var maxDuration;
     if (( window.innerWidth <= 800 )){
-        minDuration = 1400;
+        minDuration = 1000;
         maxDuration = 1600;
     } else {
         minDuration = 2000;
