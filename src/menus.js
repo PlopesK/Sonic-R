@@ -5,7 +5,7 @@ function openMenu() {
     button.classList.add("hidden");
     navbar.style.height = "50%";
     if (( window.innerWidth <= 800 )){
-      navbar.style.width = "50%";
+      navbar.style.width = "45%";
     } else {
       navbar.style.width = "25%";
     }

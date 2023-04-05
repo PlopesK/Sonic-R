@@ -1,6 +1,7 @@
 /* 🎮🎮🎮🎮Game🎮🎮🎮🎮 */
 let lifes = 3;
 let canLoseLife = true;
+let isGameOver = false;
 
 function game() {
     const sonic = document.getElementById("sonic");
@@ -38,43 +39,31 @@ function game() {
 
     /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     function checkCollision() {
-    let sonicTop = parseInt(
-        window.getComputedStyle(sonic).getPropertyValue("top"));
+        let sonicTop = parseInt(window.getComputedStyle(sonic).getPropertyValue("top"));
 
-    let obstLeft = parseInt(
-        window.getComputedStyle(bug).getPropertyValue("left"));
+        let obstLeft = parseInt(window.getComputedStyle(bug).getPropertyValue("left"));
+        let obstTop = parseInt(window.getComputedStyle(bug).getPropertyValue("top"));
+        let obstWidth = parseInt(window.getComputedStyle(bug).getPropertyValue("width"));
+        let obstHeight = parseInt(window.getComputedStyle(bug).getPropertyValue("height"));
+
+        let flyLeft = parseInt(window.getComputedStyle(fly).getPropertyValue("left"));
+        let flyTop = parseInt(window.getComputedStyle(fly).getPropertyValue("top"));
+        let flyWidth = parseInt(window.getComputedStyle(fly).getPropertyValue("width"));
+        let flyHeight = parseInt(window.getComputedStyle(fly).getPropertyValue("height"));
     
-    let obsTop = parseInt(
-    window.getComputedStyle(fly).getPropertyValue("left"));
-
-     if (( window.innerWidth <= 900 ) || (window.innerHeight < window.innerWidth)){
-        if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 55 && obsTop > 0 && sonicTop <= 90 && sonicTop >= 40 && canLoseLife == true) {  
-                sonicDamage();
-                canLoseLife = false;
-                if (lifes <= 0) {
-                    gameOver();
-                } else {
-                    setTimeout(() => {
+        if (((sonicTop >= obstTop && sonicTop <= obstTop + obstHeight && obstLeft >= 0 && obstLeft <= obstWidth) || 
+        (sonicTop >= flyTop && sonicTop <= flyTop + flyHeight && flyLeft >= 0 && flyLeft <= flyWidth)) && canLoseLife == true) { 
+            sonicDamage();
+            canLoseLife = false;
+            if (lifes <= 0) {
+                gameOver();
+            } else {
+                setTimeout(() => {
                         lifelost();
-                    }, 500);
-                } 
-            }
-    } else {
-        if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 55 && obsTop > 0 && sonicTop <= 120 && sonicTop >= 50 && canLoseLife == true) { 
-                sonicDamage();
-                canLoseLife = false;
-                if (lifes <= 0) {
-                    gameOver();
-                } else {
-                    setTimeout(() => {
-                        lifelost();
-                    }, 500);
-                }
+                }, 500);
             }
         }
-    } 
+    }
 
     function lifelost() {
         lifes -= 1;
@@ -180,7 +169,6 @@ function game() {
 let lastTime = 0;
 let speed = 100;
 let speedGround = 200;
-let isGameOver = false;
 
 function backgroundMove() {
     let positionX = 0;
@@ -264,16 +252,15 @@ function objectSpawn() {
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
             }
-            object5.addEventListener("animationend", () => {
-                object5.style.backgroundImage = ``;
-            })
+        } else {
+            object5.classList.remove('move');
         }
     } else {
         if (!isGameOver) {
             if ((timerObj += 10) == (1800)) {
                 object1.classList.add("move");
                 object1.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 2300) {
+            } if (timerObj == 2400) {
                 object2.classList.add("move");
                 object2.style.backgroundImage = `url(${objectBackground})`;
             } if (timerObj == 2800) {
@@ -297,14 +284,18 @@ function BGObjSpawn() {
     const bg2 = document.getElementById("bg-object2");
     if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         bg1.classList.add("hidden");
-        if ((BgTimer += 10) == (2000)) {
-            BgTimer = 0
-            bg2.classList.add("move");
-            bg2.style.backgroundImage = `url(${objectBackground})`;
+        if (!isGameOver) {
+            if ((BgTimer += 10) == (2000)) {
+                BgTimer = 0
+                bg2.classList.add("move");
+                bg2.style.backgroundImage = `url(${objectBackground})`;
+            }
+        } else {
+            bg2.classList.remove("move");
         }
     } else {
         if (!isGameOver) {
-            if ((BgTimer += 10) == (2000)) {
+            if ((BgTimer += 10) == (2200)) {
                 bg1.classList.add("move");
                 bg1.style.backgroundImage = `url(${objectBackground})`;
             } if (BgTimer == 3800) {
