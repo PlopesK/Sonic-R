@@ -351,8 +351,7 @@ footer p {
 .game .left-wall {
     height: 110%;
     width: 22.5%;
-    transform: translateX(-100%);
-    margin-left: 10px;
+    left: 0;
     background:  var(--SiteColor);
     margin: auto;
     position: absolute;
@@ -362,8 +361,7 @@ footer p {
 .game .right-wall {
     height: 110%;
     width: 22.5%;
-    transform: translateX(244%);
-    margin-right: 10px;
+    right: 0;
     background:  var(--SiteColor);
     margin: auto;
     position: absolute;

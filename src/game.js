@@ -49,7 +49,7 @@ function game() {
 
      if (( window.innerWidth <= 900 ) || (window.innerHeight < window.innerWidth)){
         if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
-            obsTop < 55 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
+            obsTop < 55 && obsTop > 0 && sonicTop <= 90 && sonicTop >= 30 && canLoseLife == true) {  
                 sonicDamage();
                 canLoseLife = false;
                 if (lifes <= 0) {
