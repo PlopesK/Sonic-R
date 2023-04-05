@@ -20,8 +20,8 @@
 /* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-x: clip;
+    overscroll-behavior: none;
 }
 
 * {
@@ -38,7 +38,7 @@ a {
 /* 🚧🚧🚧🚧Body🚧🚧🚧🚧 */
 body {
     background:  var(--SiteColor);
-    line-height: 1.6;
+    line-height: 1.2;
     min-height: 100vh;
 }
 
@@ -94,7 +94,7 @@ footer a {
 footer p {
     font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 500;
-    text-shadow: none !important;
+    text-shadow: none;
     font-size: 2.3vh;
     line-height: 1.2em;
     padding-right: 40px !important;

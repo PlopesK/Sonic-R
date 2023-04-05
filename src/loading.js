@@ -8,6 +8,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
         if (load.style.opacity > 0) {
             load.style.opacity -= 0.3;
         } else {
+            Menu.play();
+            setTimeout(function(){
+                window.scrollTo(0, 1);
+            }, 0);
             clearInterval(loadEffect);
             load.classList.remove("active");
         }
@@ -112,10 +116,3 @@ window.addEventListener("DOMContentLoaded", function (event) {
             unmuteSound();
     }
 });
-
-window.onload = function() {
-    Menu.play();
-    setTimeout(function(){
-      window.scrollTo(0, 1);
-    }, 0);
-  };
