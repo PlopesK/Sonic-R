@@ -47,7 +47,7 @@ function game() {
     let obsTop = parseInt(
     window.getComputedStyle(fly).getPropertyValue("left"));
 
-     if (( window.outerWidth <= 800 ) || (window.outerHeight > window.outerWidth)){
+     if (( window.innerWidth <= 900 ) || (window.innerHeight < window.innerWidth)){
         if (obstLeft < 55 && obstLeft > 0 && (sonic.classList != "jump") && canLoseLife == true || 
             obsTop < 55 && obsTop > 0 && sonicTop <= 85 && sonicTop >= 20 && canLoseLife == true) {  
                 sonicDamage();
@@ -191,7 +191,7 @@ function backgroundMove() {
         if (speed >= 400 && speedGround >= 600){
             speed = 400;
             speedGround = 600;
-        } else if (( window.outerWidth <= 800 ) || (window.outerHeight > window.outerWidth)){
+        } else if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
             speed = 200;
             speedGround = 400;
         } else {
@@ -253,7 +253,7 @@ function objectSpawn() {
     const object3 = document.getElementById("object3");
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
-    if (( window.outerrWidth <= 800 ) || (window.outerHeight > window.outerrWidth)){
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         object1.classList.add("hidden");
         object2.classList.add("hidden");
         object3.classList.add("hidden");
@@ -295,7 +295,7 @@ function BGObjSpawn() {
     const objectBackground = randItem(OBJECTS);
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    if (( window.outerrWidth <= 800 ) || (window.outerHeight > window.outerrWidth)){
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         bg1.classList.add("hidden");
         if ((BgTimer += 10) == (2000)) {
             BgTimer = 0
