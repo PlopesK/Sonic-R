@@ -17,6 +17,10 @@
   # Better not change tab after the game started... You'll lose a life!
 ```
 ```diff
+  # The Double Jump mechanic gives you some invincibility time, so use it when needed!
+  # Alongside this, the Double Jump let you vulnerable for a short time when used, so be careful!
+```
+```diff
   # You can change the Menu/Game/Game Over music in the settings!
   # You can change your character in the 'Select a Character' menu!
 ```
