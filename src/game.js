@@ -30,8 +30,10 @@ function game() {
     }
 
     document.addEventListener(`blur`, () => {
-        lifelost();
-        HitDamage.play();
+        if (!isGameOver) {
+            lifelost();
+            HitDamage.play();
+        }
         if (lifes <= 0) {
             gameOver();
         }
@@ -39,20 +41,16 @@ function game() {
 
     /* 💓💓💓💓Hit/Life System💓💓💓💓 */
     function checkCollision() {
-        let sonicTop = parseInt(window.getComputedStyle(sonic).getPropertyValue("top"));
+        let sonicRect = sonic.getBoundingClientRect();
 
-        let obstLeft = parseInt(window.getComputedStyle(bug).getPropertyValue("left"));
-        let obstTop = parseInt(window.getComputedStyle(bug).getPropertyValue("top"));
-        let obstWidth = parseInt(window.getComputedStyle(bug).getPropertyValue("width"));
-        let obstHeight = parseInt(window.getComputedStyle(bug).getPropertyValue("height"));
+        let flyRect = fly.getBoundingClientRect();
 
-        let flyLeft = parseInt(window.getComputedStyle(fly).getPropertyValue("left"));
-        let flyTop = parseInt(window.getComputedStyle(fly).getPropertyValue("top"));
-        let flyWidth = parseInt(window.getComputedStyle(fly).getPropertyValue("width"));
-        let flyHeight = parseInt(window.getComputedStyle(fly).getPropertyValue("height"));
+        let bugRect = bug.getBoundingClientRect();
+        bugRect.left -= 30;
+        bugRect.top -= 60;
     
-        if (((sonicTop >= obstTop && sonicTop <= obstTop + obstHeight && obstLeft >= 0 && obstLeft <= obstWidth) || 
-        (sonicTop >= flyTop && sonicTop <= flyTop + flyHeight && flyLeft >= 0 && flyLeft <= flyWidth)) && canLoseLife == true) { 
+        if ((isOverlap(sonicRect, flyRect) && canLoseLife == true) || 
+        (isOverlap(sonicRect, bugRect) && (sonic.classList != "jump") && canLoseLife == true)) {
             sonicDamage();
             canLoseLife = false;
             if (lifes <= 0) {
@@ -63,6 +61,13 @@ function game() {
                 }, 500);
             }
         }
+    }
+
+    function isOverlap(rect1, rect2) {
+        return !(rect1.right < rect2.left ||
+                 rect1.left > rect2.right ||
+                 rect1.bottom < rect2.top ||
+                 rect1.top > rect2.bottom);
     }
 
     function lifelost() {
@@ -160,8 +165,12 @@ function game() {
     }
 
     function sonicDJump() {
+        canLoseLife = false;
         DoubleJump.play();
         sonic.animate(sonicDoubleJump, sonicDJumpTimming);
+        setTimeout(() => {
+            canLoseLife = true;
+        }, 500);
     }
 }
 
