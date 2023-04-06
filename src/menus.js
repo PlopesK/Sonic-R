@@ -104,6 +104,14 @@ function normal() {
   }
 }
 
+function check() {
+  if (!Started) {
+    return;
+  } else {
+    alert("You can't modify the game after it started! \nYou will take damage after this message is show :) \n[unless if it's on beginning...]");
+  }
+}
+
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
     Selected.currentTime = 3;
