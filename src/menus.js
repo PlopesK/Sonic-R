@@ -108,7 +108,7 @@ function check() {
   if (!Started) {
     return;
   } else {
-    alert("You can't modify the game after it started! \nYou will take damage after this message is show :) \n[unless if it's on beginning...]");
+    alert("You can't modify the game after it started! \nYou will take damage after this message is show :) \n[unless you're fast enough to avoid...]");
   }
 }
 
