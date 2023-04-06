@@ -188,11 +188,11 @@ function backgroundMove() {
     let positionX = 0;
     let positionXG = 0;
     const ground = document.getElementById("ground");
-    
+
     if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
         backLimit = 200;
         groundLimit = 400;
-    } else if (slow == true) {
+    } else if ((slow == true) && (!Started)) {
         backLimit = 200;
         groundLimit = 300;
     } else {
@@ -245,7 +245,7 @@ function object() {
 function objInterval() {
     clearInterval(object);
     const objects = document.querySelectorAll(".object");
-    if (slow == true) {
+    if ((slow == true) && (!Started)) {
         respawnDuration = 4500;
         objects.forEach(element => {
             element.style.animationDuration = '4.5s';
