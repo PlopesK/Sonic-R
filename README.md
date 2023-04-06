@@ -1,6 +1,6 @@
 <h1>Sonic-Runners 🌀</h1>
   <img src="images/print.jpg" style="width: 100%; max-width:100%; height: auto;" title="Sonic-R website game">
-  A simple game where you control Sonic through an infinite stage, is a fan-project created using HTML, CSS and JS, based on the 
+  A simple game where you control Sonic and his friends through an infinite stage, is a fan-project created using HTML, CSS and JS, based on the 
   Dino Game from Chrome. <br><br>
  
   This project was created with love for the Sonic franchise, with no intended monetary values.<br>
@@ -15,6 +15,10 @@
 ```diff
   # You can Double Jump if you press jump 2 times!
   # Better not change tab after the game started... You'll lose a life!
+```
+```diff
+  # The Double Jump mechanic gives you some invincibility time, so use it when needed!
+  # Alongside this, the Double Jump let you vulnerable for a short time when used, so be careful!
 ```
 ```diff
   # You can change the Menu/Game/Game Over music in the settings!
