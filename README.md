@@ -7,8 +7,16 @@
   I hope I can still update the project with time, adding new playble characters, new stages, even new mechanics!<br>
  
  <h2> 🟦 How to Play 🟦 </h2>
- Press any key in your keyboard or click the screen to jump! <br><br>
- Pay attention to enemies position to be sure that you're safe and focus on surpassing your highscore!<br>
+ Press any key in your keyboard or click the screen to jump! <br>
+ Pay attention to enemies position to be sure that you're safe and focus on surpassing your highscore!<br><br>
+ You can make changes to the game in the Settings menu!<br>
+ 
+ <h2> ⚙️ Settings ⚙️ </h2>
+ You can acess Settings by pressing the triangle at the top left of the site!<br><br>
+ <img src="images/print-settings.jpg" style="width: 50%; max-width:50%; height: auto;" title="Settings">
+ 
+ Inside settings you can change musics for Menu, Game and Game Over! And even mute the music/soundeffects if wanted.<br>
+ Furthermore, you can make changes to the game! Like disabling the bakcground objects and lowering the background speed!<br>
  
  <h2> 💠 Tips 💠 </h2>
  
