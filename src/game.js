@@ -83,7 +83,7 @@ function game() {
         canLoseLife = true;
     }
 
-    /* Game Over */
+    /* ❌❌❌❌Game Over❌❌❌❌ */
     function gameOver() {
         isGameOver = true;
         Game.loop = false;
@@ -194,6 +194,9 @@ function backgroundMove() {
         } else if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
             speed = 200;
             speedGround = 400;
+        } else if (slow == true) {
+            speed = 200;
+            speedGround = 300;
         } else {
             speed++;
             speedGround++;
@@ -218,11 +221,9 @@ function backgroundMove() {
 /* 🌴🌴🌴🌴Objects Moving🌴🌴🌴🌴 */
 const OBJECTS = ['sprites/Object1.png', 'sprites/Object2.png', 'sprites/Object3.gif', 
 'sprites/Object4.gif', 'sprites/Object5.gif', 'sprites/Object6.png', 'sprites/Object7.gif', 'sprites/Object8.gif'];
-let objIntervalId = 0;
 let timerObj = 0;
 let BgTimer = 0;
-let BgInterval;
-let ObjInterval;
+let respawnDuration = 5500;
 
 function object() {
     objInterval();
@@ -236,6 +237,18 @@ function object() {
 
 function objInterval() {
     clearInterval(object);
+    const objects = document.querySelectorAll(".object");
+    if (slow == true) {
+        respawnDuration = 4500;
+        objects.forEach(element => {
+            element.style.animationDuration = '4.5s';
+        });
+    } else {
+        respawnDuration = 5500;
+        objects.forEach(element => {
+            element.style.animationDuration = '2.5s';
+        });
+    }
 }
 
 function randInteger(min, max) {
@@ -272,16 +285,16 @@ function objectSpawn() {
             if ((timerObj += 10) == (1800)) {
                 object1.classList.add("move");
                 object1.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 2400) {
+            } if (timerObj == 2600) {
                 object2.classList.add("move");
                 object2.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 2800) {
+            } if (timerObj == 3000) {
                 object3.classList.add("move");
                 object3.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 3400) {
+            } if (timerObj == 4000) {
                 object4.classList.add("move");
                 object4.style.backgroundImage = `url(${objectBackground})`;
-            } if (timerObj == 4000) {
+            } if (timerObj == 4400) {
                 timerObj = 0;
                 object5.classList.add("move");
                 object5.style.backgroundImage = `url(${objectBackground})`;
@@ -307,10 +320,10 @@ function BGObjSpawn() {
         }
     } else {
         if (!isGameOver) {
-            if ((BgTimer += 10) == (2200)) {
+            if ((BgTimer += 10) == (3200)) {
                 bg1.classList.add("move");
                 bg1.style.backgroundImage = `url(${objectBackground})`;
-            } if (BgTimer == 3800) {
+            } if (BgTimer == 5000) {
                 BgTimer = 0
                 bg2.classList.add("move");
                 bg2.style.backgroundImage = `url(${objectBackground})`;
@@ -322,9 +335,12 @@ function BGObjSpawn() {
 function BGObjRespawn() {
     const bg1 = document.getElementById("bg-object1");
     const bg2 = document.getElementById("bg-object2");
-    bg1.classList.remove("move");
-    bg2.classList.remove("move");
-    objInterval();
+
+    setTimeout(() => {
+        bg1.classList.remove("move");
+        bg2.classList.remove("move");
+        objInterval();
+    }, respawnDuration);
 }
 
 function objRespawn() {
@@ -334,10 +350,12 @@ function objRespawn() {
     const object4 = document.getElementById("object4");
     const object5 = document.getElementById("object5");
 
-    object1.classList.remove("move");
-    object2.classList.remove("move");
-    object3.classList.remove("move");
-    object4.classList.remove("move");
-    object5.classList.remove("move");
+    setTimeout(() => {
+        object1.classList.remove("move");
+        object2.classList.remove("move");
+        object3.classList.remove("move");
+        object4.classList.remove("move");
+        object5.classList.remove("move");
     objInterval();
+    }, respawnDuration);
 }

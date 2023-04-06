@@ -33,10 +33,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
     
     /* 🌴🌴🌴🌴Objects🌴🌴🌴🌴 */
     const enableObject = localStorage.getItem('objects');
-    if(enableObject === 'enabled') {
-        enable();
-    } else {
+    if(enableObject === 'disabled') {
         disable();
+    } else {
+        enable();
+    }
+
+    /* 🏞️🏞️🏞️🏞️Background Speed🏞️🏞️🏞️🏞️ */
+    const backSpeed = localStorage.getItem('speed');
+    if(backSpeed === 'slow') {
+        lower();
+    } else {
+        normal();
     }
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */

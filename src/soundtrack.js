@@ -1,6 +1,3 @@
-window.addEventListener("loaded", () => {
-  Menu.play();
-})
 /* 🔇🔇🔇🔇Mute Music🔇🔇🔇🔇 */
 function muteMusic() {
   const muted = document.querySelector('#muteMusic');

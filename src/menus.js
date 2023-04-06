@@ -54,7 +54,7 @@ function blueTheme() {
     blue.innerHTML="Blue Mode";
   }
 
-/* Enable/Disable Background Objects */
+/* 🌴🌴🌴🌴Enable/Disable Background Objects🌴🌴🌴🌴 */
 function enable() {
   localStorage.setItem('objects', 'enabled');
   const objects = document.querySelectorAll(".object");
@@ -75,6 +75,24 @@ function disable() {
   const option = document.getElementById("enable-txt");
   option.innerText = 'Enable Background Objects';
   option.addEventListener("click", enable, { once: true });
+}
+
+/* 🏞️🏞️🏞️🏞️Lower Speed of the Background🏞️🏞️🏞️🏞️ */
+let slow = false;
+function lower() {
+  localStorage.setItem('speed', 'slow');
+  slow = true;
+  const message = document.getElementById("speed-txt");
+  message.innerText = 'Normal Background Speed';
+  message.addEventListener("click", normal, { once: true });
+}
+
+function normal() {
+  localStorage.setItem('speed', 'normal');
+  slow = false;
+  const message = document.getElementById("speed-txt");
+  message.innerText = 'Slow Background Speed';
+  message.addEventListener("click", lower, { once: true });
 }
 
 /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
@@ -135,7 +153,7 @@ function closeBtn() {
     Return.play();
   }
 
-  /* Stage Select Menu */
+  /* 🗺️🗺️🗺️🗺️Stage Select Menu🗺️🗺️🗺️🗺️ */
   function Stage() {
     alert("Coming Soon!");
   }
