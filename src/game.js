@@ -181,22 +181,29 @@ function game() {
 let lastTime = 0;
 let speed = 100;
 let speedGround = 200;
+let backLimit;
+let groundLimit;
 
 function backgroundMove() {
     let positionX = 0;
     let positionXG = 0;
     const ground = document.getElementById("ground");
+    
+    if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
+        backLimit = 200;
+        groundLimit = 400;
+    } else if (slow == true) {
+        backLimit = 200;
+        groundLimit = 300;
+    } else {
+        backLimit = 400;
+        groundLimit = 600;
+    }
 
     function animate(timestamp) {
-        if (speed >= 400 && speedGround >= 600){
-            speed = 400;
-            speedGround = 600;
-        } else if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){
-            speed = 200;
-            speedGround = 400;
-        } else if (slow == true) {
-            speed = 200;
-            speedGround = 300;
+        if (speed >= backLimit && speedGround >= groundLimit){
+            speed = backLimit;
+            speedGround = groundLimit;
         } else {
             speed++;
             speedGround++;
