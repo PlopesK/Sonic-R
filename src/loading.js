@@ -27,9 +27,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme === 'dark') {
         darkTheme();
-      } else {
+    } else {
         blueTheme();
-      }
+    }
+    
+    /* 🌴🌴🌴🌴Objects🌴🌴🌴🌴 */
+    const enableObject = localStorage.getItem('objects');
+    if(enableObject === 'enabled') {
+        enable();
+    } else {
+        disable();
+    }
 
     /* 🖼️🖼️🖼️🖼️Pre-loading images🖼️🖼️🖼️🖼️ */
     var imageUrls = ['sprites/Object1.png', 'sprites/Object2.png', 'sprites/Object3.gif', 'sprites/Object4.gif', 

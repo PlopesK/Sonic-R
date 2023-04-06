@@ -17,8 +17,8 @@ function openMenu() {
     })
 }
   
-  /* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */
-  function blueTheme() {
+/* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */
+function blueTheme() {
     const blue = document.querySelector('#Blue');
     const dark = document.querySelector('#Dark');
     localStorage.setItem('theme', 'blue');
@@ -54,7 +54,30 @@ function openMenu() {
     blue.innerHTML="Blue Mode";
   }
 
-  /* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
+/* Enable/Disable Background Objects */
+function enable() {
+  localStorage.setItem('objects', 'enabled');
+  const objects = document.querySelectorAll(".object");
+  objects.forEach(element => {
+    element.classList.remove("hidden");
+  });
+  const option = document.getElementById("enable-txt");
+  option.innerText = 'Disable Background Objects';
+  option.addEventListener("click", disable, { once: true });
+}
+
+function disable() {
+  localStorage.setItem('objects', 'disabled');
+  const objects = document.querySelectorAll(".object");
+  objects.forEach(element => {
+    element.classList.add("hidden");
+  });
+  const option = document.getElementById("enable-txt");
+  option.innerText = 'Enable Background Objects';
+  option.addEventListener("click", enable, { once: true });
+}
+
+/* ⚙️⚙️⚙️⚙️Close Settings⚙️⚙️⚙️⚙️ */
 function closeBtn() {
     Selected.currentTime = 3;
     const button = document.getElementById("play");
