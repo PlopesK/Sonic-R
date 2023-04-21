@@ -16,7 +16,9 @@
  <img src="images/print-settings.jpg" style="width: 50%; max-width:50%; height: auto;" title="Settings">
  
  Inside settings you can change musics for Menu, Game and Game Over! And even mute the music/soundeffects if wanted.<br>
- Furthermore, you can make changes to the game! Like disabling the bakcground objects and lowering the background speed!<br>
+ Furthermore, you can make changes to the game! Like disabling the bakcground objects and lowering the background speed!<br><br>
+ 
+ If you're playing on mobile, you can change the screen orientation for a better view! (But it will make the obstacles faster too!)<br>
  
  <h2> 💠 Tips 💠 </h2>
  
