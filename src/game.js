@@ -172,7 +172,7 @@ function game() {
             sonic.animate(sonicDoubleJump, sonicDJumpTimming);
             setTimeout(() => {
                 canLoseLife = true;
-            }, 350);
+            }, 650);
         }
     }
 }
