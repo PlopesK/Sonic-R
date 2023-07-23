@@ -35,11 +35,11 @@ function bugRespawn() {
     var minDuration;
     var maxDuration;
     if (( window.innerWidth <= 800 )){
-        minDuration = 1200;
-        maxDuration = 2000;
+        minDuration = 1500;
+        maxDuration = 3000;
     } else {
-        minDuration = 2500;
-        maxDuration = 3500;
+        minDuration = 3500;
+        maxDuration = 4500;
     }
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;
@@ -54,11 +54,11 @@ function flyRespawn() {
     var minDuration;
     var maxDuration;
     if (( window.innerWidth <= 800 )){
-        minDuration = 1000;
-        maxDuration = 1600;
-    } else {
         minDuration = 2000;
-        maxDuration = 2500;
+        maxDuration = 2600;
+    } else {
+        minDuration = 3000;
+        maxDuration = 3500;
     }
     const randomDuration = Math.floor(Math.random() * (maxDuration - minDuration + 1)) + minDuration;
     const animationDuration = `${randomDuration / 1000}s`;

@@ -827,7 +827,7 @@ footer p {
     justify-content: center;
     align-items: center;
     margin: 1px;
-    animation: rotate 4s infinite;
+    animation: rotate 3s infinite;
 }
 
 .load img {
@@ -836,10 +836,10 @@ footer p {
 
 @keyframes rotate {
   50% {
-      transform: rotateZ(0.5turn);
+      transform: rotateY(0.5turn);
   }
   100% {
-    transform: rotateZ(1turn);
+    transform: rotateY(1turn);
   }
 }
 
