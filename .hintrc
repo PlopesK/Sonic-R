@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "height: fit-content",
+          "rotate",
+          "overscroll-behavior",
+          "overflow-x: clip"
+        ]
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off",
+        "link-name": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/layout": "off",
+    "detect-css-reflows/paint": "off"
+  }
+}
