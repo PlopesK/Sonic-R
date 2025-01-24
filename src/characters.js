@@ -1,5 +1,5 @@
 // Função genérica para definir o personagem
-function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon) {
+function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon = 'life-icon.gif') {
     localStorage.setItem('characters', character);
 
     const spriteActions = ['Idle', 'Start', 'Run', 'Jump', 'DoubleJump', 'Damage', 'Death'];
