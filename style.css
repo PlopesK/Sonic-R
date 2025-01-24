@@ -8,13 +8,13 @@
     --CharColor: #0080d0;
     
     /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
-    --Idle:  url("sprites/sonic-idle.gif");
-    --Start: url("sprites/sonic-start.gif");
-    --Run: url("sprites/sonic-run.gif");
-    --Jump: url("sprites/sonic-jump.gif");
-    --DoubleJump: url("sprites/sonic-doublejump.gif");
-    --Damage: url("sprites/sonic-damage.gif");
-    --Death: url("sprites/sonic-death.gif");
+    --Idle:  url("sprites/Sonic/sonic-idle.gif");
+    --Start: url("sprites/Sonic/sonic-start.gif");
+    --Run: url("sprites/Sonic/sonic-run.gif");
+    --Jump: url("sprites/Sonic/sonic-jump.gif");
+    --DoubleJump: url("sprites/Sonic/sonic-doublejump.gif");
+    --Damage: url("sprites/Sonic/sonic-damage.gif");
+    --Death: url("sprites/Sonic/sonic-death.gif");
 }
 
 /* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
