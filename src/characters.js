@@ -10,7 +10,8 @@ function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon = 'life
         );
     });
 
-    document.getElementById("life-icon").src = `sprites/${spriteFolder.toLowerCase()}/${lifeIcon}`;
+    spriteFolder = spriteFolder.charAt(0).toUpperCase() + spriteFolder.slice(1);
+    document.getElementById("life-icon").src = `sprites/${spriteFolder}/${lifeIcon}`;
     document.getElementById("charName").innerText = name;
 
     document.getElementById("extraInfo").innerHTML = extraInfo;
