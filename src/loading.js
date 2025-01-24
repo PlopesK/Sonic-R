@@ -1,20 +1,28 @@
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
 window.addEventListener("DOMContentLoaded", function () {
-    var load = document.getElementById("load");
-    var loadEffect = setInterval(function () {
-        if (!load.style.opacity) {
-            load.style.opacity = 1;
-        }
-        if (load.style.opacity > 0) {
-            load.style.opacity -= 0.3;
+    var loading = document.getElementById("loading");
+    let progress = 0;
+
+    const startTime = performance.now();
+    for (let i = 0; i < 1e6; i++) {}
+    const executionTime = performance.now() - startTime;
+
+    const intervalSpeed = Math.max(50, Math.min(500, executionTime * 5));
+
+    const loadingInterval = setInterval(() => {
+        if (progress < 100) {
+            progress += Math.min(2 + 100 / intervalSpeed, 10);
         } else {
-            setTimeout(function(){
-                window.scrollTo(0, 1);
-            }, 0);
-            clearInterval(loadEffect);
-            load.classList.remove("active");
+            clearInterval(loadingInterval);
+            loading.style.transition = "opacity 1s ease";
+            loading.style.opacity = "0";
+
+            setTimeout(() => {
+                loading.style.display = "none";
+                content.classList.add("visible");
+            }, 1000);
         }
-    }, 200);
+    }, intervalSpeed);
 
     const play = document.getElementById("play-txt");
     if (( window.innerWidth <= 800 ) || (window.innerHeight > window.innerWidth)){

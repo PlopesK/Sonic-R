@@ -46,7 +46,8 @@ const themes = {
           '--Header': 'url(images/header.png)',
           '--Footer': 'url(images/footer-bg.gif)',
           '--CharSelect': 'url(images/charselect.png)',
-          '--CharColor': '#0080d0'
+          '--CharColor': '#0080d0',
+          '--ScrollColor': '#1C1294'
       },
       images: {
           sonicTeam: "https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png",
@@ -65,7 +66,8 @@ const themes = {
           '--Header': 'url(images/header-dark.jpg)',
           '--Footer': 'url(images/footer-bg-dark.gif)',
           '--CharSelect': 'url(images/charselect-dark.png)',
-          '--CharColor': '#001c2e'
+          '--CharColor': '#001c2e',
+          '--ScrollColor': '#000000'
       },
       images: {
           sonicTeam: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3b7997c1-7e9b-4257-8243-4d9acf4cbd0a/d4kn36i-2fe1b899-9e11-4cef-be8c-0a884b9d4621.png/v1/fill/w_1280,h_416,strp/__team_shadow_logo___by_kaiser_art_d4kn36i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE2IiwicGF0aCI6IlwvZlwvM2I3OTk3YzEtN2U5Yi00MjU3LTgyNDMtNGQ5YWNmNGNiZDBhXC9kNGtuMzZpLTJmZTFiODk5LTllMTEtNGNlZi1iZThjLTBhODg0YjlkNDYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NZDxbeGOENEkB2XpR1Gd_083vm9U3UAYxWemPgnjpgo",

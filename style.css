@@ -6,6 +6,7 @@
     --Footer: url("images/footer-bg.gif");
     --CharSelect: url("images/charselect.png");
     --CharColor: #0080d0;
+    --ScrollColor: #1C1294;
     
     /* 🌀🌀🌀🌀Player🌀🌀🌀🌀 */
     --Idle:  url("sprites/Sonic/sonic-idle.gif");
@@ -20,8 +21,9 @@
 /* 🌐🌐🌐🌐Site🌐🌐🌐🌐 */
 html {
     scroll-behavior: smooth;
-    overflow-x: clip;
-    overscroll-behavior: none;
+    scrollbar-color: var(--ScrollColor) transparent;
+    scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 * {
@@ -126,42 +128,51 @@ footer p {
     text-align: center;
 }
 
-.sidenav {
+.menu {
     background-image: url("images/menu_bg.webp");
     background-size: auto 120%;
-    font-family: Arial,Helvetica,sans-serif;
     height: 0;
-    width: 0; 
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    background-color: #111; 
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     overflow-x: hidden;
     transition: 0.5s; 
-    text-align: center;
     z-index: 22;
+    scrollbar-color: #0D1E33 transparent;
+    scrollbar-width: thin;
+}
+
+.sidenav {
+    width: 0;  
+    top: 0; 
+    left: 0; 
 }
 
 .sidenav a {
+    font-family: 'MS Shell Dlg 2', sans-serif;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 3vh;
     color: white;
     display: block;
     transition: 0.3s;
+    font-weight: 550;
 }
 
 .sidenav .title {
+    font-family: 'SF Intermosaic', sans-serif;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 8px 8px 8px 16px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1.5vh;
     background-color: #142038;
     color: #7996a7;
-    width: 100%;
-    height: 5vh;
-    font-size: 4vh;
-    margin-top: 1.5vh;
-    margin-bottom: 2vh;
-    font-weight: 600;
-    align-items: center;
-    justify-content: baseline;
+    font-size: 3vh;
 }
 
 #closebtn {
@@ -180,8 +191,6 @@ footer p {
 }
 
 .selectMusic {
-    background-image: url("images/menu_bg.webp");
-    background-size: auto 120%;
     background-position-x: right;
     font-family: 'SF Intermosaic', sans-serif;
     height: 0;
@@ -189,35 +198,27 @@ footer p {
     position: fixed; 
     top: 0; 
     left: 25%;
-    justify-content: center;
+}
+
+.majorTitle, .title {
+    display: flex;
     align-items: center;
-    background-color: #111; 
-    overflow-x: hidden;
-    transition: 0.5s; 
-    z-index: 22;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1.5vh;
+    background-color: #142038;
 }
 
 .selectMusic .majorTitle {
-    background-color: #142038;
     color: #7996a7;
-    width: 100%;
     height: 5vh;
     font-size: 3vh;
-    font-weight: 600;
-    margin-top: 1.5vh;
-    align-items: center;
-    justify-content: center;
 }
 
 .selectMusic .title {
-    background-color: #142038;
-    align-items: center;
-    text-align: center;
-    font-weight: 600;
-    justify-content: center;
-    margin-top: 1.5vh;
     margin-bottom: 2vh;
-    width: 100%;
     height: 6.5vh;
 }
 
@@ -230,6 +231,7 @@ footer p {
     display: block;
     transition: 0.3s;
     background: transparent;
+    font-family: 'MS Shell Dlg 2', sans-serif;
 }
 
 .selectMusic button:hover {
@@ -803,23 +805,28 @@ footer p {
 }
 
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
-.load-wrapper {
-    display: block;
-    position: absolute;
-    z-index: -2;
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
-.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #103563;
+.fade-in.visible {
+    opacity: 1;
+}
+
+#loading {
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #103563;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: wait;
 }
 
 .load {

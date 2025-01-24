@@ -19,7 +19,7 @@
         <title>Sonic Runner</title>
     </head>
     <body>
-        <div class="load-wrapper active" id="load">
+        <div id="loading">
             <div class="load">
                 <img id="loadIMG" src="images/sonic.ico"><img>
             </div>
@@ -40,7 +40,7 @@
                     <p><i class="fa fa-cog"></i></p>
                 </button>
             </div>
-            <div id="settings" class="sidenav">
+            <div id="settings" class="sidenav menu">
                 <a class="closebtn" id="closebtn" onclick="closeBtn()"> <p><i class="fa fa-times "></i></p> </a>
                 <div class="title"><p> Site Settings </p></div>
                 <a class="option" id="Blue" onclick="blueTheme()"><p> Blue Mode - Active </p></a>
@@ -54,9 +54,9 @@
                 <a class="option" onclick="lower(), check()" id="speed-txt"><p> Slow Background Speed </p></a>
             </div>
             
-            <div class="selectMusic" id="menuMusic">
+            <div class="selectMusic menu" id="menuMusic">
                 <div class="majorTitle"><p> Select a Music </p></div>
-                <div class="title" style="background-color: transparent;"><p> Music for Menu</p></div>
+                <div class="title"><p> Music for Menu</p></div>
                 <button onclick="selectMusic(0)"><p>Extras Menu - Sonic Mega Collection</p></button>
                 <button onclick="selectMusic(1)"><p>File Select - Sonic the Hedgehog 3 & Knuckles</p></button>
                 <button onclick="selectMusic(2)"><p>Sonic Mega Collection Main Menu Theme</p></button>
@@ -92,7 +92,7 @@
         </header>
         <div class="subheader">
         </div>
-        <div class="area">
+        <div class="area content">
             <p id="play-txt" class="hid">Press any key or click the button to start!</p>
             <div class="start">
                 <a id="play" class="button hid" onclick="wait()">
