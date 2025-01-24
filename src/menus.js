@@ -18,41 +18,74 @@ function openMenu() {
 }
   
 /* ⚫⚫⚫⚫Dark/Blue Mode🔵🔵🔵🔵 */
+function applyTheme(themeConfig) {
+  const blue = document.querySelector('#Blue');
+  const dark = document.querySelector('#Dark');
+
+  localStorage.setItem('theme', themeConfig.name);
+
+  Object.entries(themeConfig.cssVariables).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value);
+  });
+
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', themeConfig.cssVariables['--SiteColor']);
+
+  document.getElementById("SonicTeam").src = themeConfig.images.sonicTeam;
+  document.getElementById("SonicTeam").title = themeConfig.images.sonicTeamTitle;
+  document.getElementById("SEGA").src = themeConfig.images.sega;
+
+  blue.innerHTML = themeConfig.buttons.blue;
+  dark.innerHTML = themeConfig.buttons.dark;
+}
+
+const themes = {
+  blue: {
+      name: 'blue',
+      cssVariables: {
+          '--SiteColor': '#257BE6',
+          '--Header': 'url(images/header.png)',
+          '--Footer': 'url(images/footer-bg.gif)',
+          '--CharSelect': 'url(images/charselect.png)',
+          '--CharColor': '#0080d0'
+      },
+      images: {
+          sonicTeam: "https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png",
+          sonicTeamTitle: "Sonic Team",
+          sega: "https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp"
+      },
+      buttons: {
+          blue: "Blue Mode - Active",
+          dark: "Dark Mode"
+      }
+  },
+  dark: {
+      name: 'dark',
+      cssVariables: {
+          '--SiteColor': '#252525',
+          '--Header': 'url(images/header-dark.jpg)',
+          '--Footer': 'url(images/footer-bg-dark.gif)',
+          '--CharSelect': 'url(images/charselect-dark.png)',
+          '--CharColor': '#001c2e'
+      },
+      images: {
+          sonicTeam: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3b7997c1-7e9b-4257-8243-4d9acf4cbd0a/d4kn36i-2fe1b899-9e11-4cef-be8c-0a884b9d4621.png/v1/fill/w_1280,h_416,strp/__team_shadow_logo___by_kaiser_art_d4kn36i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE2IiwicGF0aCI6IlwvZlwvM2I3OTk3YzEtN2U5Yi00MjU3LTgyNDMtNGQ5YWNmNGNiZDBhXC9kNGtuMzZpLTJmZTFiODk5LTllMTEtNGNlZi1iZThjLTBhODg0YjlkNDYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NZDxbeGOENEkB2XpR1Gd_083vm9U3UAYxWemPgnjpgo",
+          sonicTeamTitle: "Art by: kaiser-art",
+          sega: "images/sega-dark.png"
+      },
+      buttons: {
+          blue: "Blue Mode",
+          dark: "Dark Mode - Active"
+      }
+  }
+};
+
 function blueTheme() {
-    const blue = document.querySelector('#Blue');
-    const dark = document.querySelector('#Dark');
-    localStorage.setItem('theme', 'blue');
-  
-    document.documentElement.style.setProperty('--SiteColor', '#257BE6');
-    document.documentElement.style.setProperty('--Header', 'url(images/header.png)');
-    document.documentElement.style.setProperty('--Footer', 'url(images/footer-bg.gif)');
-    document.documentElement.style.setProperty('--CharSelect', 'url(images/charselect.png)');
-    document.documentElement.style.setProperty('--CharColor', '#0080d0');
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#257BE6');
-    document.getElementById("SonicTeam").src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/97/Sonic_Team_Logo.svg/1280px-Sonic_Team_Logo.svg.png";
-    document.getElementById("SonicTeam").title="Sonic Team";
-    document.getElementById("SEGA").src="https://www.sonicthehedgehog.com/wp-content/uploads/2021/08/Sega_Logo-WHT-R.png.webp";
-    dark.innerHTML="Dark Mode";
-    blue.innerHTML="Blue Mode - Active";
-  }
-  
-  function darkTheme() {
-    const blue = document.querySelector('#Blue');
-    const dark = document.querySelector('#Dark');
-    localStorage.setItem('theme', 'dark');
-  
-    document.documentElement.style.setProperty('--SiteColor', '#252525');
-    document.documentElement.style.setProperty('--Header', 'url(images/header-dark.jpg)');
-    document.documentElement.style.setProperty('--Footer', 'url(images/footer-bg-dark.gif)');
-    document.documentElement.style.setProperty('--CharSelect', 'url(images/charselect-dark.png)');
-    document.documentElement.style.setProperty('--CharColor', '#001c2e');
-    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#252525');
-    document.getElementById("SonicTeam").src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3b7997c1-7e9b-4257-8243-4d9acf4cbd0a/d4kn36i-2fe1b899-9e11-4cef-be8c-0a884b9d4621.png/v1/fill/w_1280,h_416,strp/__team_shadow_logo___by_kaiser_art_d4kn36i-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE2IiwicGF0aCI6IlwvZlwvM2I3OTk3YzEtN2U5Yi00MjU3LTgyNDMtNGQ5YWNmNGNiZDBhXC9kNGtuMzZpLTJmZTFiODk5LTllMTEtNGNlZi1iZThjLTBhODg0YjlkNDYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NZDxbeGOENEkB2XpR1Gd_083vm9U3UAYxWemPgnjpgo";
-    document.getElementById("SonicTeam").title="Art by: kaiser-art"
-    document.getElementById("SEGA").src="images/sega-dark.png";
-    dark.innerHTML="Dark Mode - Active";
-    blue.innerHTML="Blue Mode";
-  }
+  applyTheme(themes.blue);
+}
+
+function darkTheme() {
+  applyTheme(themes.dark);
+}
 
 /* 🌴🌴🌴🌴Enable/Disable Background Objects🌴🌴🌴🌴 */
 let showAlert = false;
@@ -153,6 +186,7 @@ function closeBtn() {
   
     charSelect.addEventListener("click", () => {
       Selected.play();
+      closeCharSelect();
     })
   }
 
