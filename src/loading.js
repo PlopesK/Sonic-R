@@ -1,17 +1,5 @@
 /* ♻️♻️♻️♻️Loading♻️♻️♻️♻️ */
 window.addEventListener("DOMContentLoaded", function () {
-    const headerContainer = document.querySelector("#header-container");
-
-    fetch("./header.html")
-    .then((response) => {
-      if (!response.ok) throw new Error("Erro ao carregar o header.");
-      return response.text();
-    })
-    .then((data) => {
-      headerContainer.innerHTML = data;
-    })
-    .catch((error) => console.error("Erro:", error));
-
     var load = document.getElementById("load");
     var loadEffect = setInterval(function () {
         if (!load.style.opacity) {

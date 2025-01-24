@@ -24,7 +24,73 @@
                 <img id="loadIMG" src="images/sonic.ico"><img>
             </div>
         </div>
-        <div id="header-container"></div>
+        <header>
+            <a href="https://www.sonicthehedgehog.com/">
+                <img loading="lazy" src="images/Sonic_Runners_logo.png" alt="Sonic Runners" 
+                title="Logo" id="SonicRunners">
+            </a>
+            <div class="settings">
+                <button class="cog" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72.5 72.5" 
+                    enable-background="new 0 0 72.5 72.5" aria-hidden="true" class="triangle">
+                        <g id="triangle">
+                            <path d="M0,0l72.5,72.5H0V0z" ></path>
+                        </g>
+                    </svg>
+                    <p><i class="fa fa-cog"></i></p>
+                </button>
+            </div>
+            <div id="settings" class="sidenav">
+                <a class="closebtn" id="closebtn" onclick="closeBtn()"> <p><i class="fa fa-times "></i></p> </a>
+                <div class="title"><p> Site Settings </p></div>
+                <a class="option" id="Blue" onclick="blueTheme()"><p> Blue Mode - Active </p></a>
+                <a class="option" id="Dark" onclick="darkTheme()"><p> Dark Mode </p></a>
+                <div class="title"><p> Soundtrack Settings </p></div>
+                <a class="option" onclick="openSelect()"><p> Select Music </p></a>
+                <a class="option" onclick="muteMusic()" id="muteMusic"><p> Mute Music </p></a>
+                <a class="option" onclick="muteSound()" id="muteSound"><p> Mute SoundEffects </p></a>
+                <div class="title"><p> Game Settings </p></div>
+                <a class="option" onclick="disable(), check()" id="enable-txt"><p> Disable Background Objects </p></a>
+                <a class="option" onclick="lower(), check()" id="speed-txt"><p> Slow Background Speed </p></a>
+            </div>
+            
+            <div class="selectMusic" id="menuMusic">
+                <div class="majorTitle"><p> Select a Music </p></div>
+                <div class="title" style="background-color: transparent;"><p> Music for Menu</p></div>
+                <button onclick="selectMusic(0)"><p>Extras Menu - Sonic Mega Collection</p></button>
+                <button onclick="selectMusic(1)"><p>File Select - Sonic the Hedgehog 3 & Knuckles</p></button>
+                <button onclick="selectMusic(2)"><p>Sonic Mega Collection Main Menu Theme</p></button>
+                <button onclick="selectMusic(3)"><p>Chun-nan (Night) - Sonic Unleashed</p></button>
+                <button onclick="selectMusic(4)"><p>Options Screen - Sonic R</p></button>
+                <button onclick="selectMusic(5)"><p>A Ghost's Pumpkin Soup ... for Pumpkin Hill - Sonic Adventure 2</p></button>
+
+                <div class="selectGameMusic" id="gameMusic">
+                    <div class="title"><p> Music for the Game</p></div>
+                    <button onclick="selectGameMusic(0)"><p>Green Hill (Modern) - Sonic Generations</p></button>
+                    <button onclick="selectGameMusic(1)"><p>Live and Learn by Crush 40 (Main Theme of SA2)</p></button>
+                    <button onclick="selectGameMusic(2)"><p>Escape From the City (City Escape) - Sonic Adventure 2</p></button>
+                    <button onclick="selectGameMusic(3)"><p>BOSS BATTLE BIG ARM - Sonic the Hedgehog 3</p></button>
+                    <button onclick="selectGameMusic(4)"><p>Crisis City - Sonic the Hedgehog (2006)</p></button>
+                    <button onclick="selectGameMusic(5)"><p>Kick The Rock! - Sonic Adventure 2</p></button>
+                    <button onclick="selectGameMusic(6)"><p>Undefeatable - Sonic Frontiers</p></button>
+                    <button onclick="selectGameMusic(7)"><p>Dragon Road (Day) - Sonic Unleashed</p></button>
+                    <button onclick="selectGameMusic(8)"><p>Doomsday Zone - Sonic the Hedgehog 3 & Knuckles</p></button>
+                    <button onclick="selectGameMusic(9)"><p>Vela-Nova - Sonic Rush</p></button>
+                    <button onclick="selectGameMusic(10)"><p>Rooftop Run (Modern) - Sonic Generations</p></button>
+                </div>
+
+                <div class="selectGameOverMusic" id="gameoverMusic">
+                    <div class="title"><p> Music for Game Over</p></div>
+                    <button onclick="selectGameOverMusic(0)"><p>Sonic Advance 1, 2 and 3 - Game Over</p></button>
+                    <button onclick="selectGameOverMusic(1)"><p>Sonic CD - Game Over Music ~ Japan</p></button>
+                    <button onclick="selectGameOverMusic(2)"><p>Sonic CD - Game Over Music ~ USA</p></button>
+                    <button onclick="selectGameOverMusic(3)"><p>Sonic the Hedgehog 1 - Game Over</p></button>
+                    <button onclick="selectGameOverMusic(4)"><p>Sonic 3 And Knuckles - Game Over</p></button>
+                    <button onclick="selectGameOverMusic(5)"><p>Sonic Rush - Game Over</p></button>
+                </div>
+            </div>
+        </header>
+        <div class="subheader">
         </div>
         <div class="area">
             <p id="play-txt" class="hid">Press any key or click the button to start!</p>
