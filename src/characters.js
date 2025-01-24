@@ -1,21 +1,26 @@
-// Função genérica para definir o personagem
 function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon = 'life-icon.gif') {
     localStorage.setItem('characters', character);
+
+    const formatFolderName = (folderName) => {
+        return folderName.charAt(0).toUpperCase() + folderName.slice(1);
+    };
+
+    const formattedSpriteFolder = formatFolderName(spriteFolder);
 
     const spriteActions = ['Idle', 'Start', 'Run', 'Jump', 'DoubleJump', 'Damage', 'Death'];
     spriteActions.forEach(action => {
         document.documentElement.style.setProperty(
             `--${action}`, 
-            `url(sprites/${spriteFolder}/${spriteFolder.toLowerCase()}-${action.toLowerCase()}.gif)`
+            `url(sprites/${formattedSpriteFolder}/${formattedSpriteFolder.toLowerCase()}-${action.toLowerCase()}.gif)`
         );
     });
 
-    spriteFolder = spriteFolder.charAt(0).toUpperCase() + spriteFolder.slice(1);
-    document.getElementById("life-icon").src = `sprites/${spriteFolder}/${lifeIcon}`;
+    document.getElementById("life-icon").src = `sprites/${formattedSpriteFolder}/${lifeIcon}`;
+    
     document.getElementById("charName").innerText = name;
-
     document.getElementById("extraInfo").innerHTML = extraInfo;
 }
+
 
 function ClassicSonic() {
     setCharacter(
