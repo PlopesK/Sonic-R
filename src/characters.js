@@ -1,5 +1,5 @@
 // Função genérica para definir o personagem
-function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon = "life-icon.gif") {
+function setCharacter(character, spriteFolder, name, extraInfo, lifeIcon) {
     localStorage.setItem('characters', character);
 
     const spriteActions = ['Idle', 'Start', 'Run', 'Jump', 'DoubleJump', 'Damage', 'Death'];
@@ -22,7 +22,7 @@ function ClassicSonic() {
         'ClassicSonic', 
         'Classic Sonic', 
         'Sonic the Hedgehog 3 (& Knuckles)', 
-        'sonic3-life.gif'
+        'classicsonic-life.gif'
     );
 }
 
