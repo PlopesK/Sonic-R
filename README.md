@@ -13,7 +13,7 @@
  
  <h2> ⚙️ Settings ⚙️ </h2>
  You can acess Settings by pressing the triangle at the top left of the site!<br><br>
- <img src="https://github.com/PlopesK/Sonic-R/blob/main/images/print-settings.jpg?raw=true" style="width: 50%; max-width:50%; height: auto;" title="Settings">
+ <img src="https://github.com/PlopesK/Sonic-R/blob/main/images/print-settings.jpg?raw=true" style="width:70%; max-width:70%; height: auto;" title="Settings">
  
  Inside settings you can change musics for Menu, Game and Game Over! And even mute the music/soundeffects if wanted.<br>
  Furthermore, you can make changes to the game! Like disabling the bakcground objects and lowering the background speed!<br>
@@ -38,6 +38,7 @@
   # You can't make any changes after starting a game, so be sure when to start!
   # On the PC, you can start without having to press the button, just by pressing a key! Both to Start and Restart...
 ```
+<img src="https://github.com/PlopesK/Sonic-R/blob/main/images/print2.jpg?raw=true" style="width: 100%; max-width:100%; height: auto;" title="Sonic-R website game">
 <h2> 🌐 Conclusion 🌐 </h2>
 I learned a lot developting this project, and had a lot of fun! :) <br>
 This project was more like a love letter to the Sonic franchise! So I hope everyone seeing this have fun playing!<br>
