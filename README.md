@@ -1,5 +1,5 @@
 <h1>Sonic-Runners 🌀</h1>
-  <img src="images/print.jpg" style="width: 100%; max-width:100%; height: auto;" title="Sonic-R website game">
+  <img src="https://github.com/PlopesK/Sonic-R/blob/main/images/print.jpg?raw=true" style="width: 100%; max-width:100%; height: auto;" title="Sonic-R website game">
   A simple game where you control Sonic and his friends through an infinite stage, is a fan-project created using HTML, CSS and JS, based on the 
   Dino Game from Chrome. <br><br>
  
@@ -13,7 +13,7 @@
  
  <h2> ⚙️ Settings ⚙️ </h2>
  You can acess Settings by pressing the triangle at the top left of the site!<br><br>
- <img src="images/print-settings.jpg" style="width: 50%; max-width:50%; height: auto;" title="Settings">
+ <img src="https://github.com/PlopesK/Sonic-R/blob/main/images/print-settings.jpg?raw=true" style="width: 50%; max-width:50%; height: auto;" title="Settings">
  
  Inside settings you can change musics for Menu, Game and Game Over! And even mute the music/soundeffects if wanted.<br>
  Furthermore, you can make changes to the game! Like disabling the bakcground objects and lowering the background speed!<br>
@@ -44,4 +44,4 @@ This project was more like a love letter to the Sonic franchise! So I hope every
 
 <h3>🔷 Take a look at the website here: <a href="https://plopesk.github.io/Sonic-R/"> Sonic Runner </a> 🔷</h3>
 <h3>🌐 See more of the production here: <a href="https://plopesk.github.io/Sonic-R/about.html"> About Page </a> 🌐</h3>
-<img src="images/sonic.ico" style="width:150px; height: auto;" title="Icon"> 
+<img src="https://github.com/PlopesK/Sonic-R/blob/main/images/sonic.ico?raw=true" style="width:150px; height: auto;" title="Icon"> 
